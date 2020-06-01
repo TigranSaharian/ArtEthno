@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Sitka Banner', sans-serif;
+    src: url('SitkaBanner-Bold.eot');
+    src: url('SitkaBanner-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SitkaBanner-Bold.woff2') format('woff2'),
+        url('SitkaBanner-Bold.woff') format('woff'),
+        url('SitkaBanner-Bold.ttf') format('truetype'),
+        url('SitkaBanner-Bold.svg#SitkaBanner-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('SegoeUI.eot');
+    src: url('SegoeUI.eot?#iefix') format('embedded-opentype'),
+        url('SegoeUI.woff2') format('woff2'),
+        url('SegoeUI.woff') format('woff'),
+        url('SegoeUI.ttf') format('truetype'),
+        url('SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
