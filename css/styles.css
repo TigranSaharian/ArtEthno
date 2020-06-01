@@ -744,8 +744,27 @@ label {
 .shop-wrapper:hover .shop-cover-img img {
   transform: scale(1.2);
 }
-.footer {
-  margin-top: 40px;
+.footer .footer-title h1 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: calc(0.8vw + 0.5px);
+  font-weight: 100;
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  padding-left: 25px;
+}
+.footer .footer-title h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: #F5CD79;
+  opacity: 0.6;
+  width: 90px;
+  height: 30px;
+  z-index: -1;
 }
 .footer .footer-top-wrapper {
   background-color: #393939;
@@ -814,9 +833,6 @@ label {
 }
 .footer .footer-top-wrapper ul li:hover::after {
   width: 30px;
-}
-.footer .footer-top-wrapper .footer-info {
-  margin-top: 15px;
 }
 .footer .footer-bottom-wrapper {
   background-color: #F5CD79;
