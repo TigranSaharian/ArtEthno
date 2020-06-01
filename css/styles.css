@@ -680,9 +680,9 @@ label {
   height: 100%;
 }
 .section .section-wrapper .btn-right {
-  position: absolute;
   bottom: 10px;
   right: 10px;
+  margin-top: 30px;
 }
 .section .section-wrapper .btn-right button {
   padding: 5px 80px;
@@ -760,7 +760,7 @@ label {
   margin-bottom: 10px;
 }
 .footer .footer-top-wrapper .social-media-wrapper .social-media-icons {
-  display: flex;
+  display: inline-flex;
 }
 .footer .footer-top-wrapper .social-media-wrapper .social-media-icons a {
   text-decoration: none;
@@ -785,13 +785,16 @@ label {
 .footer .footer-top-wrapper .social-media-wrapper .social-media-icons a:hover i {
   background-color: #F5CD79;
 }
+.footer .footer-top-wrapper ul {
+  display: inline-block;
+}
 .footer .footer-top-wrapper ul li {
   position: relative;
   list-style: none;
   font-family: 'Segoe UI';
   font-weight: 200;
   padding: 5px 0;
-  font-size: 18px;
+  font-size: calc(0.4vw + 12px);
   cursor: pointer;
   transition: 0.3s;
   width: max-content;
@@ -812,13 +815,16 @@ label {
 .footer .footer-top-wrapper ul li:hover::after {
   width: 30px;
 }
+.footer .footer-top-wrapper .footer-info {
+  margin-top: 15px;
+}
 .footer .footer-bottom-wrapper {
   background-color: #F5CD79;
   padding: 15px 0;
 }
 .footer .footer-bottom-wrapper .fotter-bottom-body {
   display: flex;
-  font-size: 18px;
+  font-size: calc(0.4vw + 10px);
 }
 .footer .footer-bottom-wrapper .fotter-bottom-body div:first-child {
   font-family: 'Sitka Banner', sans-serif;
@@ -832,4 +838,20 @@ label {
   right: 0;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
+}
+@media (max-width: 992px) {
+  .about-us-wrapper {
+    text-align: center;
+  }
+  .about-us-wrapper .btn-right {
+    text-align: center;
+  }
+  .footer .footer-info {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .btn-right {
+    text-align: right;
+  }
 }

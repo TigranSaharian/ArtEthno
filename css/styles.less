@@ -801,9 +801,9 @@ label {
         }
 
         .btn-right {
-            position: absolute;
             bottom: 10px;
             right: 10px;
+            margin-top: 30px;
 
             button {
                 padding: 5px 80px;
@@ -901,7 +901,7 @@ label {
 
         .social-media-wrapper {
             .social-media-icons {
-                display: flex;
+                display: inline-flex;
 
                 a {
                     text-decoration: none;
@@ -937,12 +937,13 @@ label {
         }
 
         ul {
+            display: inline-block;
             li {
                 position: relative;
                 list-style: none;
                 .font_Segoe;
                 padding: 5px 0;
-                font-size: 18px;
+                font-size: calc(0.4vw + 12px);
                 cursor: pointer;
                 transition: 0.3s;
                 width: max-content;
@@ -966,6 +967,9 @@ label {
                 }
             }
         }
+        .footer-info{
+            margin-top: 15px;
+        }
     }
 
     .footer-bottom-wrapper {
@@ -973,7 +977,7 @@ label {
         padding: 15px 0;
         .fotter-bottom-body{
             display: flex;
-            font-size: 18px;
+            font-size: calc(0.4vw + 10px);
             div{
                 &:first-child{
                     .font_Sitka;
@@ -990,3 +994,23 @@ label {
         }
     }
 }
+
+@media (max-width: 992px){
+    .about-us-wrapper{
+        text-align: center;
+        .btn-right {
+            text-align: center;
+        }
+    }
+    .footer{
+        .footer-info{
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 992px){
+        .btn-right {
+            text-align: right;
+        }
+    }
