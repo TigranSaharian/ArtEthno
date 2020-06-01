@@ -712,7 +712,7 @@ label {
   cursor: pointer;
 }
 .shop-wrapper .shop-info-body .shop-avatar-wrapper .shop-avatar-img {
-  background-image: url(/assets/Images/shops/shop-logo.jpg);
+  background-image: url(../assets/Images/shops/shop-logo.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
