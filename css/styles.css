@@ -163,8 +163,8 @@ label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   cursor: pointer;
-  font-weight: 900;
-  font-size: calc(0.2vw + 12px);
+  font-weight: 100;
+  font-size: calc(0.2vw + 11px);
 }
 .item-wrapper .image .image-items i {
   color: #F5CD79;
