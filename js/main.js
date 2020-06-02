@@ -25,3 +25,23 @@ $(function(){
         })
     });
 });
+
+$(function(){
+    var closeBtn = $('#close-search');
+    var searcheInput = $('.search_box');
+    var icons = $('.icon');
+    if ($(window).width() <= 768) {  
+        $('#search-item').click(function(){
+            searcheInput.removeClass('search_box');
+            searcheInput.addClass('mobile-search');
+            closeBtn.css('display', 'block');
+            icons.css('display','none');
+        })
+        $('#close-search').on('click',function(){
+            closeBtn.css('display', 'none');
+            searcheInput.removeClass('mobile-search');
+            searcheInput.addClass('search_box');
+            icons.css('display','block');
+        });
+    }
+});
