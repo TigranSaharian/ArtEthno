@@ -195,28 +195,8 @@ label {
                 color: @light_color;
                 .font_Sitka;
                 cursor: pointer;
-                font-weight: 100;
-                font-size: calc(0.2vw + 11px);
-            }
-
-            span:nth-child(1) {
-                bottom: -50px;
-                left: 10px;
-            }
-
-            span:nth-child(3) {
-                bottom: -50px;
-                right: 0;
-            }
-
-            span:nth-child(2) {
-                top: 10px;
-                right: -30%;
-            }
-
-            span:last-child {
-                .font_Sitka;
-                font-weight: 100;
+                font-weight: 900;
+                font-size: calc(0.2vw + 12px);
             }
 
             i {
@@ -271,22 +251,6 @@ label {
                 color: @light_color;
                 font-size: 14px;
 
-            }
-        }
-    }
-
-    &:hover {
-        .image-items {
-            span:nth-child(1) {
-                bottom: 0;
-            }
-
-            span:nth-child(3) {
-                bottom: 0;
-            }
-
-            span:nth-child(2) {
-                right: 0;
             }
         }
     }
@@ -1116,6 +1080,40 @@ label {
     .close-search {
         display: none;
     }
+
+    .image-wrapper{
+        .image-items{
+            span:nth-child(1) {
+                bottom: -50px;
+                left: 10px;
+            }
+    
+            span:nth-child(3) {
+                bottom: -50px;
+                right: 0;
+            }
+    
+            span:nth-child(2) {
+                top: 10px;
+                right: -30%;
+            }
+        }
+        &:hover {
+            .image-items {
+                span:nth-child(1) {
+                    bottom: 0;
+                }
+    
+                span:nth-child(3) {
+                    bottom: 0;
+                }
+    
+                span:nth-child(2) {
+                    right: 0;
+                }
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
@@ -1162,6 +1160,22 @@ label {
             top: 0;
             z-index: 100;
             background-color: @main_color;
+        }
+    }
+    .image-wrapper{
+        span:nth-child(1) {
+            bottom: 0;
+            left: 10px;
+        }
+
+        span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+        }
+
+        span:nth-child(2) {
+            top: 10px;
+            right: 0;
         }
     }
 }
