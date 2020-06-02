@@ -329,7 +329,7 @@ label {
 }
 .top-content {
   background-color: #393939;
-  height: 40px;
+  height: 45px;
   display: flex;
   align-items: center;
 }
@@ -406,7 +406,7 @@ label {
   border: none;
   font-family: 'Segoe UI';
   font-weight: 200;
-  padding: 3px 15px;
+  padding: 5px 15px;
   font-size: calc(0.3vw + 10px);
 }
 .top-content .iner_content button {
@@ -414,7 +414,8 @@ label {
   border: none;
   height: 100%;
   border-radius: 25px;
-  font-size: 12px;
+  padding: 0 7px;
+  font-size: 14px;
 }
 .mobile-search {
   width: 100%;
@@ -430,11 +431,11 @@ label {
   border: none;
   font-family: 'Segoe UI';
   font-weight: 200;
-  padding: 3px 15px;
-  width: calc(100% - 65px);
+  padding: 5px 15px;
+  width: calc(100% - 75px);
   font-size: calc(0.3vw + 10px);
   transition: 0.3s;
-  margin-left: 30px;
+  margin-left: 35px;
 }
 .mobile-search .search .search-item {
   background-color: #F5CD79;
