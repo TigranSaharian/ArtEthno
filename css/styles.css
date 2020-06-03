@@ -1100,7 +1100,7 @@ label {
   }
   .top-content .icon-wrapper .mobile-search-wrapper .search-input {
     width: 0;
-    position: relative;
+    position: absolute;
     visibility: hidden;
     transition: 0.3s;
     z-index: 100;
@@ -1113,7 +1113,6 @@ label {
   .mobile-search-active {
     visibility: visible !important;
     width: calc(100% - 130px) !important;
-    top: -3px !important;
   }
 }
 @media (max-width: 991.98px) {
