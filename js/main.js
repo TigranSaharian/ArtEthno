@@ -25,15 +25,23 @@ $(function(){
         })
     });
 
-    var menu_item = $(".mobile-icon").find("a[rel='bottom-menu-item']");
+    var mobile_menu_item = $(".mobile-icon").find("a[rel='bottom-menu-item']");
     $('#mobile-search-item').click(function(){
         $('#mobile-search-input').addClass('mobile-search-active');
         $('#close-mobile-search').css('right','30px');
-        menu_item.css('visibility', 'hidden');
+        mobile_menu_item.css('visibility', 'hidden');
     });
     $('#close-mobile-search').click(function(){
         $('#mobile-search-input').removeClass('mobile-search-active');
         $('#close-mobile-search').css('right','-50%');
-        menu_item.css('visibility', 'visible');
+        mobile_menu_item.css('visibility', 'visible');
     });
+
+    $('#burger').click(function(){
+        $("#mobile-menu").find(".mobile-drop-menu-contaner").toggleClass("menu-active");
+    });
+
+    $("#close-burger").click(function(){
+        $(this).closest("#mobile-menu").find(".mobile-drop-menu-contaner").removeClass("menu-active");
+    })
 });
