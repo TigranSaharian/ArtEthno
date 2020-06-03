@@ -301,6 +301,16 @@ label {
   background-color: #F5CD79;
   color: #393939;
 }
+.search-input {
+  border-radius: 50px;
+  border: none;
+  font-family: 'Segoe UI';
+  font-weight: 200;
+  padding: 5px 15px;
+  border: none !important;
+  padding: 5px 15px !important;
+  font-size: calc(0.3vw + 10px);
+}
 .top-content {
   background-color: #393939;
   height: 45px;
@@ -329,7 +339,6 @@ label {
   align-items: center;
 }
 .top-content .container .icon i {
-  margin: 10px;
   color: #F9F9F9;
 }
 .top-content .container .icon span {
@@ -366,22 +375,14 @@ label {
 .top-content .iner_content {
   position: relative;
 }
-.top-content .iner_content .search_box {
+.top-content .iner_content .search-box {
   width: 100%;
 }
-.top-content .iner_content .search_box .search {
+.top-content .iner_content .search-box .search {
   position: relative;
   line-height: 0;
   z-index: 1;
   width: fit-content;
-}
-.top-content .iner_content .search_box .search input {
-  border-radius: 50px;
-  border: none;
-  font-family: 'Segoe UI';
-  font-weight: 200;
-  padding: 5px 15px;
-  font-size: calc(0.3vw + 10px);
 }
 .top-content .iner_content button {
   position: absolute;
@@ -876,10 +877,10 @@ label {
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .search_box .search input {
+  .search-box .search input {
     width: calc(20vw + 100px);
   }
-  .search_box .search button {
+  .search-box .search button {
     background-color: transparent;
     width: 50px;
     top: 50%;
@@ -887,12 +888,21 @@ label {
     right: 0;
     padding: 0;
   }
-  .search_box .search button:hover {
+  .search-box .search button:hover {
     background-color: #F5CD79;
     width: 60px;
   }
-  .search_box .search button i {
+  .search-box .search button i {
     color: #393939;
+  }
+  .icon a {
+    margin: 0 15px;
+  }
+  .mobile-search-wrapper {
+    display: none;
+  }
+  .icon-wrapper {
+    display: none;
   }
   .close-search {
     display: none;
@@ -925,18 +935,18 @@ label {
   }
 }
 @media (max-width: 767.98px) {
-  .iner_content .search_box .search input {
+  .iner_content .search-box .search input {
     width: 0px;
     visibility: hidden;
   }
-  .iner_content .search_box .search input::placeholder {
+  .iner_content .search-box .search input::placeholder {
     opacity: 0;
   }
-  .iner_content .search_box .search .search-item {
+  .iner_content .search-box .search .search-item {
     background-color: #F5CD79;
     left: 0;
   }
-  .iner_content .search_box .search .search-item i {
+  .iner_content .search-box .search .search-item i {
     color: #393939;
   }
   .iner_content .close-search {
@@ -957,6 +967,64 @@ label {
   .image-wrapper span:nth-child(2) {
     top: 10px;
     right: 0;
+  }
+  .top-content {
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+    z-index: 100;
+    height: 55px;
+  }
+  .top-content .icon-wrapper .icon-count span:first-child {
+    top: -5px !important;
+  }
+  .top-content .icon-wrapper .icon {
+    justify-content: center;
+    width: 100%;
+    right: 0 !important;
+  }
+  .top-content .icon-wrapper .icon a {
+    flex: 1;
+    text-align: center;
+  }
+  .top-content .icon-wrapper .icon a i {
+    font-size: calc(1vw + 14px);
+  }
+  .top-content .icon-wrapper .icon .mobile-search-icon {
+    position: relative;
+    left: 0;
+  }
+  .top-content .icon-wrapper .icon .mobile-search-icon i {
+    padding: 6px;
+    border-radius: 50%;
+  }
+  .top-content .icon-wrapper .icon #close-mobile-search {
+    position: absolute;
+    transition: 0.3s;
+    top: 50%;
+    transform: translateY(-40%);
+    right: -50%;
+  }
+  .top-content .icon-wrapper .mobile-search-wrapper {
+    position: absolute;
+    left: 65px;
+    width: 100%;
+  }
+  .top-content .icon-wrapper .mobile-search-wrapper .search-input {
+    width: 0;
+    position: relative;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .top-content .search-box {
+    display: none;
+  }
+  .mobile-search-active {
+    visibility: visible !important;
+    width: calc(100% - 130px) !important;
   }
 }
 @media (max-width: 991.98px) {
