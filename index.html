@@ -15,22 +15,32 @@
 </head>
 
 <body>
-    <div id="mobile-menu" class="mobile-menu-wrapper">
+    <div id="burger-menu" class="burger-menu-wrapper">
         <div class="mobile-drop-menu-contaner">
-            <div id="burger-menu"> 
+            <div> 
+                <p class="chosen-categoria">Browse Categories</p>
                 <button id="close-burger" class="close-burger"><i class="fas fa-times"></i></button>
-                <p>The best way to find any artwork</p>
                 <aside>
+                    <p class="search-type-tytle">Check Search type</p>
+                    <div class="check-search-type">
+                        <div class="advance">
+                            <input type="radio" name="search-type">
+                            <label for="search-type">Advance</label>
+                        </div>
+                        <div class="simple">
+                            <input type="radio" name="search-type">
+                            <label for="search-type">Simple</label>
+                        </div>
+                    </div>
                     <ul>
-                        <li class="burger-sub-categoria"><a href="#">Categoria name</a></li>
-                        <li class="burger-sub-categoria"><a href="#">Categoria name</a></li>
-                        <li class="burger-sub-categoria"><a href="#">Categoria name</a></li>
-                        <li class="burger-sub-categoria"><a href="#">Categoria name</a></li>
-                        <li class="burger-sub-categoria"><a href="#">Categoria name</a></li>
-                        <li class="burger-sub-categoria"><a href="#">Categoria name</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Jewelry & Accessories</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Clothing & Shoes</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Home & Living</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Wedding & Party</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Art & Collectibles</a></li>
                     </ul>
                 </aside>
-                <!-- <section>
+                <!-- <section id="">
                     <div class="drop-menu-second-filter">
                         <div class="dark-dropdown">
                             <div class="dropdown">
@@ -278,22 +288,22 @@
             </div>
             <div class="categories">
                 <button class="burger" id="burger"><i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item categoria_name">
-                            <a class="nav-link" href="#">Categoria</a>
+                <div class="navbar-menu" id="navbarNav">
+                    <ul>
+                        <li class="categoria_name">
+                            <a href="#">Jewelry & Accessories</a>
                         </li>
-                        <li class="nav-item categoria_name">
-                            <a class="nav-link" href="#">Categoria</a>
+                        <li class="categoria_name">
+                            <a href="#">Clothing & Shoes</a>
                         </li>
-                        <li class="nav-item categoria_name">
-                            <a class="nav-link" href="#">Categoria</a>
+                        <li class="categoria_name">
+                            <a href="#">Home & Living</a>
                         </li>
-                        <li class="nav-item categoria_name">
-                            <a class="nav-link" href="#">Categoria</a>
+                        <li class="categoria_name">
+                            <a href="#">Wedding & Party</a>
                         </li>
-                        <li class="nav-item categoria_name">
-                            <a class="nav-link" href="#">Categoria</a>
+                        <li class="categoria_name">
+                            <a href="#">Art & Collectibles</a>
                         </li>
                     </ul>
                 </div>

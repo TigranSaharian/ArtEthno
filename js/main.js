@@ -31,6 +31,7 @@ $(function(){
         $('#close-mobile-search').css('right','30px');
         mobile_menu_item.css('visibility', 'hidden');
     });
+    
     $('#close-mobile-search').click(function(){
         $('#mobile-search-input').removeClass('mobile-search-active');
         $('#close-mobile-search').css('right','-50%');
@@ -38,10 +39,10 @@ $(function(){
     });
 
     $('#burger').click(function(){
-        $("#mobile-menu").find(".mobile-drop-menu-contaner").toggleClass("menu-active");
+        $("#burger-menu").find(".mobile-drop-menu-contaner").toggleClass("menu-active");
     });
 
     $("#close-burger").click(function(){
-        $(this).closest("#mobile-menu").find(".mobile-drop-menu-contaner").removeClass("menu-active");
+        $(this).closest("#burger-menu").find(".mobile-drop-menu-contaner").removeClass("menu-active");
     })
 });

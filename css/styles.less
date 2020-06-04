@@ -1,5 +1,5 @@
 /* FONTS */
-@import './fonts/stylesheet.css';
+@import '../fonts/stylesheet.css';
 
 @main_color: #F5CD79;
 @dark_color: #393939;
@@ -557,7 +557,7 @@ label {
             h1 {
                 .font_Sitka;
                 font-weight: 700;
-                letter-spacing: calc(0.5vw + 5px);
+                letter-spacing: calc(0.5vw + 2px);
                 text-transform: uppercase;
                 font-size: calc(0.5vw + 17px);
                 line-height: 0;
@@ -583,15 +583,22 @@ label {
                 }
             }
             ul {
+                width: 100%;
                 margin: 0;
-
+                display: flex;
+                text-align: center;
                 li {
                     display: inline-block;
                     .font_Sitka;
-                    font-size: 15px;
                     letter-spacing: 1px;
                     text-transform: uppercase;
+                    line-height: 1;
                     cursor: pointer;
+                    padding-right: calc(0.8vw + 9px);
+                    a{
+                        font-size: calc(0.4vw + 7px);
+                        color: @dark_color;
+                    }
                 }
             }
         }
@@ -770,10 +777,10 @@ label {
 }
 
 .menu-active{
-    top: 0 !important;
+    left: 0 !important;
 }
 
-.mobile-menu-wrapper{
+.burger-menu-wrapper{
     padding: 0 15px;
     .mobile-drop-menu-contaner{
         background-color: @dark_color;
@@ -781,14 +788,22 @@ label {
         width: 100%;
         height: 100%;
         transition: 0.3s;
-        top: -100%;
+        left: -100%;
         z-index: 10;
-        left: 0;
+        .chosen-categoria{
+            color: @dark_color;
+            background-color: @main_color;
+            padding: 10px 15px;
+            .font_Sitka;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
         .close-burger{
             background-color: transparent;
             position: absolute;
             right: 0;
-            top: 15px;
+            bottom: 65px;
             border: none;
             margin-right: 15px;
             i{
@@ -796,38 +811,67 @@ label {
                 color: @main_color;
             }
         }
-        p{
-            text-align: center;
-            color:@main_color;
-            .font_Sitka;
-            font-size: calc(0.5vw + 14px);
-            padding: 40px 0;
-        }
         aside{
-            position: absolute;
-            top: 50%;
-            left: 50%;
             width: 100%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            text-align: left;
+            padding: 0 20px;
+            .search-type-tytle{
+                text-align: left;
+                color:@main_color;
+                .font_Sitka;
+                font-size: calc(0.5vw + 12px);
+                padding: 10px 0;
+            }
             ul{
                 list-style: none;
                 li{
                     padding: 10px 0;
+                    position: relative;
                     a{
                         text-decoration: none;
-                        color: @main_color;
+                        color: @light_color;
                         .font_Sitka;
-                        font-size:  calc(1vw + 13px);
+                        font-size:  calc(0.5vw + 13px);
                         text-transform: uppercase;
                         letter-spacing: 2px;
                     }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        bottom: 10px;
+                        left: 0px;
+                        height: 2px;
+                        background-color: @main_color;
+                    }
+                }
+            }
+            .check-search-type{
+                display: flex;
+                position: relative;
+                div{
+                    margin-bottom: 10px;
+                    label{
+                        color: @light_color;
+                    }
+                    &:first-child{
+                        margin-right: 15px;
+                    }
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: @main_color;
                 }
             }
         }
         section{
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             width: 100%;
             padding: 0 15px;
@@ -1172,9 +1216,7 @@ label {
         display: none;
     }
 
-    .icon-wrapper {
-        display: none;
-    }
+
 
     .close-search {
         display: none;
@@ -1214,12 +1256,18 @@ label {
             }
         }
     }
+    .burger{
+        display: none;
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .btn-right {
         text-align: right;
+    }
+    .icon-wrapper {
+        display: none;
     }
 }
 
@@ -1230,30 +1278,8 @@ label {
 @media (max-width: 575.98px) {}
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px ) {
     .iner_content {
-        .search-box {
-            .search {
-                input {
-                    width: 0px;
-                    visibility: hidden;
-
-                    &::placeholder {
-                        opacity: 0;
-                    }
-                }
-
-                .search-item {
-                    background-color: @main_color;
-                    left: 0;
-
-                    i {
-                        color: @dark_color;
-                    }
-                }
-            }
-        }
-
         .close-search {
             right: 20px;
             display: none;
@@ -1324,7 +1350,7 @@ label {
             }
             .mobile-search-wrapper {
                 position: absolute;
-                left: 65px;
+                left: calc(3vw + 50px);
                 width: 100%;
                 
                 .search-input {
@@ -1348,10 +1374,16 @@ label {
         visibility: visible !important;
         width: calc(100% - 130px) !important;
     }
+    .burger{
+        display: block;
+    }
+    .navbar-menu{
+        display: none;
+    }
 }
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
     .about-us-wrapper {
         text-align: center;
 
