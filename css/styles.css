@@ -1,5 +1,5 @@
 /* FONTS */
-@import '../fonts/stylesheet.css';
+@import 'fonts/stylesheet.css';
 .font_Segoe {
   font-family: 'Segoe UI';
   font-weight: 200;
