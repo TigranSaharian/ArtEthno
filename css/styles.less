@@ -781,23 +781,27 @@ label {
 }
 
 .burger-menu-wrapper{
-    padding: 0 15px;
     .mobile-drop-menu-contaner{
         background-color: @dark_color;
         position: fixed;
         width: 100%;
         height: 100%;
-        transition: 0.3s;
         left: -100%;
+        transition: 0.3s;
         z-index: 10;
-        .chosen-categoria{
+        .burger-categoria-name-wrapper{
             color: @dark_color;
-            background-color: @main_color;
+            background-color: @light_color;
             padding: 10px 15px;
             .font_Sitka;
             font-size: 18px;
             letter-spacing: 2px;
             text-transform: uppercase;
+            .back{
+                position: absolute;
+                right: 20px;
+                cursor: pointer;
+            }
         }
         .close-burger{
             background-color: transparent;
@@ -811,10 +815,14 @@ label {
                 color: @main_color;
             }
         }
-        aside{
+        .burger-search-1{
+            position: absolute;
+            left: 0;
+            top: 50px;
             width: 100%;
             text-align: left;
             padding: 0 20px;
+            transition: 0.3s;
             .search-type-tytle{
                 text-align: left;
                 color:@main_color;
@@ -869,13 +877,14 @@ label {
                 }
             }
         }
-        section{
+        .burger-search-2{
             position: absolute;
-            top: 40%;
-            left: 50%;
+            top: 50px;
+            background-color: @dark_color;
+            left: -100%;
             width: 100%;
             padding: 0 15px;
-            transform: translate(-50%, -50%);
+            transition: 0.3s;
             label{
                 color: @light_color;
                 margin-bottom: 5px;
@@ -889,9 +898,120 @@ label {
             .chackbox{
                 margin-top: 10px;
             }
+            .next-wrapper{
+                color: @light_color;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    .font_Sitka;
+                    background-color: @light_color;
+                    padding: 5px 20px;
+                    border: none;
+                    font-size: 17px;
+                    display: flex;
+                    align-items: center;
+                    &:first-child{
+                        margin-right: 10px;
+                    }
+                    i{
+                        margin-left: 10px;
+                    }
+                }
+            }
 
         }
+        .burger-search-3{
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            width: 100%;
+            padding: 0 15px;
+            transition: 0.3s;
+            .drop-menu-item-filter {
+                width: 100%;
+    
+                .material {
+                    margin-top: 10px;
+                    label{
+                        color: @light_color;
+                    }
+                    .material-name {
+                        margin: 3px 2px;
+                        display: inline-flex;
+                        background-color: @main_color;
+
+                        input {
+                            background-color: transparent;
+                            border: 1px solid @main_color;
+                            padding: 1px 10px;
+                            font-size: 13px;
+                            color: @dark_color;
+                        }
+                    }
+                }
+    
+                .price {
+                    margin-top: 10px;
+                    label{
+                        color: @light_color;
+                    }
+                    .material_price {
+                        display: inline-flex;
+                        span{
+                            color: @light_color;
+                        }
+                        input {
+                            background-color: transparent;
+                            border: 1px solid @main_color;
+                            text-align: left;
+                            padding: 5px 10px;
+                            color: @main_color;
+                            width: 80px;
+                            .font_Sitka;
+                            font-size: 16px;
+                        }
+                    }
+    
+                    .currency_dropdown {
+                        margin: 0;
+                        display: inline-flex;
+    
+                        .dropbtn {
+                            font-size: 16px;
+                            background-color: @light_color;
+                            color: @dark_color;
+                            i {
+                                right: 10px;
+                            }
+                        }
+                    }
+                }
+    
+                .drop-menu-search-brn {
+                    margin-top: 10px;
+    
+                    input {
+                        width: 100%;
+                        transition: 0.3s;
+                        font-size: 18px;
+    
+                        &:hover {
+                            background-color: @main_color;
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+
+.burger-section-show{
+    left: 0 !important;
+}
+
+.burger-section-hide{
+    left: -100% !important;
 }
 
 .center-btn {

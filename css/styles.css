@@ -665,27 +665,29 @@ label {
 .menu-active {
   left: 0 !important;
 }
-.burger-menu-wrapper {
-  padding: 0 15px;
-}
 .burger-menu-wrapper .mobile-drop-menu-contaner {
   background-color: #393939;
   position: fixed;
   width: 100%;
   height: 100%;
-  transition: 0.3s;
   left: -100%;
+  transition: 0.3s;
   z-index: 10;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner .chosen-categoria {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-categoria-name-wrapper {
   color: #393939;
-  background-color: #F5CD79;
+  background-color: #F9F9F9;
   padding: 10px 15px;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-categoria-name-wrapper .back {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .close-burger {
   background-color: transparent;
@@ -699,12 +701,16 @@ label {
   font-size: 22px;
   color: #F5CD79;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 {
+  position: absolute;
+  left: 0;
+  top: 50px;
   width: 100%;
   text-align: left;
   padding: 0 20px;
+  transition: 0.3s;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside .search-type-tytle {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .search-type-tytle {
   text-align: left;
   color: #F5CD79;
   font-family: 'Sitka Banner', sans-serif;
@@ -712,14 +718,14 @@ label {
   font-size: calc(0.5vw + 12px);
   padding: 10px 0;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside ul {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 ul {
   list-style: none;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside ul li {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 ul li {
   padding: 10px 0;
   position: relative;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside ul li a {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 ul li a {
   text-decoration: none;
   color: #F9F9F9;
   font-family: 'Sitka Banner', sans-serif;
@@ -728,7 +734,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside ul li::after {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 ul li::after {
   content: '';
   position: absolute;
   width: 20px;
@@ -737,20 +743,20 @@ label {
   height: 2px;
   background-color: #F5CD79;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside .check-search-type {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type {
   display: flex;
   position: relative;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside .check-search-type div {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type div {
   margin-bottom: 10px;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside .check-search-type div label {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type div label {
   color: #F9F9F9;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside .check-search-type div:first-child {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type div:first-child {
   margin-right: 15px;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner aside .check-search-type::after {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -759,24 +765,128 @@ label {
   bottom: 0;
   background-color: #F5CD79;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner section {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 {
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 50px;
+  background-color: #393939;
+  left: -100%;
   width: 100%;
   padding: 0 15px;
-  transform: translate(-50%, -50%);
+  transition: 0.3s;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner section label {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 label {
   color: #F9F9F9;
   margin-bottom: 5px;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner section .dark-dropdown .dropbtn {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .dark-dropdown .dropbtn {
   background-color: #F5CD79;
   color: #393939;
 }
-.burger-menu-wrapper .mobile-drop-menu-contaner section .chackbox {
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .chackbox {
   margin-top: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .next-wrapper {
+  color: #F9F9F9;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .next-wrapper button {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  background-color: #F9F9F9;
+  padding: 5px 20px;
+  border: none;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .next-wrapper button:first-child {
+  margin-right: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .next-wrapper button i {
+  margin-left: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 {
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  width: 100%;
+  padding: 0 15px;
+  transition: 0.3s;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter {
+  width: 100%;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .material {
+  margin-top: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .material label {
+  color: #F9F9F9;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .material .material-name {
+  margin: 3px 2px;
+  display: inline-flex;
+  background-color: #F5CD79;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .material .material-name input {
+  background-color: transparent;
+  border: 1px solid #F5CD79;
+  padding: 1px 10px;
+  font-size: 13px;
+  color: #393939;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price {
+  margin-top: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price label {
+  color: #F9F9F9;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .material_price {
+  display: inline-flex;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .material_price span {
+  color: #F9F9F9;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .material_price input {
+  background-color: transparent;
+  border: 1px solid #F5CD79;
+  text-align: left;
+  padding: 5px 10px;
+  color: #F5CD79;
+  width: 80px;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .currency_dropdown {
+  margin: 0;
+  display: inline-flex;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .currency_dropdown .dropbtn {
+  font-size: 16px;
+  background-color: #F9F9F9;
+  color: #393939;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .currency_dropdown .dropbtn i {
+  right: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .drop-menu-search-brn {
+  margin-top: 10px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .drop-menu-search-brn input {
+  width: 100%;
+  transition: 0.3s;
+  font-size: 18px;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .drop-menu-search-brn input:hover {
+  background-color: #F5CD79;
+}
+.burger-section-show {
+  left: 0 !important;
+}
+.burger-section-hide {
+  left: -100% !important;
 }
 .center-btn {
   text-align: center;
