@@ -680,7 +680,7 @@ label {
   padding: 10px 15px;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: calc(0.3vw + 9px);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -715,7 +715,7 @@ label {
   color: #F5CD79;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.5vw + 12px);
+  font-size: calc(0.5vw + 14px);
   padding: 10px 0;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 ul {
@@ -749,9 +749,12 @@ label {
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type div {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type div label {
   color: #F9F9F9;
+  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-1 .check-search-type div:first-child {
   margin-right: 15px;
@@ -777,10 +780,14 @@ label {
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 label {
   color: #F9F9F9;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .dark-dropdown .dropbtn {
   background-color: #F5CD79;
   color: #393939;
+}
+.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .dark-dropdown .dropbtn span {
+  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .chackbox {
   margin-top: 10px;
@@ -790,6 +797,7 @@ label {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-top: 15px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-2 .next-wrapper button {
   font-family: 'Sitka Banner', sans-serif;
@@ -797,7 +805,7 @@ label {
   background-color: #F9F9F9;
   padding: 5px 20px;
   border: none;
-  font-size: 17px;
+  font-size: 14px;
   display: flex;
   align-items: center;
 }
@@ -823,6 +831,7 @@ label {
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .material label {
   color: #F9F9F9;
+  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .material .material-name {
   margin: 3px 2px;
@@ -841,6 +850,7 @@ label {
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price label {
   color: #F9F9F9;
+  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .material_price {
   display: inline-flex;
@@ -857,14 +867,14 @@ label {
   width: 80px;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .currency_dropdown {
   margin: 0;
   display: inline-flex;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .price .currency_dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 14px;
   background-color: #F9F9F9;
   color: #393939;
 }
@@ -877,10 +887,8 @@ label {
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .drop-menu-search-brn input {
   width: 100%;
   transition: 0.3s;
-  font-size: 18px;
-}
-.burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .drop-menu-search-brn input:hover {
-  background-color: #F5CD79;
+  font-size: 14px;
+  margin-top: 15px;
 }
 .burger-section-show {
   left: 0 !important;

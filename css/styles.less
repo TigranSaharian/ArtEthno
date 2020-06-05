@@ -794,7 +794,7 @@ label {
             background-color: @light_color;
             padding: 10px 15px;
             .font_Sitka;
-            font-size: 18px;
+            font-size: calc(0.3vw + 9px);
             letter-spacing: 2px;
             text-transform: uppercase;
             .back{
@@ -827,7 +827,7 @@ label {
                 text-align: left;
                 color:@main_color;
                 .font_Sitka;
-                font-size: calc(0.5vw + 12px);
+                font-size: calc(0.5vw + 14px);
                 padding: 10px 0;
             }
             ul{
@@ -859,8 +859,11 @@ label {
                 position: relative;
                 div{
                     margin-bottom: 10px;
+                    display: flex;
+    align-items: center;
                     label{
                         color: @light_color;
+                        font-size: 14px;
                     }
                     &:first-child{
                         margin-right: 15px;
@@ -888,11 +891,15 @@ label {
             label{
                 color: @light_color;
                 margin-bottom: 5px;
+                font-size: 14px;
             }
             .dark-dropdown {
                 .dropbtn{
                     background-color: @main_color;
                     color: @dark_color;
+                    span{
+                        font-size: 14px;
+                    }
                 }
             }
             .chackbox{
@@ -903,12 +910,13 @@ label {
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
+                margin-top: 15px;
                 button{
                     .font_Sitka;
                     background-color: @light_color;
                     padding: 5px 20px;
                     border: none;
-                    font-size: 17px;
+                    font-size: 14px;
                     display: flex;
                     align-items: center;
                     &:first-child{
@@ -935,6 +943,7 @@ label {
                     margin-top: 10px;
                     label{
                         color: @light_color;
+                        font-size: 14px;
                     }
                     .material-name {
                         margin: 3px 2px;
@@ -955,6 +964,7 @@ label {
                     margin-top: 10px;
                     label{
                         color: @light_color;
+                        font-size: 14px;
                     }
                     .material_price {
                         display: inline-flex;
@@ -969,7 +979,7 @@ label {
                             color: @main_color;
                             width: 80px;
                             .font_Sitka;
-                            font-size: 16px;
+                            font-size: 14px;
                         }
                     }
     
@@ -978,7 +988,7 @@ label {
                         display: inline-flex;
     
                         .dropbtn {
-                            font-size: 16px;
+                            font-size: 14px;
                             background-color: @light_color;
                             color: @dark_color;
                             i {
@@ -994,11 +1004,8 @@ label {
                     input {
                         width: 100%;
                         transition: 0.3s;
-                        font-size: 18px;
-    
-                        &:hover {
-                            background-color: @main_color;
-                        }
+                        font-size: 14px;
+                        margin-top: 15px;
                     }
                 }
             }
