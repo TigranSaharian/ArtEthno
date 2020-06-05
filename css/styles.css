@@ -348,8 +348,10 @@ label {
   padding: 10px 0;
   width: 100%;
   align-items: center;
+  display: flex;
 }
 .sign-in-wrapper .signin-container .login-form .remember-me a {
+  font-weight: 100 !important;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   text-align: right;
@@ -358,9 +360,11 @@ label {
   right: 20px;
   text-decoration: none;
 }
+.sign-in-wrapper .signin-container .login-form .remember-me label {
+  font-weight: 100 !important;
+}
 .sign-in-wrapper .signin-container .login-form .input-style label {
-  display: flex;
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 .sign-in-wrapper .signin-container .login-form .input-style input {
   width: 100%;
@@ -376,6 +380,7 @@ label {
   color: #F9F9F9;
   text-transform: uppercase;
   transition: 0.3s;
+  font-size: calc(0.3vw + 12px);
 }
 .sign-in-wrapper .signin-container .login-form .signIn-btn:hover {
   background-color: #F5CD79;
@@ -386,6 +391,7 @@ label {
   border: 1px solid #F5CD79;
   background-color: #F9F9F9;
   transition: 0.3s;
+  font-size: calc(0.3vw + 12px);
 }
 .sign-in-wrapper .signin-container .login-form .internal-signIn-btn:hover {
   background-color: #393939;

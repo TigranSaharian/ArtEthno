@@ -395,7 +395,9 @@ label {
                 padding: 10px 0;
                 width: 100%;
                 align-items: center;
+                display: flex;
                 a{
+                    font-weight: 100 !important;
                     .font_Sitka;
                     text-align: right;
                     color: @dark_color;
@@ -403,11 +405,13 @@ label {
                     right: 20px;
                     text-decoration: none;
                 }
+                label{
+                    font-weight: 100 !important;
+                }
             }
             .input-style{
                 label{
-                    display: flex;
-                    font-weight: 100;
+                    font-weight: 100 !important;
                 }
                 input{
                     width: 100%;
@@ -424,6 +428,7 @@ label {
                 color: @light_color;
                 text-transform: uppercase;
                 transition: 0.3s;
+                font-size: calc(0.3vw + 12px);
                 &:hover{
                     background-color: @main_color;
                     color: @dark_color;
@@ -434,6 +439,7 @@ label {
                 border: 1px solid @main_color;
                 background-color: @light_color;
                 transition: 0.3s;
+                font-size: calc(0.3vw + 12px);
                 &:hover{
                     background-color: @dark_color;
                     color: @main_color;
