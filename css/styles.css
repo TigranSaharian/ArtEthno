@@ -330,15 +330,14 @@ label {
   border: 2px solid #F5CD79;
   position: fixed;
   z-index: 100;
-  top: 50%;
+  top: 50px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px 0;
+  transform: translateX(-50%);
 }
 .sign-in-wrapper .signin-container p {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.6vw + 13px);
+  font-size: calc(0.6vw + 20px);
   padding: 10px 0;
 }
 .sign-in-wrapper .signin-container .login-form {
