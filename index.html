@@ -15,6 +15,32 @@
 </head>
 
 <body>
+    <div class="sign-in-wrapper">
+        <div class="signin-container">
+            <div class="container">
+                <div class="col-12">
+                    <p>Sign in</p>
+                </div>
+                <form action="" class="login-form">
+                    <div class="input-style">
+                        <label>Email address</label>
+                        <input type="email" name="email"/> 
+                    </div>
+                    <div class="input-style">
+                        <label>Password</label>
+                        <input type="password" name="password"/> 
+                    </div>
+                    <div class="remember-me">
+                        <input type="checkbox" name="rememberMe"/>
+                        <label>Remember Me</label>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <input class="signIn-btn" type="button" value="Sign in"/>
+                    <input class="internal-signIn-btn" type="button" value="Continue with facebook"/>
+                </form>
+            </div>
+        </div>
+    </div>
     <div id="burger-menu" class="burger-menu-wrapper">
         <div class="mobile-drop-menu-contaner">
             <div> 
@@ -167,7 +193,7 @@
                     <input class="search-input" type="text" placeholder="Search" />
                     <button class="search-item" id="search-item" type="button"><i class="fas fa-search"></i></button>
                 </div>
-                <div class="icon">
+                <!-- <div class="icon">
                     <a href="#" rel="bottom-menu-item" id="like" title="Favorite items"><i
                             class="fas fa-heart"></i></a><span>|</span>
                     <a href="#" rel="bottom-menu-item" id="user" title="User page"><i
@@ -178,12 +204,12 @@
                             class="fas fa-bell"><span>14</span></i></a><span>|</span>
                     <a href="#" rel="bottom-menu-item" class="icon-count" title="Cart"><i
                             class="fas fa-shopping-cart"><span>6</span></i></a>
-                </div>
-                <!-- <div class="icon unauthorized">
-                    <a href="#" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
+                </div> -->
+                <div class="icon unauthorized">
+                    <a href="#" class="sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
                     <a href="#" title="Create account"><i class="fas fa-user-plus"></i></a><span>|</span>
                     <a href="#" title="Cart" class="icon-count"><i class="fas fa-shopping-cart"><span>6</span></i></a>
-                </div> -->
+                </div>
             </div>
             <div class="icon-wrapper">
                 <div class="mobile-search-wrapper">
@@ -206,7 +232,7 @@
                             class="fas fa-times-circle"></i></a>
                 </div>
                 <!-- <div class="icon unauthorized">
-                    <a href="#" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
+                    <a href="#" class="sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
                     <a href="#" title="Create account"><i class="fas fa-user-plus"></i></a><span>|</span>
                     <a href="#" title="Cart" class="icon-count"><i class="fas fa-shopping-cart"><span>6</span></i></a>
                 </div> -->

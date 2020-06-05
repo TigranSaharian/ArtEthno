@@ -51,6 +51,20 @@ $(".dropbtn").click(function () {
     })
 });
 
+$(function(){
+    $('.sign-in').click(function(){
+        $('.sign-in-wrapper').css('opacity', '1');
+    });
+    $(".sign-in-wrapper").click(function(e) {
+        e.preventDefault();
+        if ($(e.target).attr('class') === 'sign-in-wrapper') {
+            console.log(22);
+            $('.sign-in-wrapper').css('opacity', '0');
+        }
+    });
+});
+
+
 // moblie size burgem menu
 $(function(){
     $('#burger').click(function () {

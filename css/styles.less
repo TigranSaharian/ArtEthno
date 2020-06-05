@@ -362,12 +362,97 @@ label {
     font-size: calc(0.3vw + 10px);
 }
 
+.sign-in-wrapper{
+    opacity: 0;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: @dark_color;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        opacity: 0.9;
+    }
+    .signin-container{
+        background-color: @light_color;
+        border: 2px solid @main_color;
+        position: fixed;
+        z-index: 100;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 0;
+        p{
+            .font_Sitka;
+            font-size: calc(0.6vw + 13px);
+            padding: 10px 0;
+        }
+        .login-form{
+            width: 100%;
+            .remember-me{
+                padding: 10px 0;
+                width: 100%;
+                align-items: center;
+                a{
+                    .font_Sitka;
+                    text-align: right;
+                    color: @dark_color;
+                    position: absolute;
+                    right: 20px;
+                    text-decoration: none;
+                }
+            }
+            .input-style{
+                label{
+                    display: flex;
+                    font-weight: 100;
+                }
+                input{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            input[type="button"]{
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .signIn-btn{
+                background-color: @dark_color;
+                color: @light_color;
+                text-transform: uppercase;
+                transition: 0.3s;
+                &:hover{
+                    background-color: @main_color;
+                    color: @dark_color;
+                }
+            }
+            .internal-signIn-btn{
+                text-transform: uppercase;
+                border: 1px solid @main_color;
+                background-color: @light_color;
+                transition: 0.3s;
+                &:hover{
+                    background-color: @dark_color;
+                    color: @main_color;
+                }
+            }
+        }
+    }
+}
+
+
+
 .top-content {
     background-color: @dark_color;
     height: 45px;
     display: flex;
     align-items: center;
-
+    #user{
+        position: relative;
+    }
     .container {
         display: flex;
 

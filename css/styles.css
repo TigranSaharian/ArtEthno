@@ -311,11 +311,94 @@ label {
   padding: 5px 15px !important;
   font-size: calc(0.3vw + 10px);
 }
+.sign-in-wrapper {
+  opacity: 0;
+}
+.sign-in-wrapper::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #393939;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0.9;
+}
+.sign-in-wrapper .signin-container {
+  background-color: #F9F9F9;
+  border: 2px solid #F5CD79;
+  position: fixed;
+  z-index: 100;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 0;
+}
+.sign-in-wrapper .signin-container p {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.6vw + 13px);
+  padding: 10px 0;
+}
+.sign-in-wrapper .signin-container .login-form {
+  width: 100%;
+}
+.sign-in-wrapper .signin-container .login-form .remember-me {
+  padding: 10px 0;
+  width: 100%;
+  align-items: center;
+}
+.sign-in-wrapper .signin-container .login-form .remember-me a {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  text-align: right;
+  color: #393939;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+}
+.sign-in-wrapper .signin-container .login-form .input-style label {
+  display: flex;
+  font-weight: 100;
+}
+.sign-in-wrapper .signin-container .login-form .input-style input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.sign-in-wrapper .signin-container .login-form input[type="button"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.sign-in-wrapper .signin-container .login-form .signIn-btn {
+  background-color: #393939;
+  color: #F9F9F9;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.sign-in-wrapper .signin-container .login-form .signIn-btn:hover {
+  background-color: #F5CD79;
+  color: #393939;
+}
+.sign-in-wrapper .signin-container .login-form .internal-signIn-btn {
+  text-transform: uppercase;
+  border: 1px solid #F5CD79;
+  background-color: #F9F9F9;
+  transition: 0.3s;
+}
+.sign-in-wrapper .signin-container .login-form .internal-signIn-btn:hover {
+  background-color: #393939;
+  color: #F5CD79;
+}
 .top-content {
   background-color: #393939;
   height: 45px;
   display: flex;
   align-items: center;
+}
+.top-content #user {
+  position: relative;
 }
 .top-content .container {
   display: flex;
