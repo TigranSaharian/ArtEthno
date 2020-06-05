@@ -30,6 +30,7 @@ $(function(){
     });
 
     $(document).on('click', '.material-name', function () {
+        console.log(333)
         $(this).toggleClass("active_onclick_dark");
     });
     

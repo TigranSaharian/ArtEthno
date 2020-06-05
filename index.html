@@ -18,7 +18,7 @@
     <div id="burger-menu" class="burger-menu-wrapper">
         <div class="mobile-drop-menu-contaner">
             <div> 
-                <p class="burger-categoria-name-wrapper"><span class="burger-categoria-name">Browse Categories</span><span id="current-page-name"></span><span class="back" hidden><i class="fas fa-long-arrow-alt-left"></i> Back</span></p>
+                <p class="burger-categoria-name-wrapper"><span class="burger-categoria-name">Browse Categories</span><span id="current-page-name"></span><span class="back" hi><i class="fas fa-long-arrow-alt-left"></i> Back</span></p>
                 <button id="close-burger" class="close-burger"><i class="fas fa-times"></i></button>
                 <section class="burger-search-1">
                     <p class="search-type-tytle">Check Search type</p>
@@ -89,6 +89,30 @@
                 </section>
                 <section class="burger-search-3">
                     <div class="drop-menu-item-filter">
+                        <div class="price">
+                            <div>
+                                <label>Price</label>
+                            </div>
+                            <div class="material_price">
+                                <input type="number" min="0" name="currency" />
+                            </div>
+                            <span>-</span>
+                            <div class="material_price">
+                                <input type="number" min="0" name="currency" />
+                            </div>
+                            <div class="currency_dropdown light_dropdown">
+                                <div class="dropdown">
+                                    <button class="dropbtn"><span>USD</span><i
+                                            class="fa fa-angle-down"
+                                            aria-hidden="true"></i></button>
+                                    <div class="dropdown-content scroll">
+                                        <span href="#">AMD</span>
+                                        <span href="#">RUB</span>
+                                        <span href="#">EUR</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="material">
                             <div>
                                 <label>Materials</label>
@@ -127,30 +151,6 @@
                             </div>
                             <div class="material-name">
                                 <input type="button" name="material-name" value="Bronze" />
-                            </div>
-                        </div>
-                        <div class="price">
-                            <div>
-                                <label>Price</label>
-                            </div>
-                            <div class="material_price">
-                                <input type="number" min="0" name="currency" />
-                            </div>
-                            <span>-</span>
-                            <div class="material_price">
-                                <input type="number" min="0" name="currency" />
-                            </div>
-                            <div class="currency_dropdown light_dropdown">
-                                <div class="dropdown">
-                                    <button class="dropbtn"><span>USD</span><i
-                                            class="fa fa-angle-down"
-                                            aria-hidden="true"></i></button>
-                                    <div class="dropdown-content scroll">
-                                        <span href="#">AMD</span>
-                                        <span href="#">RUB</span>
-                                        <span href="#">EUR</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="drop-menu-search-brn"><input type="button" name="navbar_search"
