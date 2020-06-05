@@ -33,7 +33,7 @@ $(function(){
         $(this).toggleClass("active_onclick_dark");
     });
     
-    $(".checked_categoria_name").click(function () {
+    $(".categoria_name").click(function () {
         $(".drop-menu-contaner").slideToggle();
     });
 });
@@ -55,14 +55,14 @@ $(function(){
     $('#burger').click(function () {
         $("#burger-menu").find(".mobile-drop-menu-contaner").addClass("menu-active"); // TODO toggleClass changed to addClass
     });
-
+    
     $("#close-burger").click(function () {
         $(this).closest("#burger-menu").find(".mobile-drop-menu-contaner").removeClass("menu-active");
     });
-
+    
     $(".burger-sub-categoria").click(function () {
         section = $('#burger-menu').find('section');
-
+        $('.back').attr('hidden', false);
         let checked_categoria_name = $(this).find('a').text();
         buger_categ_title.text(checked_categoria_name);
 
@@ -75,7 +75,10 @@ $(function(){
     });
 
     $('.back').on('click', function (e) {
-         e.preventDefault();
+        e.preventDefault();
+        if(parseInt( $(this).attr('rel')) === 1){
+            $(this).attr('hidden', true);
+        }
         let privuse_page_index = $(this).attr('rel');
         current_page_title.text('');
         GetPrivusePage(privuse_page_index);
@@ -103,9 +106,9 @@ function SetBackBtnIndex(current_section){
 function GetPrivusePage(page_index){
     for (let index = 0; index < section.length; index++) {
         let page_name = section[index];
-        var privuse_page = $(page_name).attr('rel');
-        if(privuse_page === page_index){
-            if(parseInt(privuse_page) === 1){
+        var privuse_page_index = $(page_name).attr('rel');
+        if(privuse_page_index === page_index){
+            if(parseInt(privuse_page_index) === 1){
                 buger_categ_title.text('Browse Categories');
                 section.eq(index).removeClass(hide);
                 section.eq(index + 1).removeClass(show);
