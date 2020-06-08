@@ -445,6 +445,7 @@ label {
 .notification-container p {
   border-bottom: 1px solid #393939;
   padding: 5px 0;
+  font-size: calc(0.3vw + 10px);
 }
 .user-profile-window {
   position: relative;
