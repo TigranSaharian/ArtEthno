@@ -120,7 +120,6 @@ label {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    bottom: 10px;
     position: fixed;
     left: -100%;
     z-index: 1000;
@@ -1595,13 +1594,9 @@ label {
     .mobile-search-wrapper {
         display: none;
     }
-
-
-
     .close-search {
         display: none;
     }
-
     .image-wrapper {
         .image-items {
             span:nth-child(1) {
@@ -1643,6 +1638,9 @@ label {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    .alert-wrapper{
+        bottom: 10px;
+    }
     .btn-right {
         text-align: right;
     }
@@ -1659,6 +1657,9 @@ label {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 991.98px ) {
+    .alert-wrapper{
+        top: 10px;
+    }
     .iner_content {
         .close-search {
             right: 20px;

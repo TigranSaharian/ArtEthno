@@ -100,7 +100,6 @@ label {
   display: flex;
   align-items: center;
   border-radius: 5px;
-  bottom: 10px;
   position: fixed;
   left: -100%;
   z-index: 1000;
@@ -1420,6 +1419,9 @@ label {
   }
 }
 @media (min-width: 992px) {
+  .alert-wrapper {
+    bottom: 10px;
+  }
   .btn-right {
     text-align: right;
   }
@@ -1428,6 +1430,9 @@ label {
   }
 }
 @media (max-width: 991.98px) {
+  .alert-wrapper {
+    top: 10px;
+  }
   .iner_content .close-search {
     right: 20px;
     display: none;
