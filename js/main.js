@@ -39,6 +39,7 @@ $(function(){
     });
 });
 
+// dropdown
 $(".dropbtn").click(function () {
     let dropdown_content = $(this).closest(".dropdown").find(".dropdown-content");
     let dropdown = $(this).find('span');
@@ -51,19 +52,56 @@ $(".dropbtn").click(function () {
     })
 });
 
-$(function(){
-    $('.sign-in').click(function(){
-        $('.sign-in-wrapper').css('opacity', '1');
-    });
-    $(".sign-in-wrapper").click(function(e) {
-        e.preventDefault();
-        if ($(e.target).attr('class') === 'sign-in-wrapper') {
-            console.log(22);
-            $('.sign-in-wrapper').css('opacity', '0');
-        }
-    });
+// click sign-in
+$('.sign-in').click(function(){
+    $('.sign-in-wrapper').css('opacity', '1');
 });
 
+// click sign-up 
+$('.sign-up').click(function(){
+    $('.sign-up-wrapper').css('opacity', '1');
+});
+
+// click anywhere for removing the sign-in window
+$(".sign-in-wrapper").click(function(e) {
+    e.preventDefault();
+    if ($(e.target).attr('rel') === 'sign-in-popup') {
+        $('.sign-in-wrapper').css('opacity', '0');
+    }
+});
+
+// click anywhere for removing the sign-up window
+$(".sign-up-wrapper").click(function(e) {
+    e.preventDefault();
+    if ($(e.target).attr('rel') === 'sign-up-popup') {
+        $('.sign-up-wrapper').css('opacity', '0');
+    }
+});
+
+// click like heart
+$('.far').click(function(){
+    $(this).toggleClass('fas');
+    $('.alert-wrapper').addClass('alert-active');
+    setTimeout(() => {
+        $('.alert-wrapper').removeClass('alert-active');
+    }, 2000);
+
+});
+
+$('#user').click(function(){
+    var user_profile_window = $(this).closest('.user-profile-window').find('.user-profile-container');
+    user_profile_window.toggleClass('block');
+});
+
+$('#notification').click(function(){
+    var notification = $(this).closest('.notification-container').find('.notification-wrapper');
+    notification.toggleClass('block');
+})
+
+$("#map-button").click(function(){
+    var map = $(this).closest('.map-container').find('.map');
+    map.toggleClass('active-map');
+});
 
 // moblie size burgem menu
 $(function(){

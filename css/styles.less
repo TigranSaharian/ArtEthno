@@ -86,7 +86,10 @@ input[type="email"],
 input[type="password"],
 textarea {
     border: 1px solid @main_color;
-    padding: 8px;
+    background-color: transparent;
+    text-align: left;
+    color: @dark_color;
+    padding: 5px 10px;
     .font_Sitka;
 }
 
@@ -104,6 +107,32 @@ label {
 .navbar-toggler {
     border: none;
     padding: 0;
+}
+
+.alert-active{
+    left: 10px !important;
+}
+
+.alert-wrapper{
+    background-color: currentColor;
+    width: fit-content;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    bottom: 10px;
+    position: fixed;
+    left: -100%;
+    z-index: 1000;
+    transition: 0.3s;
+    i{
+        color: @green_color;
+        margin-right: 10px;
+    }
+    p{
+        color: @light_color;
+        margin: 0;
+    }
 }
 
 .active_onclick_dark {
@@ -207,7 +236,7 @@ label {
     }
 
     .item-info {
-        padding: 0 8px;
+        padding: 0 10px;
         position: relative;
 
         h5 {
@@ -364,6 +393,13 @@ label {
 
 .sign-in-wrapper{
     opacity: 0;
+}
+
+.sign-up-wrapper{
+    opacity: 0;
+}
+
+.account-popup{
     &::after{
         content: '';
         width: 100%;
@@ -448,7 +484,102 @@ label {
     }
 }
 
+.block{
+    display: block !important;
+}
 
+.notification-container{
+    position: relative;
+    .notification-wrapper{
+        display: none;
+        position: absolute;
+        bottom: -7px;
+        right: 0;
+        transform: translateY(100%);
+        border: 2px solid @main_color;
+        background-color: @light_color;
+        padding: 10px 15px;
+        width: 350px;
+    }
+    p{
+        border-bottom: 1px solid @dark_color;
+        padding: 5px 0;
+    }
+}
+
+.user-profile-window{
+    position: relative;
+    .user-profile-container{
+        display: none;
+        position: absolute;
+        bottom: -7px;
+        right: 0;
+        transform: translateY(100%);
+        border: 2px solid @main_color;
+        background-color: @light_color;
+        padding: 10px 15px;
+        width: 210px;
+        .user-profile{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            .user-profile-image-wrapper{
+                width: 45px;
+                height: 45px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 50%;
+                margin-right: 10px;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 60px;
+                    height: auto;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .profile-info{
+                h4{
+                    font-size: calc(0.3vw + 11px);
+                    color: @dark_color;
+                    padding: 0;
+                }
+                a{
+                    width: 100%;
+                    margin: 0 auto;
+                    color: @main_color;
+                    text-align: left;
+                    font-size: calc(0.3vw + 10px);
+                    .font_Sitka            
+                }
+            }
+        }
+        .user-profile-setting-wrapper{
+            a{
+                color: @dark_color;
+                display: block;
+                margin: 0;
+                padding: 2px 0;
+                .font_Sitka;
+                font-size: calc(0.4vw + 10px);
+                display: flex;
+                align-items: center;
+                text-align: left;
+                &:hover{
+                    color: @dark_color;
+                }
+                i{
+                    color: @dark_color;
+                    margin-right: 10px;
+                }
+            }
+        }
+        hr{
+            background-color: @main_color;
+        }
+     }
+}
 
 .top-content {
     background-color: @dark_color;
@@ -479,6 +610,7 @@ label {
             transform: translateY(-50%);
             display: flex;
             align-items: center;
+            z-index: 10;
 
             i {
                 color: @light_color;
@@ -543,7 +675,7 @@ label {
             }
         }
 
-        button {
+        .search-item {
             position: absolute;
             border: none;
             height: 100%;
@@ -593,11 +725,11 @@ label {
         background-color: transparent;
         border: 1px solid @main_color;
         text-align: left;
-        padding: 5px 10px;
+        padding: 2px 5px;
         color: @dark_color;
         position: relative;
         display: inline-block;
-        width: 80px;
+        width: calc(3vw + 30px);
         .font_Sitka;
     }
 
@@ -779,14 +911,9 @@ label {
                         display: inline-flex;
     
                         input {
-                            background-color: transparent;
-                            border: 1px solid @main_color;
-                            text-align: left;
-                            padding: 5px 10px;
-                            color: @dark_color;
-                            width: 80px;
+                            width: calc(3vw + 20px);
+                            padding: 2px 5px;
                             .font_Sitka;
-                            font-size: 16px;
                         }
                     }
     
@@ -863,6 +990,37 @@ label {
             }
         }
     }
+    }
+}
+
+.active-map{
+    height: 0px !important;
+}
+
+.map-container{
+    .map{
+        transition: 0.3s;
+        width: 100%;
+        height: 400px;
+    }
+    .map-button{
+        position: relative;
+        button {
+            top: 20px;
+            left: 0;
+            position: absolute;
+            .font_Sitka;
+            background-color: @main_color;
+            padding: 5px 20px;
+            border: none;
+            font-size: 17px;
+            transition: 0.3s;
+    
+            &:hover {
+                background-color: @dark_color;
+                color: @main_color;
+            }
+        }
     }
 }
 
@@ -1081,6 +1239,7 @@ label {
     
                         .dropbtn {
                             font-size: 14px;
+                            padding: 3px 5px;
                             background-color: @light_color;
                             color: @dark_color;
                             i {
@@ -1142,7 +1301,7 @@ label {
 }
 
 .section {
-    padding: 40px 0;
+    padding: 60px 0;
 
     .section-wrapper {
         .section-title h1 {
@@ -1407,6 +1566,7 @@ label {
         .search {
             input {
                 width: calc(20vw + 100px);
+                background-color: @light_color;
             }
 
             button {
@@ -1416,6 +1576,7 @@ label {
                 transform: translateY(-50%);
                 right: 0;
                 padding: 0;
+                transition: 0.3s;
 
                 &:hover {
                     background-color: @main_color;
