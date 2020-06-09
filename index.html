@@ -229,7 +229,7 @@
                     <button class="search-item" id="search-item" type="button"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="icon">
-                    <a href="#" rel="bottom-menu-item" id="like" title="Favorite items"><i
+                    <a class="buttom-menu-icon" href="#" rel="bottom-menu-item" id="like" title="Favorite items"><i
                             class="fas fa-heart"></i></a><span>|</span>
                     <div class="user-popup-window">
                         <a href="#" rel="bottom-menu-item" id="user" title="User page"><i
@@ -247,28 +247,29 @@
                             <hr />
                             <div class="user-popup-setting">
                                 <a href="#"><i class="fas fa-envelope"></i> Message</a>
-                                <a href="#"><i class="fas fa-shopping-cart"></i> Purchases</a>
                                 <a href="#"><i class="fas fa-cog"></i> Account Settings</a>
                             </div>
                         </div>
                     </div>
-                    <a href="#" rel="bottom-menu-item" id="store" title="Store"><i
+                    <a class="buttom-menu-icon" href="#" rel="bottom-menu-item" id="store" title="Store"><i
                             class="fas fa-store"></i></a><span>|</span>
                     <div class="notification-container">
-                        <a href="#" rel="bottom-menu-item" id="notification" class="icon-count" title="User page"><i
-                            class="fas fa-bell"><span>14</span></i></a><span>|</span>
+                        <a href="#" rel="bottom-menu-item" id="notification" class="buttom-menu-icon icon-count" title="User page"><i
+                                class="fas fa-bell"><span>14</span></i></a><span>|</span>
                         <div class="notification-wrapper">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos nesciunt</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos nesciunt</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos
+                                nesciunt</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos
+                                nesciunt</p>
                         </div>
                     </div>
-                    <a href="#" rel="bottom-menu-item" class="icon-count" title="Cart"><i
+                    <a href="#" rel="bottom-menu-item" class="buttom-menu-icon icon-count" title="Cart"><i
                             class="fas fa-shopping-cart"><span>6</span></i></a>
                 </div>
                 <!-- <div class="icon unauthorized">
-                    <a href="#" class="sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
-                    <a href="#" class="sign-up" title="Create account"><i class="fas fa-user-plus"></i></a><span>|</span>
-                    <a href="#" title="Cart" class="icon-count cart"><i class="fas fa-shopping-cart"><span>6</span></i></a>
+                    <a href="#" class="buttom-menu-icon sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
+                    <a href="#" class="buttom-menu-icon sign-up" title="Create account"><i class="fas fa-user-plus"></i></a><span>|</span>
+                    <a href="#" title="Cart" class="buttom-menu-icon icon-count cart"><i class="fas fa-shopping-cart"><span>6</span></i></a>
                 </div> -->
             </div>
             <div class="icon-wrapper">
@@ -278,24 +279,52 @@
                     </div>
                 </div>
                 <div class="icon mobile-icon">
-                    <a href="#" class="mobile-search-icon" id="mobile-search-item" title="Search box"><i
+                    <a class="mobile-search-icon buttom-menu-icon" id="mobile-search-item" title="Search box"><i
                             class="fas fa-search"></i></a>
-                    <a href="#" rel="bottom-menu-item" id="like-burger" title="Favorite items"><i class="fas fa-heart"></i></a>
-                    <a href="#" rel="bottom-menu-item" id="user-burger" title="User page"><i
-                            class="fas fa-user-circle"></i></a>
-                    <a href="#" rel="bottom-menu-item" id="store-burger" title="Store"><i class="fas fa-store"></i></a>
-                    <a href="#" rel="bottom-menu-item" class="icon-count" title="User page"><i
-                            class="fas fa-bell"><span>14</span></i></a>
-                    <a href="#" rel="bottom-menu-item" class="icon-count" title="Cart"><i
+                    <a class="buttom-menu-icon" rel="bottom-menu-item" id="like-burger" title="Favorite items"><i class="fas fa-heart"></i></a>
+                    <div id="burger-popup-window" class="user-popup-window">
+                        <div class="user-popup-container">
+                            <div class="user-popup">
+                                <div class="user-popup-image">
+                                    <img src="./assets/Images/item1.png">
+                                </div>
+                                <div class="user-popup-info">
+                                    <h4>Jhone Smith</h4>
+                                    <a href="./profile_favorite_shop.html" class="view-profile">View Profile</a>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="user-popup-setting">
+                                <a href="#"><i class="fas fa-envelope"></i> Message</a>
+                                <a href="#"><i class="fas fa-cog"></i> Account Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="buttom-menu-icon" rel="bottom-menu-item" id="user-burger" title="User page"><i class="fas fa-user-circle"></i>
+
+                    </a>
+                    <a class="buttom-menu-icon" rel="bottom-menu-item" id="store-burger" title="Store"><i class="fas fa-store"></i></a>
+                    <div id="burger-notification" class="notification-container">
+                        <div class="notification-wrapper">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos
+                                nesciunt</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos
+                                nesciunt</p>
+                        </div>
+                    </div>
+                    <a rel="bottom-menu-item" id="notification-burger" class="buttom-menu-icon icon-count" title="User page"><i
+                            class="fas fa-bell"><span>14</span></i>
+                    </a>
+                    <a href="#" rel="bottom-menu-item" class="buttom-menu-icon icon-count" title="Cart"><i
                             class="fas fa-shopping-cart"><span>6</span></i></a>
-                    <a href="#" id="close-mobile-search" title="Close search box"><i
+                    <a class="buttom-menu-icon" href="#" id="close-mobile-search" title="Close search box"><i
                             class="fas fa-times-circle"></i></a>
                 </div>
                 <!-- <div class="icon unauthorized">
-                    <a href="#" class="sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
-                    <a href="#" class="sign-up" title="Create account"><i
+                    <a href="#" class="buttom-menu-icon sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
+                    <a href="#" class="buttom-menu-icon sign-up" title="Create account"><i
                             class="fas fa-user-plus"></i></a><span>|</span>
-                    <a href="#" title="Cart" class="icon-count"><i class="fas fa-shopping-cart"><span>6</span></i></a>
+                    <a href="#" title="Cart" class="buttom-menu-icon icon-count"><i class="fas fa-shopping-cart"><span>6</span></i></a>
                 </div> -->
             </div>
         </div>
@@ -303,8 +332,8 @@
     <header class="header">
         <div class="container iner_header">
             <div class="logo">
-                <a href="https://tigransaharian.github.io/ArtEthno/"><img src="./assets/logo/logo_yellow_green.png"></a>
-                <h1><a href="https://tigransaharian.github.io/ArtEthno/">Art Ethno</a></h1>
+                <a href="./index.html"><img src="./assets/logo/logo_yellow_green.png"></a>
+                <h1><a href="./index.html">Art Ethno</a></h1>
             </div>
             <div class="categories">
                 <button class="burger" id="burger"><i class="fas fa-bars"></i></button>
@@ -545,7 +574,7 @@
         </div>
     </header>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200861.66934672862!2d44.414246897393184!3d40.161933035852925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406aa2dab8fc8b5b%3A0x3d1479ae87da526a!2sYerevan%2C%20Armenia!5e0!3m2!1sen!2s!4v1591681249503!5m2!1sen!2s" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200861.66934672862!2d44.414246897393184!3d40.161933035852925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406aa2dab8fc8b5b%3A0x3d1479ae87da526a!2sYerevan%2C%20Armenia!5e0!3m2!1sen!2s!4v1591681249503!5m2!1sen!2s" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
         <div class="container">
             <div class="row">
                 <div class="col-12">

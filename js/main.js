@@ -93,10 +93,24 @@ $('#user').click(function(){
     user_profile_window.toggleClass('block');
 });
 
+$('#user-burger').click(function(){
+    var user_profile_window = $(this).closest('.mobile-icon').find('.user-popup-container');
+    user_profile_window.toggleClass('block');
+});
+
 $('#notification').click(function(){
     var notification = $(this).closest('.notification-container').find('.notification-wrapper');
     notification.toggleClass('block');
 })
+
+$('#notification-burger').click(function(){
+    var notification = $(this).closest('.mobile-icon').find('.notification-wrapper');
+    notification.toggleClass('block');
+});
+
+$('.buttom-menu-icon').click(function(){
+    $(this).toggleClass('bottom-menu-active');
+});
 
 $("#map-button").click(function(){
     var map = $(this).closest('.map-container').find('iframe');

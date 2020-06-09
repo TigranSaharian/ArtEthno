@@ -439,18 +439,16 @@ label {
 .notification-container .notification-wrapper {
   display: none;
   position: absolute;
-  bottom: -7px;
-  right: 0;
-  transform: translateY(100%);
   border: 2px solid #F5CD79;
   background-color: #F9F9F9;
   padding: 10px 15px;
-  width: 350px;
 }
-.notification-container p {
+.notification-container .notification-wrapper p {
   border-bottom: 1px solid #393939;
   padding: 5px 0;
   font-size: calc(0.3vw + 10px);
+  color: #393939;
+  text-align: left;
 }
 .user-popup-window {
   position: relative;
@@ -458,9 +456,6 @@ label {
 .user-popup-window .user-popup-container {
   display: none;
   position: absolute;
-  bottom: -7px;
-  right: 0;
-  transform: translateY(100%);
   border: 2px solid #F5CD79;
   background-color: #F9F9F9;
   padding: 10px 15px;
@@ -488,7 +483,7 @@ label {
   transform: translate(-50%, -50%);
 }
 .user-popup-window .user-popup-container .user-popup .user-popup-info h4 {
-  font-size: calc(0.4vw + 11px);
+  font-size: calc(0.4vw + 13px);
   color: #393939;
   padding: 0;
 }
@@ -497,7 +492,7 @@ label {
   margin: 0 auto;
   color: #F5CD79;
   text-align: left;
-  font-size: calc(0.4vw + 10px);
+  font-size: calc(0.4vw + 12px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
@@ -505,7 +500,7 @@ label {
   color: #393939;
   display: block;
   margin: 0;
-  padding: 2px 0;
+  padding: 2px 0 !important;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   font-size: calc(0.4vw + 10px);
@@ -525,7 +520,6 @@ label {
 }
 .top-content {
   background-color: #393939;
-  height: 45px;
   display: flex;
   align-items: center;
 }
@@ -1260,6 +1254,7 @@ label {
 .user-profile .search {
   position: relative;
   margin-top: 15px;
+  line-height: 0;
 }
 .user-profile .search .search-input {
   background-color: #F9F9F9;
@@ -1267,12 +1262,12 @@ label {
 }
 .user-profile .search button {
   position: absolute;
-  right: 0;
+  right: 5px;
   border-radius: 30px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  top: 0;
+  padding: 8px 15px;
+}
+.user-profile .search button i {
+  font-size: 10px;
 }
 .shop-wrapper .shop-cover-img {
   overflow: hidden;
@@ -1499,6 +1494,24 @@ label {
   }
 }
 @media (min-width: 992px) {
+  .top-content {
+    height: 45px;
+    padding: 10px 0;
+  }
+  .top-content .notification-wrapper {
+    bottom: -15px;
+    right: 0;
+    transform: translateY(100%);
+    width: 350px;
+  }
+  .top-content .user-popup-window {
+    position: relative;
+  }
+  .top-content .user-popup-window .user-popup-container {
+    bottom: -15px;
+    right: 0;
+    transform: translateY(100%);
+  }
   .alert-wrapper {
     bottom: 10px;
   }
@@ -1510,6 +1523,23 @@ label {
   }
 }
 @media (max-width: 991.98px) {
+  .notification-container {
+    position: initial;
+  }
+  .notification-container .notification-wrapper {
+    left: 50%;
+    top: calc(0% - 5px);
+    transform: translate(-50%, -100%);
+    width: calc(100% - 30px);
+  }
+  .user-popup-window {
+    position: initial;
+  }
+  .user-popup-window .user-popup-container {
+    left: 50%;
+    top: calc(0% - 5px);
+    transform: translate(-50%, -100%);
+  }
   .alert-wrapper {
     top: 10px;
   }
@@ -1532,6 +1562,9 @@ label {
     top: 10px;
     right: 0;
   }
+  .bottom-menu-active {
+    background-color: #575d64;
+  }
   .top-content {
     position: fixed;
     bottom: 0;
@@ -1540,33 +1573,31 @@ label {
     height: 55px;
   }
   .top-content .icon-wrapper .icon-count span:first-child {
-    top: -5px !important;
+    top: 7px !important;
   }
   .top-content .icon-wrapper .icon {
     justify-content: center;
     width: 100%;
     right: 0 !important;
   }
-  .top-content .icon-wrapper .icon a {
+  .top-content .icon-wrapper .icon .buttom-menu-icon {
     flex: 1;
+    margin: 0;
     text-align: center;
+    padding: 15px;
   }
-  .top-content .icon-wrapper .icon a i {
+  .top-content .icon-wrapper .icon .buttom-menu-icon i {
     font-size: calc(1vw + 14px);
   }
   .top-content .icon-wrapper .icon .mobile-search-icon {
     position: relative;
     left: 0;
   }
-  .top-content .icon-wrapper .icon .mobile-search-icon i {
-    padding: 6px;
-    border-radius: 50%;
-  }
   .top-content .icon-wrapper .icon #close-mobile-search {
     position: absolute;
     transition: 0.3s;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
     right: -50%;
   }
   .top-content .icon-wrapper .mobile-search-wrapper {
@@ -1579,6 +1610,7 @@ label {
     position: absolute;
     visibility: hidden;
     transition: 0.3s;
+    background-color: #F9F9F9;
     z-index: 100;
     top: 50%;
     transform: translateY(-50%);

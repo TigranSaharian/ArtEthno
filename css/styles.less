@@ -6,6 +6,7 @@
 @light_color: #F9F9F9;
 @white_color: #ffffff;
 @green_color: #2DB53F;
+@menu_active__color: #575d64;
 
 .font_Segoe {
     font-family: 'Segoe UI';
@@ -495,18 +496,16 @@ label {
     .notification-wrapper{
         display: none;
         position: absolute;
-        bottom: -7px;
-        right: 0;
-        transform: translateY(100%);
         border: 2px solid @main_color;
         background-color: @light_color;
         padding: 10px 15px;
-        width: 350px;
-    }
-    p{
-        border-bottom: 1px solid @dark_color;
-        padding: 5px 0;
-        font-size: calc(0.3vw + 10px);
+        p{
+            border-bottom: 1px solid @dark_color;
+            padding: 5px 0;
+            font-size: calc(0.3vw + 10px);
+            color: @dark_color;
+            text-align: left;
+        }
     }
 }
 
@@ -515,9 +514,6 @@ label {
     .user-popup-container{
         display: none;
         position: absolute;
-        bottom: -7px;
-        right: 0;
-        transform: translateY(100%);
         border: 2px solid @main_color;
         background-color: @light_color;
         padding: 10px 15px;
@@ -544,7 +540,7 @@ label {
             }
             .user-popup-info{
                 h4{
-                    font-size: calc(0.4vw + 11px);
+                    font-size: calc(0.4vw + 13px);
                     color: @dark_color;
                     padding: 0;
                 }
@@ -553,7 +549,7 @@ label {
                     margin: 0 auto;
                     color: @main_color;
                     text-align: left;
-                    font-size: calc(0.4vw + 10px);
+                    font-size: calc(0.4vw + 12px);
                     .font_Sitka            
                 }
             }
@@ -563,7 +559,7 @@ label {
                 color: @dark_color;
                 display: block;
                 margin: 0;
-                padding: 2px 0;
+                padding: 2px 0 !important;
                 .font_Sitka;
                 font-size: calc(0.4vw + 10px);
                 display: flex;
@@ -586,7 +582,6 @@ label {
 
 .top-content {
     background-color: @dark_color;
-    height: 45px;
     display: flex;
     align-items: center;
     #user{
@@ -1416,18 +1411,19 @@ label {
     .search{
         position: relative;
         margin-top: 15px;
+        line-height: 0;
         .search-input{
             background-color: @light_color;
             width: 100%;
         }
         button{
             position: absolute;
-            right: 0;
+            right: 5px;
             border-radius: 30px;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            top: 0;
+            padding: 8px 15px;
+            i{
+                font-size: 10px;
+            }
         }
     }
 }
@@ -1723,6 +1719,24 @@ label {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    .top-content{
+        height: 45px;
+        padding: 10px 0;
+        .notification-wrapper{
+            bottom: -15px;
+            right: 0;
+            transform: translateY(100%);
+            width: 350px;
+        }
+        .user-popup-window{
+            position: relative;
+            .user-popup-container{
+                bottom: -15px;
+                right: 0;
+                transform: translateY(100%);
+             }
+        }
+    }
     .alert-wrapper{
         bottom: 10px;
     }
@@ -1742,6 +1756,23 @@ label {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 991.98px ) {
+    .notification-container{
+        position: initial;
+        .notification-wrapper{
+            left: 50%;
+            top: calc(0% - 5px);
+            transform: translate(-50%, -100%);
+            width: calc(100% - 30px);
+        }
+    }
+    .user-popup-window{
+        position: initial;
+        .user-popup-container{
+            left: 50%;
+            top: calc(0% - 5px);
+            transform: translate(-50%, -100%);
+         }
+    }
     .alert-wrapper{
         top: 10px;
     }
@@ -1772,6 +1803,10 @@ label {
         }
     }
 
+    .bottom-menu-active{
+        background-color: @menu_active__color;
+    }
+
     .top-content {
         position: fixed;
         bottom: 0;
@@ -1780,37 +1815,32 @@ label {
         height: 55px;
         .icon-wrapper{
             .icon-count span:first-child{
-                top: -5px !important;
+                top: 7px !important;
             }
             .icon {
                 justify-content: center;
                 width: 100%;
                 right: 0 !important;
-                
-                a {
+                .buttom-menu-icon {
                     flex: 1;
+                    margin: 0;
                     text-align: center;
-                    
+                    padding: 15px;
                     i {
                         font-size: calc(1vw + 14px);
                     }
                 }
                 
-                
                 .mobile-search-icon{
                     position: relative;
                     left: 0;
-                    i {
-                       padding: 6px;
-                       border-radius: 50%;
-                   }
                 }
                 
                 #close-mobile-search {
                     position: absolute;
                     transition: 0.3s;
                     top: 50%;
-                    transform: translateY(-40%);
+                    transform: translateY(-50%);
                     right: -50%;
                 }
             }
@@ -1824,6 +1854,7 @@ label {
                     position: absolute;
                     visibility: hidden;
                     transition: 0.3s;
+                    background-color: @light_color;
                     z-index: 100;
                     top: 50%;
                     transform: translateY(-50%);
