@@ -72,7 +72,8 @@ input[type="button"] {
         border: none;
         font-size: 17px;
         transition: 0.3s;
-
+        cursor: pointer;
+        text-transform: capitalize;
         &:hover {
             background-color: @dark_color;
             color: @main_color;
@@ -176,7 +177,7 @@ label {
 }
 
 .shop-stars {
-    font-size: calc(0.3vw + 9px);
+    font-size: calc(0.2vw + 9px);
     line-height: 0;
 
     i {
@@ -241,7 +242,7 @@ label {
         h5 {
             .font_Sitka;
             padding-top: 10px;
-            font-size: calc(0.4vw + 12px);
+            font-size: calc(0.4vw + 10px);
             cursor: pointer;
         }
 
@@ -263,7 +264,7 @@ label {
 
         h6 {
             .font_Segoe;
-            font-size: calc(0.4vw + 10px);
+            font-size: calc(0.3vw + 9px);
             cursor: pointer;
         }
 
@@ -399,6 +400,7 @@ label {
 }
 
 .account-popup{
+    opacity: 1;
     &::after{
         content: '';
         width: 100%;
@@ -410,74 +412,75 @@ label {
         z-index: 99;
         opacity: 0.9;
     }
-    .signin-container{
-        background-color: @light_color;
-        border: 2px solid @main_color;
-        position: fixed;
-        z-index: 100;
-        top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        p{
-            .font_Sitka;
-            font-size: calc(0.6vw + 20px);
+}
+
+.signin-container{
+    background-color: @light_color;
+    border: 2px solid @main_color;
+    position: fixed;
+    z-index: 100;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    p{
+        .font_Sitka;
+        font-size: calc(0.6vw + 20px);
+        padding: 10px 0;
+    }
+    .login-form{
+        width: 100%;
+        .remember-me{
             padding: 10px 0;
-        }
-        .login-form{
             width: 100%;
-            .remember-me{
-                padding: 10px 0;
-                width: 100%;
-                align-items: center;
-                display: flex;
-                a{
-                    font-weight: 100 !important;
-                    .font_Sitka;
-                    text-align: right;
-                    color: @dark_color;
-                    position: absolute;
-                    right: 20px;
-                    text-decoration: none;
-                }
-                label{
-                    font-weight: 100 !important;
-                }
+            align-items: center;
+            display: flex;
+            a{
+                font-weight: 100 !important;
+                .font_Sitka;
+                text-align: right;
+                color: @dark_color;
+                position: absolute;
+                right: 20px;
+                text-decoration: none;
             }
-            .input-style{
-                label{
-                    font-weight: 100 !important;
-                }
-                input{
-                    width: 100%;
-                    margin-bottom: 10px;
-                }
+            label{
+                font-weight: 100 !important;
             }
-            input[type="button"]{
+        }
+        .input-style{
+            label{
+                font-weight: 100 !important;
+            }
+            input{
                 width: 100%;
                 margin-bottom: 10px;
-                padding: 10px;
             }
-            .signIn-btn{
+        }
+        input[type="button"]{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .signIn-btn{
+            background-color: @dark_color;
+            color: @light_color;
+            text-transform: uppercase;
+            transition: 0.3s;
+            font-size: calc(0.3vw + 12px);
+            &:hover{
+                background-color: @main_color;
+                color: @dark_color;
+            }
+        }
+        .internal-signIn-btn{
+            text-transform: uppercase;
+            border: 1px solid @main_color;
+            background-color: @light_color;
+            transition: 0.3s;
+            font-size: calc(0.3vw + 12px);
+            &:hover{
                 background-color: @dark_color;
-                color: @light_color;
-                text-transform: uppercase;
-                transition: 0.3s;
-                font-size: calc(0.3vw + 12px);
-                &:hover{
-                    background-color: @main_color;
-                    color: @dark_color;
-                }
-            }
-            .internal-signIn-btn{
-                text-transform: uppercase;
-                border: 1px solid @main_color;
-                background-color: @light_color;
-                transition: 0.3s;
-                font-size: calc(0.3vw + 12px);
-                &:hover{
-                    background-color: @dark_color;
-                    color: @main_color;
-                }
+                color: @main_color;
             }
         }
     }
@@ -507,9 +510,9 @@ label {
     }
 }
 
-.user-profile-window{
+.user-popup-window{
     position: relative;
-    .user-profile-container{
+    .user-popup-container{
         display: none;
         position: absolute;
         bottom: -7px;
@@ -518,18 +521,18 @@ label {
         border: 2px solid @main_color;
         background-color: @light_color;
         padding: 10px 15px;
-        width: 210px;
-        .user-profile{
+        width: 270px;
+        .user-popup{
             display: flex;
             align-items: center;
             width: max-content;
-            .user-profile-image-wrapper{
+            .user-popup-image{
                 width: 45px;
                 height: 45px;
                 overflow: hidden;
                 position: relative;
                 border-radius: 50%;
-                margin-right: 10px;
+                margin-right: 20px;
                 img{
                     position: absolute;
                     top: 50%;
@@ -539,9 +542,9 @@ label {
                     transform: translate(-50%,-50%);
                 }
             }
-            .profile-info{
+            .user-popup-info{
                 h4{
-                    font-size: calc(0.3vw + 11px);
+                    font-size: calc(0.4vw + 11px);
                     color: @dark_color;
                     padding: 0;
                 }
@@ -550,12 +553,12 @@ label {
                     margin: 0 auto;
                     color: @main_color;
                     text-align: left;
-                    font-size: calc(0.3vw + 10px);
+                    font-size: calc(0.4vw + 10px);
                     .font_Sitka            
                 }
             }
         }
-        .user-profile-setting-wrapper{
+        .user-popup-setting{
             a{
                 color: @dark_color;
                 display: block;
@@ -998,10 +1001,10 @@ label {
 }
 
 .map-container{
-    .map{
+    iframe{
+        width: 100% !important;
         transition: 0.3s;
-        width: 100%;
-        height: 400px;
+        height: 300px;
     }
     .map-button{
         position: relative;
@@ -1348,6 +1351,87 @@ label {
         }
     }
 }
+
+.user-profile{
+    .user-profile-container{
+        .user-profile{
+            display: flex;
+            align-items: center;
+            .user-profile-image-wrapper{
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 50%;
+                margin-right: 25px;
+                border: 1px solid @main_color;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 130px;
+                    height: auto;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .profile-info{
+                text-align: left;
+    
+                h4{
+                    font-size: calc(0.4vw + 13px);
+                    color: @dark_color;
+                    padding: 0;
+                    text-transform: uppercase;
+                }
+                .profile-follower{
+                    display: block;
+                    margin: 5px 0 10px 0;
+                    a{
+                        color: @dark_color;
+                        font-size: calc(0.3vw + 10px);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .inline-buttons{
+            margin-top: 20px;
+            button{
+                margin-right: 15px;
+                background-color: transparent;
+                border: 1px solid @main_color;
+                transition: 0.3s;
+                width: 100%;
+                &:hover{
+                    background-color: @dark_color;
+                    color: @light_color;
+                    border: none;
+                }
+                span{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .search{
+        position: relative;
+        margin-top: 15px;
+        .search-input{
+            background-color: @light_color;
+            width: 100%;
+        }
+        button{
+            position: absolute;
+            right: 0;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            top: 0;
+        }
+    }
+}
+
 
 .shop-wrapper {
     .shop-cover-img {

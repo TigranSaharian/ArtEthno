@@ -58,6 +58,8 @@ input[type="button"] {
   border: none;
   font-size: 17px;
   transition: 0.3s;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 .section button:hover {
   background-color: #393939;
@@ -147,7 +149,7 @@ label {
   color: #F5CD79;
 }
 .shop-stars {
-  font-size: calc(0.3vw + 9px);
+  font-size: calc(0.2vw + 9px);
   line-height: 0;
 }
 .shop-stars i {
@@ -203,7 +205,7 @@ label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   padding-top: 10px;
-  font-size: calc(0.4vw + 12px);
+  font-size: calc(0.4vw + 10px);
   cursor: pointer;
 }
 .item-wrapper .item-info p {
@@ -223,7 +225,7 @@ label {
 .item-wrapper .item-info h6 {
   font-family: 'Segoe UI';
   font-weight: 200;
-  font-size: calc(0.4vw + 10px);
+  font-size: calc(0.3vw + 9px);
   cursor: pointer;
 }
 .item-wrapper .item-info .item-shipping-type {
@@ -343,6 +345,9 @@ label {
 .sign-up-wrapper {
   opacity: 0;
 }
+.account-popup {
+  opacity: 1;
+}
 .account-popup::after {
   content: '';
   width: 100%;
@@ -354,7 +359,7 @@ label {
   z-index: 99;
   opacity: 0.9;
 }
-.account-popup .signin-container {
+.signin-container {
   background-color: #F9F9F9;
   border: 2px solid #F5CD79;
   position: fixed;
@@ -363,22 +368,22 @@ label {
   left: 50%;
   transform: translateX(-50%);
 }
-.account-popup .signin-container p {
+.signin-container p {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   font-size: calc(0.6vw + 20px);
   padding: 10px 0;
 }
-.account-popup .signin-container .login-form {
+.signin-container .login-form {
   width: 100%;
 }
-.account-popup .signin-container .login-form .remember-me {
+.signin-container .login-form .remember-me {
   padding: 10px 0;
   width: 100%;
   align-items: center;
   display: flex;
 }
-.account-popup .signin-container .login-form .remember-me a {
+.signin-container .login-form .remember-me a {
   font-weight: 100 !important;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
@@ -388,40 +393,40 @@ label {
   right: 20px;
   text-decoration: none;
 }
-.account-popup .signin-container .login-form .remember-me label {
+.signin-container .login-form .remember-me label {
   font-weight: 100 !important;
 }
-.account-popup .signin-container .login-form .input-style label {
+.signin-container .login-form .input-style label {
   font-weight: 100 !important;
 }
-.account-popup .signin-container .login-form .input-style input {
+.signin-container .login-form .input-style input {
   width: 100%;
   margin-bottom: 10px;
 }
-.account-popup .signin-container .login-form input[type="button"] {
+.signin-container .login-form input[type="button"] {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
 }
-.account-popup .signin-container .login-form .signIn-btn {
+.signin-container .login-form .signIn-btn {
   background-color: #393939;
   color: #F9F9F9;
   text-transform: uppercase;
   transition: 0.3s;
   font-size: calc(0.3vw + 12px);
 }
-.account-popup .signin-container .login-form .signIn-btn:hover {
+.signin-container .login-form .signIn-btn:hover {
   background-color: #F5CD79;
   color: #393939;
 }
-.account-popup .signin-container .login-form .internal-signIn-btn {
+.signin-container .login-form .internal-signIn-btn {
   text-transform: uppercase;
   border: 1px solid #F5CD79;
   background-color: #F9F9F9;
   transition: 0.3s;
   font-size: calc(0.3vw + 12px);
 }
-.account-popup .signin-container .login-form .internal-signIn-btn:hover {
+.signin-container .login-form .internal-signIn-btn:hover {
   background-color: #393939;
   color: #F5CD79;
 }
@@ -447,10 +452,10 @@ label {
   padding: 5px 0;
   font-size: calc(0.3vw + 10px);
 }
-.user-profile-window {
+.user-popup-window {
   position: relative;
 }
-.user-profile-window .user-profile-container {
+.user-popup-window .user-popup-container {
   display: none;
   position: absolute;
   bottom: -7px;
@@ -459,22 +464,22 @@ label {
   border: 2px solid #F5CD79;
   background-color: #F9F9F9;
   padding: 10px 15px;
-  width: 210px;
+  width: 270px;
 }
-.user-profile-window .user-profile-container .user-profile {
+.user-popup-window .user-popup-container .user-popup {
   display: flex;
   align-items: center;
   width: max-content;
 }
-.user-profile-window .user-profile-container .user-profile .user-profile-image-wrapper {
+.user-popup-window .user-popup-container .user-popup .user-popup-image {
   width: 45px;
   height: 45px;
   overflow: hidden;
   position: relative;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 20px;
 }
-.user-profile-window .user-profile-container .user-profile .user-profile-image-wrapper img {
+.user-popup-window .user-popup-container .user-popup .user-popup-image img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -482,21 +487,21 @@ label {
   height: auto;
   transform: translate(-50%, -50%);
 }
-.user-profile-window .user-profile-container .user-profile .profile-info h4 {
-  font-size: calc(0.3vw + 11px);
+.user-popup-window .user-popup-container .user-popup .user-popup-info h4 {
+  font-size: calc(0.4vw + 11px);
   color: #393939;
   padding: 0;
 }
-.user-profile-window .user-profile-container .user-profile .profile-info a {
+.user-popup-window .user-popup-container .user-popup .user-popup-info a {
   width: 100%;
   margin: 0 auto;
   color: #F5CD79;
   text-align: left;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.4vw + 10px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
-.user-profile-window .user-profile-container .user-profile-setting-wrapper a {
+.user-popup-window .user-popup-container .user-popup-setting a {
   color: #393939;
   display: block;
   margin: 0;
@@ -508,14 +513,14 @@ label {
   align-items: center;
   text-align: left;
 }
-.user-profile-window .user-profile-container .user-profile-setting-wrapper a:hover {
+.user-popup-window .user-popup-container .user-popup-setting a:hover {
   color: #393939;
 }
-.user-profile-window .user-profile-container .user-profile-setting-wrapper a i {
+.user-popup-window .user-popup-container .user-popup-setting a i {
   color: #393939;
   margin-right: 10px;
 }
-.user-profile-window .user-profile-container hr {
+.user-popup-window .user-popup-container hr {
   background-color: #F5CD79;
 }
 .top-content {
@@ -871,10 +876,10 @@ label {
 .active-map {
   height: 0px !important;
 }
-.map-container .map {
+.map-container iframe {
+  width: 100% !important;
   transition: 0.3s;
-  width: 100%;
-  height: 400px;
+  height: 300px;
 }
 .map-container .map-button {
   position: relative;
@@ -1194,6 +1199,80 @@ label {
 }
 .section .section-wrapper .btn-right button {
   padding: 5px 80px;
+}
+.user-profile .user-profile-container .user-profile {
+  display: flex;
+  align-items: center;
+}
+.user-profile .user-profile-container .user-profile .user-profile-image-wrapper {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  margin-right: 25px;
+  border: 1px solid #F5CD79;
+}
+.user-profile .user-profile-container .user-profile .user-profile-image-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+.user-profile .user-profile-container .user-profile .profile-info {
+  text-align: left;
+}
+.user-profile .user-profile-container .user-profile .profile-info h4 {
+  font-size: calc(0.4vw + 13px);
+  color: #393939;
+  padding: 0;
+  text-transform: uppercase;
+}
+.user-profile .user-profile-container .user-profile .profile-info .profile-follower {
+  display: block;
+  margin: 5px 0 10px 0;
+}
+.user-profile .user-profile-container .user-profile .profile-info .profile-follower a {
+  color: #393939;
+  font-size: calc(0.3vw + 10px);
+  text-decoration: none;
+}
+.user-profile .user-profile-container .inline-buttons {
+  margin-top: 20px;
+}
+.user-profile .user-profile-container .inline-buttons button {
+  margin-right: 15px;
+  background-color: transparent;
+  border: 1px solid #F5CD79;
+  transition: 0.3s;
+  width: 100%;
+}
+.user-profile .user-profile-container .inline-buttons button:hover {
+  background-color: #393939;
+  color: #F9F9F9;
+  border: none;
+}
+.user-profile .user-profile-container .inline-buttons button span {
+  margin-left: 10px;
+}
+.user-profile .search {
+  position: relative;
+  margin-top: 15px;
+}
+.user-profile .search .search-input {
+  background-color: #F9F9F9;
+  width: 100%;
+}
+.user-profile .search button {
+  position: absolute;
+  right: 0;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  top: 0;
 }
 .shop-wrapper .shop-cover-img {
   overflow: hidden;

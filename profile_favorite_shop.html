@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#393939">
+    <link rel="icon" href="./assets/logo/logo.ico" type="image/ico" sizes="16x16">
+    <title>Art Ethno</title>
+    <!-- external libraries -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- custome styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="alert">
+        <div class="alert-wrapper">
+            <i class="fas fa-check-circle"></i>
+            <p class="alert-message">Item added to favorite</p>
+        </div>
+    </div>
+    <div class="sign-in-wrapper" rel="sign-in-popup">
+        <div class="signin-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Sign in</p>
+                    </div>
+                    <form action="" class="login-form">
+                        <div class="input-style">
+                            <label>Email address</label>
+                            <input type="email" name="email" />
+                        </div>
+                        <div class="input-style">
+                            <label>Password</label>
+                            <input type="password" name="password" />
+                        </div>
+                        <div class="remember-me">
+                            <input type="checkbox" name="rememberMe" id="remeberMe" />
+                            <label for="rememberMe">Remember Me</label>
+                            <a href="#">Forgot Password</a>
+                        </div>
+                        <input class="signIn-btn" type="button" value="Sign in" />
+                        <input class="internal-signIn-btn" type="button" value="Continue with facebook" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sign-up-wrapper" rel="sign-up-popup">
+        <div class="signin-container">
+            <div class="container">
+                <div class="col-12">
+                    <p>Create an account</p>
+                </div>
+                <form action="" class="login-form">
+                    <div class="input-style">
+                        <label>Email address</label>
+                        <input type="email" name="email" />
+                    </div>
+                    <div class="input-style">
+                        <label>First name</label>
+                        <input type="email" name="email" />
+                    </div>
+                    <div class="input-style">
+                        <label>Password</label>
+                        <input type="password" name="password" />
+                    </div>
+                    <input class="signIn-btn" type="button" value="Create an account" />
+                    <input class="internal-signIn-btn" type="button" value="Continue with facebook" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="burger-menu" class="burger-menu-wrapper">
+        <div class="mobile-drop-menu-contaner">
+            <div>
+                <p class="burger-categoria-name-wrapper"><span class="burger-categoria-name">Browse
+                        Categories</span><span id="current-page-name"></span><span class="back" hidden><i
+                            class="fas fa-long-arrow-alt-left"></i> Back</span></p>
+                <button id="close-burger" class="close-burger"><i class="fas fa-times"></i></button>
+                <section class="burger-search-1">
+                    <p class="search-type-tytle">Check Search type</p>
+                    <div class="check-search-type">
+                        <div class="advance">
+                            <input type="radio" name="search-type">
+                            <label for="search-type">Advance</label>
+                        </div>
+                        <div class="simple">
+                            <input type="radio" name="search-type">
+                            <label for="search-type">Simple</label>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="burger-sub-categoria"><a href="#">Jewelry & Accessories</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Clothing & Shoes</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Home & Living</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Wedding & Party</a></li>
+                        <li class="burger-sub-categoria"><a href="#">Art & Collectibles</a></li>
+                    </ul>
+                </section>
+                <section class="burger-search-2">
+                    <div class="drop-menu-second-filter">
+                        <div class="dark-dropdown">
+                            <div class="dropdown">
+                                <label>Shipping location</label>
+                                <button class="dropbtn"><span>Shipping location</span><i class="fa fa-angle-down"
+                                        aria-hidden="true"></i></button>
+                                <div class="dropdown-content scroll">
+                                    <span href="#">Armenia</span>
+                                    <span href="#">Unitade State</span>
+                                    <span href="#">Burgundian Islands</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dark-dropdown">
+                            <div class="dropdown">
+                                <label>Item's ethic location</label>
+                                <button class="dropbtn"><span>Country</span><i class="fa fa-angle-down"
+                                        aria-hidden="true"></i></button>
+                                <div class="dropdown-content scroll">
+                                    <span href="#">Armenia</span>
+                                    <span href="#">Unitade State</span>
+                                    <span href="#">Burgundian Islands</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dark-dropdown">
+                            <div class="dropdown">
+                                <label>Delivery type</label>
+                                <button class="dropbtn"><span>Delivery type</span><i class="fa fa-angle-down"
+                                        aria-hidden="true"></i></button>
+                                <div class="dropdown-content scroll">
+                                    <span href="#">Fast(1-5 days)</span>
+                                    <span href="#">Standart(5-30 days)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chackbox">
+                            <input type="checkbox" name="freeShiiping" />
+                            <label for="freeShipping">Free Shipping</label>
+                        </div>
+                        <div class="next-wrapper">
+                            <button id="skip" type="button">Skip</button>
+                            <button id="next" type="button">Submit and Continue<i
+                                    class="fas fa-long-arrow-alt-right"></i></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="burger-search-3">
+                    <div class="drop-menu-item-filter">
+                        <div class="price">
+                            <div>
+                                <label>Price</label>
+                            </div>
+                            <div class="material_price">
+                                <input type="number" min="0" name="currency" />
+                            </div>
+                            <span>-</span>
+                            <div class="material_price">
+                                <input type="number" min="0" name="currency" />
+                            </div>
+                            <div class="currency_dropdown light_dropdown">
+                                <div class="dropdown">
+                                    <button class="dropbtn"><span>USD</span><i class="fa fa-angle-down"
+                                            aria-hidden="true"></i></button>
+                                    <div class="dropdown-content scroll">
+                                        <span href="#">AMD</span>
+                                        <span href="#">RUB</span>
+                                        <span href="#">EUR</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="material">
+                            <div>
+                                <label>Materials</label>
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                        </div>
+                        <div class="material">
+                            <div>
+                                <label>Item types</label>
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                            <div class="material-name">
+                                <input type="button" name="material-name" value="Bronze" />
+                            </div>
+                        </div>
+                        <div class="drop-menu-search-brn"><input type="button" name="navbar_search"
+                                value="Results (256) "></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="top-content">
+        <div class="container iner_content">
+            <div class="search-box">
+                <div class="search">
+                    <input class="search-input" type="text" placeholder="Search" />
+                    <button class="search-item" id="search-item" type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <!-- <div class="icon">
+                    <a href="#" rel="bottom-menu-item" id="like" title="Favorite items"><i
+                            class="fas fa-heart"></i></a><span>|</span>
+                    <div class="user-profile-window">
+                        <a href="#" rel="bottom-menu-item" id="user" title="User page"><i
+                                class="fas fa-user-circle"></i></a><span>|</span>
+                        <div class="user-profile-container">
+                            <div class="user-profile">
+                                <div class="user-profile-image-wrapper">
+                                    <img src="./assets/Images/item1.png">
+                                </div>
+                                <div class="profile-info">
+                                    <h4>Jhone Smith</h4>
+                                    <a href="#" class="view-profile">View Profile</a>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="user-profile-setting-wrapper">
+                                <a href="#"><i class="fas fa-envelope"></i> Message</a>
+                                <a href="#"><i class="fas fa-shopping-cart"></i> Purchases</a>
+                                <a href="#"><i class="fas fa-cog"></i> Account Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" rel="bottom-menu-item" id="store" title="Store"><i
+                            class="fas fa-store"></i></a><span>|</span>
+                    <div class="notification-container">
+                        <a href="#" rel="bottom-menu-item" id="notification" class="icon-count" title="User page"><i
+                            class="fas fa-bell"><span>14</span></i></a><span>|</span>
+                        <div class="notification-wrapper">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos nesciunt</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos nesciunt</p>
+                        </div>
+                    </div>
+                    <a href="#" rel="bottom-menu-item" class="icon-count" title="Cart"><i
+                            class="fas fa-shopping-cart"><span>6</span></i></a>
+                </div> -->
+                <div class="icon unauthorized">
+                    <a href="#" class="sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
+                    <a href="#" class="sign-up" title="Create account"><i class="fas fa-user-plus"></i></a><span>|</span>
+                    <a href="#" title="Cart" class="icon-count cart"><i class="fas fa-shopping-cart"><span>6</span></i></a>
+                </div>
+            </div>
+            <div class="icon-wrapper">
+                <div class="mobile-search-wrapper">
+                    <div class="search">
+                        <input id="mobile-search-input" class="search-input" type="text" placeholder="Search" />
+                    </div>
+                </div>
+                <!-- <div class="icon mobile-icon">
+                    <a href="#" class="mobile-search-icon" id="mobile-search-item" title="Search box"><i
+                            class="fas fa-search"></i></a>
+                    <a href="#" rel="bottom-menu-item" id="like-burger" title="Favorite items"><i class="fas fa-heart"></i></a>
+                    <a href="#" rel="bottom-menu-item" id="user-burger" title="User page"><i
+                            class="fas fa-user-circle"></i></a>
+                    <a href="#" rel="bottom-menu-item" id="store-burger" title="Store"><i class="fas fa-store"></i></a>
+                    <a href="#" rel="bottom-menu-item" class="icon-count" title="User page"><i
+                            class="fas fa-bell"><span>14</span></i></a>
+                    <a href="#" rel="bottom-menu-item" class="icon-count" title="Cart"><i
+                            class="fas fa-shopping-cart"><span>6</span></i></a>
+                    <a href="#" id="close-mobile-search" title="Close search box"><i
+                            class="fas fa-times-circle"></i></a>
+                </div> -->
+                <div class="icon unauthorized">
+                    <a href="#" class="sign-in" title="Sign-in"><i class="fas fa-sign-in-alt"></i></a><span>|</span>
+                    <a href="#" class="sign-up" title="Create account"><i
+                            class="fas fa-user-plus"></i></a><span>|</span>
+                    <a href="#" title="Cart" class="icon-count"><i class="fas fa-shopping-cart"><span>6</span></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container iner_header">
+            <div class="logo">
+                <a href="https://tigransaharian.github.io/ArtEthno/"><img src="./assets/logo/logo_yellow_green.png"></a>
+                <h1><a href="https://tigransaharian.github.io/ArtEthno/">Art Ethno</a></h1>
+            </div>
+            <div class="categories">
+                <button class="burger" id="burger"><i class="fas fa-bars"></i></button>
+                <div class="navbar-menu" id="navbarNav">
+                    <ul>
+                        <li class="categoria_name">
+                            <a href="#">Jewelry & Accessories</a>
+                        </li>
+                        <li class="categoria_name">
+                            <a href="#">Clothing & Shoes</a>
+                        </li>
+                        <li class="categoria_name">
+                            <a href="#">Home & Living</a>
+                        </li>
+                        <li class="categoria_name">
+                            <a href="#">Wedding & Party</a>
+                        </li>
+                        <li class="categoria_name">
+                            <a href="#">Art & Collectibles</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="drop-menu-contaner">
+            <div class="container">
+                <div class="row" id="menu">
+                    <div class="col-12 main-menu">
+                        <div class="row filter">
+                            <aside class="col-lg-3">
+                                <p class="popup-categoria-title">active Categoria name</p>
+                                <ul>
+                                    <li class="sub-categoria"><a href="#">Categoria name</a><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                    <li class="sub-categoria"><a href="#">Categoria name</a><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                    <li class="sub-categoria"><a href="#">Categoria name</a><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                    <li class="sub-categoria"><a href="#">Categoria name</a><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                    <li class="sub-categoria"><a href="#">Categoria name</a><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                    <li class="sub-categoria"><a href="#">Categoria name</a><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                </ul>
+                            </aside>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <section class="col-lg-4">
+                                        <div class="drop-menu-second-filter">
+                                            <div class="dark-dropdown">
+                                                <div class="dropdown">
+                                                    <label>Shipping location</label>
+                                                    <button class="dropbtn"><span>Shipping location</span><i
+                                                            class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                                    <div class="dropdown-content scroll">
+                                                        <span href="#">Armenia</span>
+                                                        <span href="#">Unitade State</span>
+                                                        <span href="#">Burgundian Islands</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dark-dropdown">
+                                                <div class="dropdown">
+                                                    <label>Item's ethic location</label>
+                                                    <button class="dropbtn"><span>Country</span><i
+                                                            class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                                    <div class="dropdown-content scroll">
+                                                        <span href="#">Armenia</span>
+                                                        <span href="#">Unitade State</span>
+                                                        <span href="#">Burgundian Islands</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dark-dropdown">
+                                                <div class="dropdown">
+                                                    <label>Delivery type</label>
+                                                    <button class="dropbtn"><span>Delivery type</span><i
+                                                            class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                                    <div class="dropdown-content scroll">
+                                                        <span href="#">Fast(1-5 days)</span>
+                                                        <span href="#">Standart(5-30 days)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chackbox">
+                                                <input type="checkbox" name="freeShiiping" />
+                                                <label for="freeShipping">Free Shipping</label>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="col-lg-4">
+                                        <div class="drop-menu-item-filter">
+                                            <div class="material">
+                                                <div>
+                                                    <label>Materials</label>
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                            </div>
+                                            <div class="material">
+                                                <div>
+                                                    <label>Item types</label>
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <div>
+                                                    <label>Price</label>
+                                                </div>
+                                                <div class="material_price">
+                                                    <input type="number" min="0" name="currency" />
+                                                </div>
+                                                <span>-</span>
+                                                <div class="material_price">
+                                                    <input type="number" min="0" name="currency" />
+                                                </div>
+                                                <div class="currency_dropdown light_dropdown">
+                                                    <div class="dropdown">
+                                                        <button class="dropbtn"><span>USD</span><i
+                                                                class="fa fa-angle-down"
+                                                                aria-hidden="true"></i></button>
+                                                        <div class="dropdown-content scroll">
+                                                            <span href="#">AMD</span>
+                                                            <span href="#">RUB</span>
+                                                            <span href="#">EUR</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu-search-brn"><input type="button" name="navbar_search"
+                                                    value="Results (256) "></div>
+                                        </div>
+                                    </section>
+                                    <section class="col-lg-4">
+                                        <div class="drop-menu-item-filter">
+                                            <div class="material">
+                                                <div>
+                                                    <label>Materials</label>
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                            </div>
+                                            <div class="material">
+                                                <div>
+                                                    <label>Item types</label>
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                                <div class="material-name">
+                                                    <input type="button" name="material-name" value="Bronze" />
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <div>
+                                                    <label>Price</label>
+                                                </div>
+                                                <div class="material_price">
+                                                    <input type="number" min="0" name="currency" />
+                                                </div>
+                                                <span>-</span>
+                                                <div class="material_price">
+                                                    <input type="number" min="0" name="currency" />
+                                                </div>
+                                                <div class="currency_dropdown light_dropdown">
+                                                    <div class="dropdown">
+                                                        <button class="dropbtn"><span>USD</span><i
+                                                                class="fa fa-angle-down"
+                                                                aria-hidden="true"></i></button>
+                                                        <div class="dropdown-content scroll">
+                                                            <span href="#">AMD</span>
+                                                            <span href="#">RUB</span>
+                                                            <span href="#">EUR</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu-search-brn"><input type="button" name="navbar_search"
+                                                    value="Results (256) "></div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container user-profile">
+            <div class="row">
+                <div class="col-12">
+                    <div class="user-profile-container">
+                        <div class="user-profile">
+                            <div class="user-profile-image-wrapper">
+                                <img src="./assets/Images/item1.png">
+                            </div>
+                            <div class="profile-info">
+                                <h4>Jhone Smith</h4>
+                                <div class="profile-follower">
+                                    <a href="#"><span>2</span> Following</a> <span> | </span>
+                                    <a href="#"><span>12</span> Followers</a>
+                                </div>
+                                <button type="button">Edit profle</button>
+                            </div>
+                        </div>
+                        <div class="inline-buttons">
+                            <div class="row">
+                                <div class="col-lg-8 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-12 mb-2">
+                                            <button type="button">favorite shops<span>10</span></button>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-12 mb-2">
+                                            <button type="button">favorite products<span>10</span></button>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-12 mb-2">
+                                            <button type="button">my purches<span>15</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12 search">
+                    <input class="search-input" placeholder="Search Favorite Shop" type="text" placeholder="Search">
+                    <button class="search-item" id="search-item" type="button"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                    <div class="shop-wrapper shadow">
+                        <div class="shop-cover-img">
+                            <img src="./assets/Images/shops/2.png">
+                        </div>
+                        <div class="shop-info-body">
+                            <div class="shop-avatar-wrapper">
+                                <div class="shop-avatar-img"></div>
+                            </div>
+                            <div class="shop-info">
+                                <h1>Shop name</h1>
+                                <div class="shop-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(<span>132</span>)</span>
+                                </div>
+                                <span class="like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                    <div class="shop-wrapper shadow">
+                        <div class="shop-cover-img">
+                            <img src="./assets/Images/shops/3.png">
+                        </div>
+                        <div class="shop-info-body">
+                            <div class="shop-avatar-wrapper">
+                                <div class="shop-avatar-img"></div>
+                            </div>
+                            <div class="shop-info">
+                                <h1>Shop name</h1>
+                                <div class="shop-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(<span>132</span>)</span>
+                                </div>
+                                <span class="like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                    <div class="shop-wrapper shadow">
+                        <div class="shop-cover-img">
+                            <img src="./assets/Images/shops/4.png">
+                        </div>
+                        <div class="shop-info-body">
+                            <div class="shop-avatar-wrapper">
+                                <div class="shop-avatar-img"></div>
+                            </div>
+                            <div class="shop-info">
+                                <h1>Shop name</h1>
+                                <div class="shop-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(<span>132</span>)</span>
+                                </div>
+                                <span class="like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                    <div class="shop-wrapper shadow">
+                        <div class="shop-cover-img">
+                            <img src="./assets/Images/shops/5.png">
+                        </div>
+                        <div class="shop-info-body">
+                            <div class="shop-avatar-wrapper">
+                                <div class="shop-avatar-img"></div>
+                            </div>
+                            <div class="shop-info">
+                                <h1>Shop name</h1>
+                                <div class="shop-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(<span>132</span>)</span>
+                                </div>
+                                <span class="like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                    <div class="shop-wrapper shadow">
+                        <div class="shop-cover-img">
+                            <img src="./assets/Images/shops/6.png">
+                        </div>
+                        <div class="shop-info-body">
+                            <div class="shop-avatar-wrapper">
+                                <div class="shop-avatar-img"></div>
+                            </div>
+                            <div class="shop-info">
+                                <h1>Shop name</h1>
+                                <div class="shop-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(<span>132</span>)</span>
+                                </div>
+                                <span class="like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                    <div class="shop-wrapper shadow">
+                        <div class="shop-cover-img">
+                            <img src="./assets/Images/shops/1.png">
+                        </div>
+                        <div class="shop-info-body">
+                            <div class="shop-avatar-wrapper">
+                                <div class="shop-avatar-img"></div>
+                            </div>
+                            <div class="shop-info">
+                                <h1>Shop name</h1>
+                                <div class="shop-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(<span>132</span>)</span>
+                                </div>
+                                <span class="like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="center-btn">
+                        <button>view More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-top-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 footer-title">
+                        <h1>Footer</h1>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="help-center footer-info mt-0">
+                            <p>Privacy policy</p>
+                            <ul>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="privacy-policy footer-info">
+                            <p>Privacy policy</p>
+                            <ul>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                                <li>Policy privacy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="social-media-wrapper footer-info">
+                            <p>follow us</p>
+                            <div class="social-media-icons">
+                                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 fotter-bottom-body">
+                        <div><span>Armenia</span> | <span>English</span> | <span>USD</span></div>
+                        <div><span>2020 ArtEthno, Inc.</span> | <span>Hou to use?</span> | <span>Policy</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a92fd1a4bd.js" crossorigin="anonymous"></script>
+</body>
+</html>

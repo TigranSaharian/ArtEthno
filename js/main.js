@@ -54,19 +54,19 @@ $(".dropbtn").click(function () {
 
 // click sign-in
 $('.sign-in').click(function(){
-    $('.sign-in-wrapper').css('opacity', '1');
+    $('.sign-in-wrapper').addClass('account-popup');
 });
 
 // click sign-up 
 $('.sign-up').click(function(){
-    $('.sign-up-wrapper').css('opacity', '1');
+    $('.sign-up-wrapper').addClass('account-popup');
 });
 
 // click anywhere for removing the sign-in window
 $(".sign-in-wrapper").click(function(e) {
     e.preventDefault();
     if ($(e.target).attr('rel') === 'sign-in-popup') {
-        $('.sign-in-wrapper').css('opacity', '0');
+        $('.sign-in-wrapper').removeClass('account-popup');
     }
 });
 
@@ -74,7 +74,7 @@ $(".sign-in-wrapper").click(function(e) {
 $(".sign-up-wrapper").click(function(e) {
     e.preventDefault();
     if ($(e.target).attr('rel') === 'sign-up-popup') {
-        $('.sign-up-wrapper').css('opacity', '0');
+        $('.sign-up-wrapper').removeClass('account-popup');
     }
 });
 
@@ -89,7 +89,7 @@ $('.far').click(function(){
 });
 
 $('#user').click(function(){
-    var user_profile_window = $(this).closest('.user-profile-window').find('.user-profile-container');
+    var user_profile_window = $(this).closest('.user-popup-window').find('.user-popup-container');
     user_profile_window.toggleClass('block');
 });
 
@@ -99,7 +99,7 @@ $('#notification').click(function(){
 })
 
 $("#map-button").click(function(){
-    var map = $(this).closest('.map-container').find('.map');
+    var map = $(this).closest('.map-container').find('iframe');
     map.toggleClass('active-map');
 });
 
