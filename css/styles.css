@@ -1462,9 +1462,6 @@ label {
   .icon a {
     margin: 0 15px;
   }
-  .mobile-search-wrapper {
-    display: none;
-  }
   .close-search {
     display: none;
   }
@@ -1494,6 +1491,9 @@ label {
   }
 }
 @media (min-width: 992px) {
+  .mobile-search-wrapper {
+    display: none;
+  }
   .top-content {
     height: 45px;
     padding: 10px 0;
@@ -1602,7 +1602,7 @@ label {
   }
   .top-content .icon-wrapper .mobile-search-wrapper {
     position: absolute;
-    left: calc(3vw + 50px);
+    left: calc(2vw + 60px);
     width: 100%;
   }
   .top-content .icon-wrapper .mobile-search-wrapper .search-input {
@@ -1620,7 +1620,7 @@ label {
   }
   .mobile-search-active {
     visibility: visible !important;
-    width: calc(100% - 130px) !important;
+    width: calc(100% - 125px) !important;
   }
   .burger {
     display: block;

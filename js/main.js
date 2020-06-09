@@ -9,7 +9,7 @@ $(function(){
     let mobile_menu_item = $(".mobile-icon").find("a[rel='bottom-menu-item']");
     $('#mobile-search-item').click(function () {
         $('#mobile-search-input').addClass('mobile-search-active');
-        $('#close-mobile-search').css('right', '30px');
+        $('#close-mobile-search').css('right', '0');
         mobile_menu_item.css('visibility', 'hidden');
     });
 
@@ -96,6 +96,7 @@ $('#user').click(function(){
 $('#user-burger').click(function(){
     var user_profile_window = $(this).closest('.mobile-icon').find('.user-popup-container');
     user_profile_window.toggleClass('block');
+    $(this).toggleClass('bottom-menu-active');
 });
 
 $('#notification').click(function(){
@@ -106,9 +107,6 @@ $('#notification').click(function(){
 $('#notification-burger').click(function(){
     var notification = $(this).closest('.mobile-icon').find('.notification-wrapper');
     notification.toggleClass('block');
-});
-
-$('.buttom-menu-icon').click(function(){
     $(this).toggleClass('bottom-menu-active');
 });
 
