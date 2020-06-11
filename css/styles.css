@@ -1340,16 +1340,14 @@ i {
 }
 .message-box .message-content .inbox-wrapper .inbox-message {
   display: flex;
-  align-items: center;
   padding: 10px;
-  max-height: 110px;
   cursor: pointer;
   overflow: hidden;
   margin: 5px;
   background-color: #F9F9F9;
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-img img {
-  width: 100%;
+  width: 50px;
   height: auto;
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper {
@@ -1360,6 +1358,7 @@ i {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   font-size: calc(0.3vw + 11px);
+  line-height: 0.5;
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper p {
   font-size: calc(0.3vw + 8px);
