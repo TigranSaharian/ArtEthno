@@ -115,6 +115,17 @@ $("#map-button").click(function(){
     map.toggleClass('active-map');
 });
 
+$('.opacity').click(function(e){
+    e.preventDefault();
+    if ($(e.target).attr('rel') === 'message-popup') {
+        $('.opacity').removeClass('popup-background');
+    }
+});
+
+$('#new-message').click(function(){
+    $('.opacity').addClass('popup-background');
+});
+
 $(function(){
     $('#feedback-btn').click(function(){
         $('#feedback-window').addClass('popup-background');

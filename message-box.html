@@ -21,8 +21,36 @@
             <p class="alert-message">Item added to favorite</p>
         </div>
     </div>
+    <div class="opacity" rel="message-popup">
+        <div class="popup-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>New Message</p>
+                    </div>
+                    <form action="" class="message-form">
+                        <div class="input-style">
+                            <label for="recipient">Recipient</label>
+                            <input type="email" name="recipient" />
+                        </div>
+                        <div class="input-style">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" />
+                        </div>
+                        <div class="input-style">
+                            <label for="message">Message</label>
+                            <textarea rows="4" name="message"></textarea>
+                        </div>
+                        <div class="send-message-wrapper">
+                            <input class="send-message" id="send-message" type="button" value="Send Message" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="sign-in-wrapper" rel="sign-in-popup">
-        <div class="signin-container">
+        <div class="popup-container">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -50,7 +78,7 @@
         </div>
     </div>
     <div class="sign-up-wrapper" rel="sign-up-popup">
-        <div class="signin-container">
+        <div class="popup-container">
             <div class="container">
                 <div class="col-12">
                     <p>Create an account</p>
@@ -586,13 +614,13 @@
                                 <h4>Messages</h4>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-md-6 col-12 search mr-sm-1">
+                        <div class="col-lg-7 col-md-6 col-12 search top-1">
                             <input class="search-input" placeholder="Search message" type="text" placeholder="Search">
                             <button class="search-item" id="search-item" type="button"><i class="fas fa-search"
                                     aria-hidden="true"></i></button>
                         </div>
-                        <div class="col-lg-2 col-md-3 col-12 mr-sm-1">
-                            <button type="button" class="full-size">New Message</button>
+                        <div class="col-lg-2 col-md-3 col-12 top-1">
+                            <button type="button" id="new-message" class="full-size">New Message</button>
                         </div>
                     </div>
                 </div>

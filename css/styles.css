@@ -62,6 +62,11 @@ input[type="button"] {
   padding: 5px 20px;
   border: none;
   font-size: calc(0.3vw + 11px);
+  transition: 0.3s;
+}
+input[type="button"]:hover {
+  background-color: #393939;
+  color: #F5CD79;
 }
 .section button {
   font-family: 'Sitka Banner', sans-serif;
@@ -94,7 +99,7 @@ textarea {
 label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: 17px;
+  font-size: calc(0.3vw + 12px);
   margin: 0 5px;
   font-weight: 800;
 }
@@ -379,8 +384,11 @@ label {
 i {
   cursor: pointer;
 }
+.top-1 {
+  margin: 0;
+}
 .popup-background {
-  opacity: 1;
+  opacity: 1 !important;
 }
 .popup-background::after {
   content: '';
@@ -433,7 +441,17 @@ i {
 .deliverved-item-feedback-wrapper .feedback-btn-wrapper button:last-child {
   background-color: #F5CD79;
 }
-.signin-container {
+.input-style label {
+  font-weight: 100 !important;
+}
+.input-style input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.input-style textarea {
+  display: block;
+}
+.popup-container {
   background-color: #F9F9F9;
   border: 2px solid #F5CD79;
   position: fixed;
@@ -442,22 +460,22 @@ i {
   left: 50%;
   transform: translateX(-50%);
 }
-.signin-container p {
+.popup-container p {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   font-size: calc(0.6vw + 20px);
   padding: 10px 0;
 }
-.signin-container .login-form {
+.popup-container .login-form {
   width: 100%;
 }
-.signin-container .login-form .remember-me {
+.popup-container .login-form .remember-me {
   padding: 10px 0;
   width: 100%;
   align-items: center;
   display: flex;
 }
-.signin-container .login-form .remember-me a {
+.popup-container .login-form .remember-me a {
   font-weight: 100 !important;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
@@ -467,40 +485,33 @@ i {
   right: 20px;
   text-decoration: none;
 }
-.signin-container .login-form .remember-me label {
+.popup-container .login-form .remember-me label {
   font-weight: 100 !important;
 }
-.signin-container .login-form .input-style label {
-  font-weight: 100 !important;
-}
-.signin-container .login-form .input-style input {
-  width: 100%;
-  margin-bottom: 10px;
-}
-.signin-container .login-form input[type="button"] {
+.popup-container .login-form input[type="button"] {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
 }
-.signin-container .login-form .signIn-btn {
+.popup-container .login-form .signIn-btn {
   background-color: #393939;
   color: #F9F9F9;
   text-transform: uppercase;
   transition: 0.3s;
   font-size: calc(0.3vw + 12px);
 }
-.signin-container .login-form .signIn-btn:hover {
+.popup-container .login-form .signIn-btn:hover {
   background-color: #F5CD79;
   color: #393939;
 }
-.signin-container .login-form .internal-signIn-btn {
+.popup-container .login-form .internal-signIn-btn {
   text-transform: uppercase;
   border: 1px solid #F5CD79;
   background-color: #F9F9F9;
   transition: 0.3s;
   font-size: calc(0.3vw + 12px);
 }
-.signin-container .login-form .internal-signIn-btn:hover {
+.popup-container .login-form .internal-signIn-btn:hover {
   background-color: #393939;
   color: #F5CD79;
 }
@@ -1309,7 +1320,7 @@ i {
   display: flex;
   align-items: center;
   padding: 10px;
-  max-height: 100px;
+  max-height: 110px;
   cursor: pointer;
   overflow: hidden;
   margin: 5px;
@@ -1325,9 +1336,29 @@ i {
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper h6 {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
+  font-size: calc(0.3vw + 11px);
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper p {
   font-size: calc(0.3vw + 8px);
+}
+.opacity {
+  opacity: 0;
+}
+.popup-container p {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.3vw + 14px);
+  padding: 10px 0;
+}
+.popup-container .message-form {
+  width: 100%;
+}
+.popup-container .message-form textarea {
+  width: 100%;
+}
+.popup-container .message-form .send-message-wrapper {
+  margin: 10px 0;
+  text-align: right;
 }
 .search {
   position: relative;
@@ -1855,7 +1886,7 @@ i {
   }
 }
 @media (max-width: 767.98px) {
-  .mr-sm-1 {
+  .top-1 {
     margin: 5px 0;
   }
   .purches-info-wrapper {
@@ -1870,7 +1901,7 @@ i {
   .footer-info {
     margin-top: 20px;
   }
-  .signin-container {
+  .popup-container {
     width: 85%;
   }
 }
