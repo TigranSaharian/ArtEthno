@@ -48,7 +48,7 @@ input[type="button"] {
   background-color: #F5CD79;
   padding: 5px 20px;
   border: none;
-  font-size: 15px;
+  font-size: calc(0.3vw + 11px);
 }
 .section button {
   font-family: 'Sitka Banner', sans-serif;
@@ -56,7 +56,7 @@ input[type="button"] {
   background-color: #F5CD79;
   padding: 5px 20px;
   border: none;
-  font-size: 17px;
+  font-size: calc(0.3vw + 11px);
   transition: 0.3s;
   cursor: pointer;
   text-transform: capitalize;
@@ -87,6 +87,9 @@ label {
 }
 .gray {
   background-color: #F9F9F9;
+}
+.green {
+  color: #2DB53F;
 }
 .navbar-toggler {
   border: none;
@@ -140,6 +143,21 @@ label {
   -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.flex {
+  display: flex;
+}
+.block {
+  display: block !important;
+}
+.border-basic {
+  border: 2px solid #F5CD79;
+}
+.border-success {
+  border: 2px solid #2DB53F;
+}
+.border-error {
+  border: 2px solid red;
 }
 .item-stars {
   padding: 5px 0 10px 0;
@@ -345,10 +363,13 @@ label {
 .sign-up-wrapper {
   opacity: 0;
 }
-.account-popup {
+i {
+  cursor: pointer;
+}
+.popup-background {
   opacity: 1;
 }
-.account-popup::after {
+.popup-background::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -358,6 +379,46 @@ label {
   left: 0;
   z-index: 99;
   opacity: 0.9;
+}
+.deliverved-item-feedback-wrapper {
+  max-width: 640px;
+  min-width: 350px;
+  padding: 10px;
+  position: fixed;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  display: none;
+  background-color: #F9F9F9;
+  z-index: 1000;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+}
+.deliverved-item-feedback-wrapper .item-feedback textarea {
+  width: 100%;
+  max-height: 150px;
+}
+.deliverved-item-feedback-wrapper .feedback-btn-wrapper {
+  text-align: right;
+  width: 100%;
+}
+.deliverved-item-feedback-wrapper .feedback-btn-wrapper button {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  padding: 5px 20px;
+  border: none;
+  font-size: calc(0.3vw + 11px);
+  transition: 0.3s;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.deliverved-item-feedback-wrapper .feedback-btn-wrapper button:first-child {
+  background-color: #F9F9F9;
+  color: #393939;
+  border: 1px solid #F5CD79;
+}
+.deliverved-item-feedback-wrapper .feedback-btn-wrapper button:last-child {
+  background-color: #F5CD79;
 }
 .signin-container {
   background-color: #F9F9F9;
@@ -429,9 +490,6 @@ label {
 .signin-container .login-form .internal-signIn-btn:hover {
   background-color: #393939;
   color: #F5CD79;
-}
-.block {
-  display: block !important;
 }
 .notification-container {
   position: relative;
@@ -1154,7 +1212,7 @@ label {
   font-size: calc(0.5vw + 7px);
 }
 .section {
-  padding: 60px 0;
+  padding: calc(2vw + 20px) 0;
 }
 .section .section-wrapper .section-title h1 {
   font-family: 'Sitka Banner', sans-serif;
@@ -1199,19 +1257,18 @@ label {
   align-items: center;
 }
 .user-profile .user-profile-container .user-profile .user-profile-image-wrapper {
-  width: 100px;
-  height: 100px;
+  width: calc(4vw + 50px);
+  height: calc(4vw + 50px);
   overflow: hidden;
   position: relative;
   border-radius: 50%;
   margin-right: 25px;
-  border: 1px solid #F5CD79;
 }
 .user-profile .user-profile-container .user-profile .user-profile-image-wrapper img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 130px;
+  width: calc(5vw + 80px);
   height: auto;
   transform: translate(-50%, -50%);
 }
@@ -1219,14 +1276,14 @@ label {
   text-align: left;
 }
 .user-profile .user-profile-container .user-profile .profile-info h4 {
-  font-size: calc(0.4vw + 13px);
+  font-size: calc(0.4vw + 12px);
   color: #393939;
   padding: 0;
   text-transform: uppercase;
 }
 .user-profile .user-profile-container .user-profile .profile-info .profile-follower {
   display: block;
-  margin: 5px 0 10px 0;
+  margin: 5px 0;
 }
 .user-profile .user-profile-container .user-profile .profile-info .profile-follower a {
   color: #393939;
@@ -1268,6 +1325,98 @@ label {
 }
 .user-profile .search button i {
   font-size: 10px;
+}
+.stars {
+  font-size: calc(0.2vw + 11px);
+  color: #F5CD79;
+  padding: 3px 0;
+}
+.purches-model-container {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+}
+.purches-model-container .purches-image-wrapper img {
+  width: 100%;
+}
+.purches-model-container .purches-info-wrapper {
+  position: relative;
+}
+.purches-model-container .purches-info-wrapper hr {
+  margin: 5px 0;
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div {
+  width: 100%;
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div .purches-message {
+  cursor: pointer;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.3vw + 10px);
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div .purches-message i {
+  color: #393939;
+  margin-right: 5px;
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div h1 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  align-items: baseline;
+  font-size: calc(0.5vw + 13px);
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div h1 .purches-message {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.3vw + 12px);
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div h1 .purches-message i {
+  margin-right: 10px;
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content .purches-price-wrapper {
+  text-align: right;
+  width: 100%;
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content .purches-price-wrapper p {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content .purches-price-wrapper p:first-child {
+  font-size: calc(0.5vw + 15px);
+}
+.purches-model-container .purches-info-wrapper .purches-wrapper-top-content .purches-price-wrapper p:last-child {
+  font-size: calc(0.3vw + 10px);
+  text-decoration: line-through;
+  color: #2DB53F;
+}
+.purches-model-container .purches-info-wrapper p {
+  font-size: calc(0.4vw + 11px);
+}
+.purches-model-container .purches-info-wrapper .purches-item-info span {
+  font-size: calc(0.3vw + 9px);
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  color: #575d64;
+}
+.purches-model-container .purches-status-wrapper div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.purches-model-container .purches-status-wrapper div span {
+  font-size: calc(0.4vw + 10px);
+  margin-right: 10px;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.purches-model-container .purches-status-wrapper div span i {
+  color: #F5CD79;
+  padding: 0 5px;
+}
+.purches-model-container .purches-status-wrapper div span .fa-check-circle {
+  color: #2DB53F;
 }
 .shop-wrapper .shop-cover-img {
   overflow: hidden;
@@ -1630,6 +1779,9 @@ label {
   }
 }
 @media (max-width: 767.98px) {
+  .purches-info-wrapper {
+    margin-top: 15px;
+  }
   .about-us-wrapper {
     text-align: center;
   }

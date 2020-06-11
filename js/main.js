@@ -54,19 +54,19 @@ $(".dropbtn").click(function () {
 
 // click sign-in
 $('.sign-in').click(function(){
-    $('.sign-in-wrapper').addClass('account-popup');
+    $('.sign-in-wrapper').addClass('popup-background');
 });
 
 // click sign-up 
 $('.sign-up').click(function(){
-    $('.sign-up-wrapper').addClass('account-popup');
+    $('.sign-up-wrapper').addClass('popup-background');
 });
 
 // click anywhere for removing the sign-in window
 $(".sign-in-wrapper").click(function(e) {
     e.preventDefault();
     if ($(e.target).attr('rel') === 'sign-in-popup') {
-        $('.sign-in-wrapper').removeClass('account-popup');
+        $('.sign-in-wrapper').removeClass('popup-background');
     }
 });
 
@@ -74,13 +74,13 @@ $(".sign-in-wrapper").click(function(e) {
 $(".sign-up-wrapper").click(function(e) {
     e.preventDefault();
     if ($(e.target).attr('rel') === 'sign-up-popup') {
-        $('.sign-up-wrapper').removeClass('account-popup');
+        $('.sign-up-wrapper').removeClass('popup-background');
     }
 });
 
 // click like heart
-$('.far').click(function(){
-    $(this).toggleClass('fas');
+$('.fa-heart').click(function(){
+    $(this).closest('span').find('.far').toggleClass('fas');
     $('.alert-wrapper').addClass('alert-active');
     setTimeout(() => {
         $('.alert-wrapper').removeClass('alert-active');
@@ -114,6 +114,35 @@ $("#map-button").click(function(){
     var map = $(this).closest('.map-container').find('iframe');
     map.toggleClass('active-map');
 });
+
+$(function(){
+    $('#feedback-btn').click(function(){
+        $('#feedback-window').addClass('popup-background');
+        $('.deliverved-item-feedback-wrapper').addClass('block');
+    });
+
+    $('#cancel-feedback').click(function(){
+        var feedback_window = $(this).closest('.feedback-popup');
+        feedback_window.removeClass('popup-background');
+        var block = feedback_window.find('.deliverved-item-feedback-wrapper');
+        block.removeClass('block');  
+    });
+
+    $(document).on('click','.fa-star',function(){
+        let star = $(this).closest('.stars').find('i');
+        let indexCount = star.index(this);
+        if($(this).hasClass('fas')){
+            for (let index = star.length; index >= $(this).index(); index--) {
+                star.eq(index).removeClass('fas');
+                star.eq(index).addClass('far');
+            }
+        }
+        for (let index = 0; index < indexCount + 1; index++) {
+            star.eq(index).removeClass('far');
+            star.eq(index).addClass('fas');
+        }
+    });
+})
 
 // moblie size burgem menu
 $(function(){
