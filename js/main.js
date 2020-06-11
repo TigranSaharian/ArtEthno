@@ -122,8 +122,35 @@ $('.opacity').click(function(e){
     }
 });
 
+$('.inbox-message').click(function(){
+    window.location.replace("./message-pm.html");
+});
+
 $('#new-message').click(function(){
     $('.opacity').addClass('popup-background');
+});
+
+$('.new-message-input .fa-paper-plane').click(function(){
+    let new_message = $(this).closest('.new-message-input').find('.new-message'); 
+    let message_container = $(this).closest('.message-content').find('.inbox-wrapper');
+    let inbox_message = $('<div></div>').addClass('inbox-message');
+    inbox_message.addClass('sender');
+    let message_wrapper = $('<div></div>').addClass('message-wrapper');
+    inbox_message.append(message_wrapper);
+    let h6 = $('<h6>Jony Brjoni</h6>');
+    let p = $('<p></p>');
+    let span = $('<span></span>').addClass('date');
+    let dt = new Date();
+    let time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    span.append(time)
+    p.text(new_message.val());
+    message_wrapper.append(h6);
+    message_wrapper.append(p);
+    message_wrapper.append(span);
+    if (0 < message_container.length) {
+        message_container.append(inbox_message).scrollTop(1e5);
+        new_message.val('');
+    }
 });
 
 $(function(){

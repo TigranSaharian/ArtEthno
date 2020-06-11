@@ -582,7 +582,7 @@ i {
   color: #393939;
   display: block;
   margin: 0;
-  padding: 2px 0 !important;
+  padding: 5px 0 !important;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   font-size: calc(0.4vw + 10px);
@@ -1308,6 +1308,28 @@ i {
   padding: 5px 10px;
   align-items: center;
 }
+.message-box .message-content .type-new-message {
+  margin-top: 3px;
+}
+.message-box .message-content .type-new-message input {
+  width: 100%;
+}
+.message-box .message-content .new-message-input {
+  position: relative;
+  margin-top: 3px;
+}
+.message-box .message-content .new-message-input i {
+  position: absolute;
+  color: #393939;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1px;
+  padding: 9px;
+  background-color: #ffffff;
+}
+.message-box .message-content .new-message-input input {
+  width: 100%;
+}
 .message-box .message-content .inbox-wrapper {
   margin-top: 3px;
   border: 1px solid #F5CD79;
@@ -1332,6 +1354,7 @@ i {
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper {
   margin-left: 15px;
+  width: 100%;
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper h6 {
   font-family: 'Sitka Banner', sans-serif;
@@ -1340,6 +1363,30 @@ i {
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper p {
   font-size: calc(0.3vw + 8px);
+}
+.message-box .message-content .inbox-wrapper .sender {
+  text-align: right;
+}
+.message-box .message-content .inbox-wrapper .sender span {
+  text-align: right;
+}
+.message-box .message-content .message-reciver {
+  font-size: calc(0.3vw + 11px);
+  display: flex;
+  width: 100%;
+  border: 1px solid #F5CD79;
+  padding: 5px 10px;
+  background-color: #F5CD79;
+  align-items: center;
+}
+.message-box .message-content .message-reciver h6 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  color: #393939;
+}
+.date {
+  font-size: calc(0.3vw + 7px);
+  color: #575d64;
 }
 .opacity {
   opacity: 0;

@@ -656,7 +656,7 @@ i{
                 color: @dark_color;
                 display: block;
                 margin: 0;
-                padding: 2px 0 !important;
+                padding: 5px 0 !important;
                 .font_Sitka;
                 font-size: calc(0.4vw + 10px);
                 display: flex;
@@ -1480,6 +1480,28 @@ i{
             padding: 5px 10px;
             align-items: center;
         }
+        .type-new-message{
+            margin-top: 3px;
+            input{
+                width: 100%;
+            }
+        }
+        .new-message-input{
+            position: relative;
+            margin-top: 3px;
+            i{
+                position: absolute;
+                color: @dark_color;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1px;
+                padding: 9px;
+                background-color: @white_color;
+            }
+            input{
+                width: 100%;
+            }
+        }
         .inbox-wrapper{
             margin-top: 3px;
             border: 1px solid @main_color;
@@ -1504,6 +1526,7 @@ i{
                 }
                 .message-wrapper{
                     margin-left: 15px;
+                    width: 100%;
                     h6{
                         .font_Sitka;
                         font-size: calc(0.3vw + 11px);
@@ -1513,8 +1536,33 @@ i{
                     }
                 }
             }
+
+            .sender{
+                text-align: right;
+                span{
+                    text-align: right;
+                }
+            }
+        }
+        .message-reciver{
+            font-size: calc(0.3vw + 11px);
+            display: flex;
+            width: 100%;
+            border: 1px solid @main_color;
+            padding: 5px 10px;
+            background-color: @main_color;
+            align-items: center;
+            h6{
+                .font_Sitka;
+                color: @dark_color;
+            }
         }
     }
+}
+
+.date{
+    font-size: calc(0.3vw + 7px);
+    color: @menu_active_color;
 }
 
 .opacity{
