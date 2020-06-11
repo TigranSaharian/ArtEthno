@@ -41,6 +41,19 @@ textarea:focus {
 }
 .title {
   margin: 5px 0;
+  position: relative;
+}
+.title h4 {
+  font-size: calc(0.4vw + 15px);
+}
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 30px;
+  height: 6px;
+  background-color: #F5CD79;
 }
 input[type="button"] {
   font-family: 'Sitka Banner', sans-serif;
@@ -945,7 +958,7 @@ i {
   background-color: #F5CD79;
   padding: 5px 20px;
   border: none;
-  font-size: 17px;
+  font-size: calc(0.3vw + 11px);
   transition: 0.3s;
 }
 .map-container .map-button button:hover {
@@ -1212,7 +1225,7 @@ i {
   font-size: calc(0.5vw + 7px);
 }
 .section {
-  padding: calc(2vw + 20px) 0;
+  padding: calc(1vw + 40px) 0;
 }
 .section .section-wrapper .section-title h1 {
   font-family: 'Sitka Banner', sans-serif;
@@ -1251,6 +1264,87 @@ i {
 }
 .section .section-wrapper .btn-right button {
   padding: 5px 80px;
+}
+.full-size {
+  width: 100%;
+}
+.message-box .message-top-content {
+  align-items: center;
+}
+.message-box .message-menu li {
+  list-style: none;
+  margin: 0;
+  text-align: left;
+  padding: 5px 0;
+  border-bottom: 1px solid #F5CD79;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.4vw + 10px);
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.message-box .message-menu li:hover {
+  transform: translateX(10px);
+}
+.message-box .message-content {
+  padding: 5px 0;
+}
+.message-box .message-content .message-unread {
+  display: flex;
+  width: 100%;
+  border: 1px solid #F5CD79;
+  padding: 5px 10px;
+  align-items: center;
+}
+.message-box .message-content .inbox-wrapper {
+  margin-top: 3px;
+  border: 1px solid #F5CD79;
+  width: 100%;
+  min-height: 250px;
+  max-height: 320px;
+  overflow: auto;
+}
+.message-box .message-content .inbox-wrapper .inbox-message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  max-height: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 5px;
+  background-color: #F9F9F9;
+}
+.message-box .message-content .inbox-wrapper .inbox-message .message-img img {
+  width: 100%;
+  height: auto;
+}
+.message-box .message-content .inbox-wrapper .inbox-message .message-wrapper {
+  margin-left: 15px;
+}
+.message-box .message-content .inbox-wrapper .inbox-message .message-wrapper h6 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.message-box .message-content .inbox-wrapper .inbox-message .message-wrapper p {
+  font-size: calc(0.3vw + 8px);
+}
+.search {
+  position: relative;
+  line-height: 0;
+}
+.search .search-input {
+  background-color: #F9F9F9;
+  width: 100%;
+}
+.search button {
+  position: absolute;
+  right: 5px;
+  border-radius: 30px;
+  padding: 8px 15px;
+}
+.search button i {
+  font-size: 10px;
 }
 .user-profile .user-profile-container .user-profile {
   display: flex;
@@ -1307,24 +1401,6 @@ i {
 }
 .user-profile .user-profile-container .inline-buttons button span {
   margin-left: 10px;
-}
-.user-profile .search {
-  position: relative;
-  margin-top: 15px;
-  line-height: 0;
-}
-.user-profile .search .search-input {
-  background-color: #F9F9F9;
-  width: 100%;
-}
-.user-profile .search button {
-  position: absolute;
-  right: 5px;
-  border-radius: 30px;
-  padding: 8px 15px;
-}
-.user-profile .search button i {
-  font-size: 10px;
 }
 .stars {
   font-size: calc(0.2vw + 11px);
@@ -1779,6 +1855,9 @@ i {
   }
 }
 @media (max-width: 767.98px) {
+  .mr-sm-1 {
+    margin: 5px 0;
+  }
   .purches-info-wrapper {
     margin-top: 15px;
   }
