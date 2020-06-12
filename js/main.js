@@ -1,5 +1,7 @@
 const hide = 'burger-section-hide';
 const show = 'burger-section-show';
+const success = '<i class="fas fa-check-circle"></i>';
+const error = '<i class="fas fa-exclamation-circle"></i>';
 var buger_categ_title = $('.burger-categoria-name');
 var current_page_title = $('#current-page-name');
 var section = [];
@@ -80,11 +82,7 @@ $(".sign-up-wrapper").click(function(e) {
 // click like heart
 $('.fa-heart').click(function(){
     $(this).closest('span').find('.far').toggleClass('fas');
-    $('.alert-wrapper').addClass('alert-active');
-    setTimeout(() => {
-        $('.alert-wrapper').removeClass('alert-active');
-    }, 2000);
-
+    alert('Item added to favorite', success);
 });
 
 $('#user').click(function(){
@@ -156,6 +154,25 @@ $(document).keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
         $('.fa-paper-plane').click();    
+    }
+});
+
+$('#upload-btn').click(function () {
+    UploadFile($('#upload-btn'), null);
+})
+
+$('.add-categoria').click(function(){
+    let categoria_name = $('#categoria-name').val();
+    if(categoria_name.length > 0){
+        console.log(categoria_name);
+        let close = '<i class="fas fa-times"></i>';
+        let new_blok = $('<div></div>').append(categoria_name);
+        new_blok.append(close);
+        $('.my-categoria').append(new_blok);
+        $('#categoria-name').val('');
+        Alert('The categoria added', success);
+    }else{
+        Alert('Please type any categoria', error);
     }
 });
 
@@ -258,4 +275,45 @@ function GetPrivusePage(page_index){
             }
         }
     }
+}
+
+function UploadFile(value, button) {
+    var item = $(value).closest("div").find("input[type='file']");
+    item.click();
+    $('#hidden-upload').change(function (e) {
+        ReadURL(this);
+        var fileName = e.target.files[0].name;
+        $('#upload-txt').val(fileName);
+    }); 
+}
+
+function ReadURL(input) {
+    if (input.files && input.files[0]) {
+        console.log(input);
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#avatar-image').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function Alert(message, type){
+    let alert = $('#alert');
+    let alert_wrapper = $('<div></div>');
+    let alert_message = $('<p></p>');
+    alert_wrapper.addClass('alert-wrapper');
+    alert_message.addClass('alert-message');
+    alert_message.text(message);
+    
+    alert_wrapper.append(type);
+    alert_wrapper.append(alert_message);
+    alert.append(alert_wrapper);
+    alert_wrapper.addClass('alert-active');
+    setTimeout(() => {
+        alert_wrapper.removeClass('alert-active');
+        setTimeout(() => {
+            alert_wrapper.remove();
+        }, 500);
+    }, 2000);
 }

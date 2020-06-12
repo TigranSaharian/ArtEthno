@@ -24,7 +24,7 @@ li {
 h4 {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  padding: 15px 0;
+  padding: 5px 0;
 }
 i {
   cursor: pointer;
@@ -60,9 +60,9 @@ textarea:focus {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 0;
   width: 30px;
-  height: 6px;
+  height: calc(0.1vw + 3px);
   background-color: #F5CD79;
 }
 .section button {
@@ -101,10 +101,10 @@ input[type="email"],
 input[type="password"],
 textarea {
   border: 1px solid #F5CD79;
-  background-color: #F9F9F9;
+  background-color: #ffffff;
   text-align: left;
   color: #393939;
-  padding: 5px 10px;
+  padding: 5px 10px !important;
   font-size: calc(0.4vw + 10px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
@@ -154,8 +154,12 @@ label {
   z-index: 1000;
   transition: 0.3s;
 }
-.alert-wrapper i {
+.alert-wrapper .fa-check-circle {
   color: #2DB53F;
+  margin-right: 10px;
+}
+.alert-wrapper .fa-exclamation-circle {
+  color: red;
   margin-right: 10px;
 }
 .alert-wrapper p {
@@ -194,6 +198,9 @@ label {
 }
 .item-stars i {
   color: #F5CD79;
+}
+.right {
+  text-align: right;
 }
 .item-wrapper {
   max-width: 320px;
@@ -534,7 +541,7 @@ label {
   margin: 0 auto;
   color: #F5CD79;
   text-align: left;
-  font-size: calc(0.4vw + 12px);
+  font-size: calc(0.4vw + 10px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
@@ -871,6 +878,7 @@ label {
 }
 .map-container .map-button {
   position: relative;
+  margin-bottom: 25px;
 }
 .map-container .map-button button {
   top: 20px;
@@ -1125,7 +1133,7 @@ label {
   font-size: calc(0.5vw + 7px);
 }
 .section {
-  padding: calc(1vw + 40px) 0;
+  padding: calc(1vw + 25px) 0;
 }
 .section .section-wrapper .section-title h1 {
   font-family: 'Sitka Banner', sans-serif;
@@ -1164,6 +1172,27 @@ label {
 }
 .section .section-wrapper .btn-right button {
   padding: 5px 80px;
+}
+.section .update-profile-image {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.section .update-profile-image .image-upload button {
+  background-color: #393939;
+  padding: 3px 25px;
+  color: #F9F9F9;
+}
+.section .update-profile-image .image-upload input[type="text"] {
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #F5CD79;
+  margin-left: 10px;
+  font-size: calc(0.3vw + 9px);
+}
+.section .update-profile-image .image-upload p {
+  font-size: calc(0.3vw + 6px);
+  padding: 5px 0;
 }
 .full-size {
   width: 100%;
@@ -1322,40 +1351,83 @@ label {
 .search button i {
   font-size: 10px;
 }
-.user-profile .user-profile-container .user-profile {
-  display: flex;
-  align-items: center;
-}
-.user-profile .user-profile-container .user-profile .user-profile-image-wrapper {
-  width: calc(4vw + 50px);
-  height: calc(4vw + 50px);
+.user-profile-image-wrapper {
+  width: calc(4vw + 30px);
+  height: calc(4vw + 30px);
   overflow: hidden;
   position: relative;
   border-radius: 50%;
   margin-right: 25px;
 }
-.user-profile .user-profile-container .user-profile .user-profile-image-wrapper img {
+.user-profile-image-wrapper img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(5vw + 80px);
-  height: auto;
+  height: calc(4vw + 30px);
+  width: auto;
   transform: translate(-50%, -50%);
 }
-.user-profile .user-profile-container .user-profile .profile-info {
+.sub-title {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.form-style .add-btn {
+  position: relative;
+  width: 100%;
+}
+.form-style .add-btn input {
+  width: 100%;
+}
+.form-style .add-btn .add-categoria {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  padding: 6px 20px;
+  background-color: #393939;
+  color: #F9F9F9;
+  cursor: pointer;
+}
+.form-style .add-btn .my-categoria {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-style .add-btn .my-categoria div {
+  border: 1px solid #F5CD79;
+  padding: 5px 20px;
+  color: #393939;
+  margin: 5px 5px 0 0;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline;
+  border-radius: 3px;
+  position: relative;
+}
+.form-style .add-btn .my-categoria div i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+}
+.form-style .add-btn .my-categoria span {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.3vw + 12px);
+}
+.user-profile .user-profile-container .profile-info {
   text-align: left;
 }
-.user-profile .user-profile-container .user-profile .profile-info h4 {
+.user-profile .user-profile-container .profile-info h4 {
   font-size: calc(0.4vw + 12px);
   color: #393939;
   padding: 0;
   text-transform: uppercase;
 }
-.user-profile .user-profile-container .user-profile .profile-info .profile-follower {
+.user-profile .user-profile-container .profile-info .profile-follower {
   display: block;
   margin: 5px 0;
 }
-.user-profile .user-profile-container .user-profile .profile-info .profile-follower a {
+.user-profile .user-profile-container .profile-info .profile-follower a {
   color: #393939;
   font-size: calc(0.3vw + 10px);
   text-decoration: none;
