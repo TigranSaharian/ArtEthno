@@ -30,8 +30,7 @@ $(function(){
     });
 
     $(document).on('click', '.material-name', function () {
-        console.log(333)
-        $(this).toggleClass("active_onclick_dark");
+        $(this).toggleClass("active-filter-button");
     });
     
     $(".categoria_name").click(function () {
@@ -145,28 +144,35 @@ $('.new-message-input .fa-paper-plane').click(function(){
     span.append(time)
     p.text(new_message.val());
     message_wrapper.append(h6);
-    message_wrapper.append(p);
     message_wrapper.append(span);
+    message_wrapper.append(p);
     if (0 < message_container.length) {
         message_container.append(inbox_message).scrollTop(1e5);
         new_message.val('');
     }
 });
 
+$(document).keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $('.fa-paper-plane').click();    
+    }
+});
+
 $(function(){
     $('#feedback-btn').click(function(){
         $('#feedback-window').addClass('popup-background');
-        $('.deliverved-item-feedback-wrapper').addClass('block');
+        $('.feedback-popup-wrapper').addClass('block');
     });
 
     $('#cancel-feedback').click(function(){
         var feedback_window = $(this).closest('.feedback-popup');
         feedback_window.removeClass('popup-background');
-        var block = feedback_window.find('.deliverved-item-feedback-wrapper');
+        var block = feedback_window.find('.feedback-popup-wrapper');
         block.removeClass('block');  
     });
 
-    $(document).on('click','.fa-star',function(){
+    $(document).on('click','#feedback-window .fa-star',function(){
         let star = $(this).closest('.stars').find('i');
         let indexCount = star.index(this);
         if($(this).hasClass('fas')){
