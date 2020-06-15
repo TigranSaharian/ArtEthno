@@ -567,67 +567,74 @@
                             </div>
                         </div>
                     </div>
-                    <hr/>
                 </div>
             </div>
+            <hr/>
             <div class="row mt-3">
-                <div class="col-12 mb-3 right">
-                    <a href="./favorite-item.html"><button type="button">View Profile</button></a>
+                <div class="col-lg-8">
+                    <div class="inline-buttons mt-0">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./account.html"><button type="button">Account</button></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./address.html"><button type="button">Address</button></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./preferences.html"><button type="button">Preferences</button></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./creadit-card.html"><button type="button">Credit Card</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
                 </div>
                 <div class="col-12">
-                    <h6 class="sub-title">Profile Picture</h6>
-                    <div class="user-profile update-profile-image">
-                        <div class="user-profile-image-wrapper">
-                            <img id="avatar-image" src="./assets/Images/item1.png">
-                        </div>
-                        <div class="image-upload">
-                            <button id="upload-btn" type="button">Choose file</button>
-                            <input id="upload-txt" type="text" disabled value="file name">
-                            <input id="hidden-upload" type="file" hidden name="profile-img">
-                            <p>Must be a .jpg, .gif or .png file smaller than 10MB and at least 400px by 400px</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <input type="button" value="Save Image">
-                    </div>
-                    <hr>
                     <form action="" class="form-style">
                         <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Name</h6>
-                            <input class="col-lg-4" type="text" name="name">
+                            <h6 class="col-lg-3 sub-title">Password</h6>
+                            <div class="col-lg-4">
+                                <label for="">Current Password</label>
+                                <input type="password" class="mb-2" name="current-password">
+                                <label for="">New Password</label>
+                                <input type="password" class="mb-2" name="new-password">
+                                <label for="">Confirm Password</label>
+                                <input type="password" class="mb-2" name="comfirm-password">
+                            </div>
                         </div>
                         <hr>
                         <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Gender</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Birthday</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">About</h6>
-                            <textarea class="col-lg-4" rows="4"></textarea>
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Favorite Categories</h6>
-                            <div class="col-lg-4 add-btn">
-                                <div>
-                                    <input id="categoria-name" type="text" name="name">
-                                    <span class="add-categoria">Add</span>
-                                </div>
-                                <div class="my-categoria">
-                                    <div>Categoria sample<i class="fas fa-times"></i></div>
-                                </div>
+                            <h6 class="col-lg-3 sub-title">Change Email</h6>
+                            <div class="col-lg-4">
+                                <label for="">New Email</label>
+                                <input type="email" class="mb-2" name="new-email">
+                                <label for="">Password</label>
+                                <input type="email" class="mb-2" name="password">
                             </div>
                         </div>
                         <div class="right">
                             <input type="button" value="Save changes">
                         </div>
+                        <hr>
                     </form>
+                    <div class="row mb-4">
+                        <h6 class="col-lg-3 sub-title">Close Account</h6>
+                        <div class="col-lg-9 delet-account">
+                            <h6 class="main-color mb-3">What happens when you close your Account?</h6>
+                            <h6 class="dark-color">Your profile won't appear anywhere on ArtEthno. </h6>
+                            <p class="light-gray">People who try to view your profile, shop or one of your shop's listings will see a message that the page is not available.</p>
+                            <h6 class="dark-color">Non-delivery cases you have opened will be closed.</h6>
+                            <p class="light-gray">Reported non-delivery cases for an items you never received from a shop will no longer be active.                            </p>
+                            <h6 class="dark-color">You can reopen your account any time.</h6>
+                            <p class="light-gray">If you want to reopen your account, simply sign in to Etsy.com when you want to return.
+                                You can also contact Etsy support to help you reopen your account.</p>
+                            <h6 class="dark-color">No one will be able to use your username, and your account settings will remain intact. </h6>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <input type="button" value="Close Account">
+                    </div>
                 </div>
             </div>
         </div>

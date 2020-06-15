@@ -38,6 +38,16 @@ button:focus {
 textarea:focus {
   outline: none;
 }
+.main-color {
+  color: #F5CD79;
+}
+.dark-color {
+  color: #393939;
+}
+.light-gray {
+  color: #393939;
+  opacity: 0.5;
+}
 .input-style {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
@@ -106,13 +116,14 @@ textarea {
   color: #393939;
   padding: 5px 10px !important;
   font-size: calc(0.4vw + 10px);
+  width: 100%;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
 label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 12px);
+  font-size: calc(0.3vw + 10px);
   margin: 0 5px;
 }
 .scroll::-webkit-scrollbar-track {
@@ -336,13 +347,13 @@ label {
 .light-dropdown .dropbtn {
   background-color: #F9F9F9;
   border: 1px solid #F5CD79;
+  color: #393939;
 }
 .currency-dropdown {
   display: inline-flex;
 }
 .currency-dropdown .dropbtn {
-  width: calc(3vw + 30px);
-  padding: 2px 5px;
+  width: calc(3vw + 50px);
   color: #393939;
 }
 .search-input {
@@ -1096,7 +1107,6 @@ label {
   width: 80px;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: 14px;
 }
 .burger-menu-wrapper .mobile-drop-menu-contaner .burger-search-3 .drop-menu-item-filter .drop-menu-search-brn {
   margin-top: 15px;
@@ -1370,12 +1380,14 @@ label {
 .sub-title {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
+  font-size: calc(0.4vw + 12px);
+  padding: 5px 0;
+}
+.delet-account p {
+  font-size: calc(0.3vw + 10px);
 }
 .form-style .add-btn {
   position: relative;
-  width: 100%;
-}
-.form-style .add-btn input {
   width: 100%;
 }
 .form-style .add-btn .add-categoria {
@@ -1385,6 +1397,7 @@ label {
   padding: 6px 20px;
   background-color: #393939;
   color: #F9F9F9;
+  font-size: calc(0.3vw + 11px);
   cursor: pointer;
 }
 .form-style .add-btn .my-categoria {
@@ -1393,12 +1406,12 @@ label {
 }
 .form-style .add-btn .my-categoria div {
   border: 1px solid #F5CD79;
-  padding: 5px 20px;
+  padding: calc(0.2vw + 2px) calc(0.4vw + 15px);
   color: #393939;
   margin: 5px 5px 0 0;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: calc(0.3vw + 10px);
   display: inline;
   border-radius: 3px;
   position: relative;
@@ -1407,7 +1420,7 @@ label {
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 12px;
+  font-size: calc(0.3vw + 8px);
 }
 .form-style .add-btn .my-categoria span {
   font-family: 'Sitka Banner', sans-serif;
@@ -1432,22 +1445,22 @@ label {
   font-size: calc(0.3vw + 10px);
   text-decoration: none;
 }
-.user-profile .user-profile-container .inline-buttons {
+.user-profile .inline-buttons {
   margin-top: 20px;
 }
-.user-profile .user-profile-container .inline-buttons button {
+.user-profile .inline-buttons button {
   margin-right: 15px;
   background-color: transparent;
   border: 1px solid #F5CD79;
   transition: 0.3s;
   width: 100%;
 }
-.user-profile .user-profile-container .inline-buttons button:hover {
+.user-profile .inline-buttons button:hover {
   background-color: #393939;
   color: #F9F9F9;
   border: none;
 }
-.user-profile .user-profile-container .inline-buttons button span {
+.user-profile .inline-buttons button span {
   margin-left: 10px;
 }
 .stars {
@@ -1542,6 +1555,72 @@ label {
 }
 .purches-model-container .purches-status-wrapper div span .fa-check-circle {
   color: #2DB53F;
+}
+.small-btn-group button {
+  padding: 3px 20px;
+  font-size: calc(0.2vw + 10px);
+}
+.my-progress-bar {
+  position: relative;
+  display: flex;
+}
+.my-progress-bar span {
+  flex: 1;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #393939;
+  border-radius: 50%;
+}
+.my-progress-bar span::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #F5CD79;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-container .card-wrapper {
+  border: 1px solid #F5CD79;
+}
+.card-container .card-wrapper .card-header {
+  padding: 5px 20px;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  font-size: calc(0.3vw + 16px);
+  background-color: #393939;
+  color: #F9F9F9;
+}
+.card-container .card-wrapper .card-body {
+  padding: 20px;
+}
+.card-container .card-wrapper .card-body li {
+  list-style: none;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.card-container .card-wrapper .card-body li:last-child {
+  margin-bottom: 10px;
+}
+.card-container .card-wrapper .card-body li span {
+  font-family: 'Segoe UI';
+  font-weight: 200;
+}
+.card-container .card-wrapper .card-body input[type="checkbox"] {
+  color: #393939;
+}
+.card-container .card-wrapper .card-body .flex ul {
+  margin-left: 10px;
+}
+.card-container .card-wrapper .card-body .flex ul li {
+  font-family: 'Segoe UI';
+  font-weight: 200;
 }
 .shop-wrapper .shop-cover-img {
   overflow: hidden;

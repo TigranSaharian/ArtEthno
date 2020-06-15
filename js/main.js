@@ -43,10 +43,10 @@ $(function(){
 // dropdown
 $(".dropbtn").click(function () {
     let dropdown_content = $(this).closest(".dropdown").find(".dropdown-content");
-    let dropdown = $(this).find('span');
     let arrow = dropdown_content.closest(".dropdown").find("i").css('transform', 'rotate(-180deg)');
     dropdown_content.slideToggle(200);
-    dropdown_content.on('click', 'span', function () {
+    $('.dropdown-content span').click(function () {
+        let dropdown = $(this).closest('.dropdown').find('.dropbtn').children('span');
         arrow.css('transform', 'rotate(0deg)');
         dropdown.text($(this).text());
         dropdown_content.slideUp(200);
@@ -82,7 +82,7 @@ $(".sign-up-wrapper").click(function(e) {
 // click like heart
 $('.fa-heart').click(function(){
     $(this).closest('span').find('.far').toggleClass('fas');
-    alert('Item added to favorite', success);
+    Alert('Item added to favorite', success);
 });
 
 $('#user').click(function(){
@@ -125,6 +125,17 @@ $('.inbox-message').click(function(){
 
 $('#new-message').click(function(){
     $('.opacity').addClass('popup-background');
+});
+
+$('#add-new-address').click(function(){
+    $('.opacity').addClass('popup-background');
+});
+
+$('.opacity').click(function(e){
+    e.preventDefault();
+    if ($(e.target).attr('rel') === 'new-address-popup') {
+        $('.opacity').removeClass('popup-background');
+    }
 });
 
 $('.new-message-input .fa-paper-plane').click(function(){

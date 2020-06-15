@@ -14,6 +14,62 @@
 </head>
 <body>
     <div id="alert"></div>
+    <div class="new-address-window opacity" rel="new-address-popup">
+        <div class="popup-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>New Address</p>
+                    </div>
+                    <form action="" class="login-form">
+                        <div class="light-dropdown dropdown input-style mt-0 mb-3">
+                            <label>Country*</label>
+                            <button type="button" class="dropbtn"><span>Country</span><i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></button>
+                            <div class="dropdown-content scroll">
+                                <span>Armenia</span>
+                                <span>Georgia</span>
+                                <span>Japan</span>
+                            </div>
+                        </div>
+                        <div class="light-dropdown dropdown input-style mt-0 mb-3">
+                            <label>City*</label>
+                            <button type="button" class="dropbtn"><span>City</span><i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></button>
+                            <div class="dropdown-content scroll">
+                                <span>Yerevan</span>
+                                <span>Gyumri</span>
+                                <span>Vanadzor</span>
+                            </div>
+                        </div>
+                        <div class="input-style">
+                            <label>Street Address*</label>
+                            <input type="text" name="password" />
+                        </div>
+                        <div class="input-style">
+                            <label>Postal Code*</label>
+                            <input type="number" name="password" />
+                        </div>
+                        <div class="light-dropdown dropdown input-style mt-0 mb-3">
+                            <label>Province*</label>
+                            <button type="button" class="dropbtn"><span>Province</span><i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></button>
+                            <div class="dropdown-content scroll">
+                                <span>Yerevan</span>
+                                <span>Gyumri</span>
+                                <span>Vanadzor</span>
+                            </div>
+                        </div>
+                        <div class="input-style">
+                            <label>Full name*</label>
+                            <input type="text" name="password" />
+                        </div>
+                        <input type="button" value="Save" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="sign-in-wrapper" rel="sign-in-popup">
         <div class="popup-container">
             <div class="container">
@@ -567,67 +623,64 @@
                             </div>
                         </div>
                     </div>
-                    <hr/>
                 </div>
             </div>
+            <hr/>
             <div class="row mt-3">
-                <div class="col-12 mb-3 right">
-                    <a href="./favorite-item.html"><button type="button">View Profile</button></a>
+                <div class="col-lg-8">
+                    <div class="inline-buttons mt-0">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./account.html"><button type="button">Account</button></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./address.html"><button type="button">Address</button></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./preferences.html"><button type="button">Preferences</button></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-2">
+                                <a href="./creadit-card.html"><button type="button">Credit Card</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
                 </div>
                 <div class="col-12">
-                    <h6 class="sub-title">Profile Picture</h6>
-                    <div class="user-profile update-profile-image">
-                        <div class="user-profile-image-wrapper">
-                            <img id="avatar-image" src="./assets/Images/item1.png">
-                        </div>
-                        <div class="image-upload">
-                            <button id="upload-btn" type="button">Choose file</button>
-                            <input id="upload-txt" type="text" disabled value="file name">
-                            <input id="hidden-upload" type="file" hidden name="profile-img">
-                            <p>Must be a .jpg, .gif or .png file smaller than 10MB and at least 400px by 400px</p>
-                        </div>
-                    </div>
+                    <h4 class="title">Your shipping addresses</h4>
                     <div class="right">
-                        <input type="button" value="Save Image">
+                        <input type="button" id="add-new-address" value="Add A New Address">
                     </div>
-                    <hr>
-                    <form action="" class="form-style">
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Name</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Gender</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Birthday</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">About</h6>
-                            <textarea class="col-lg-4" rows="4"></textarea>
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Favorite Categories</h6>
-                            <div class="col-lg-4 add-btn">
-                                <div>
-                                    <input id="categoria-name" type="text" name="name">
-                                    <span class="add-categoria">Add</span>
-                                </div>
-                                <div class="my-categoria">
-                                    <div>Categoria sample<i class="fas fa-times"></i></div>
+                    <!-- <h4 class="title">You don't currently have any shipping addresses.</h4> -->
+                    <div class="card-container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card-wrapper">
+                                    <div class="card-header">
+                                        <p>James Smith</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Address</li>
+                                            <li>Postal Code</li>
+                                            <li>Country</li>
+                                            <li>Province</li>
+                                            <li>City</li>
+                                        </ul>
+                                        <hr>
+                                        <div>
+                                            <input type="checkbox" name="make-default">
+                                            <label for="make-default">Make as default</label>
+                                            <div class="small-btn-group">
+                                                <button type="button">Edit</button>
+                                                <button type="button">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="right">
-                            <input type="button" value="Save changes">
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

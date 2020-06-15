@@ -53,6 +53,18 @@ textarea:focus {
     outline: none;
 }
 
+.main-color{
+    color: @main_color;
+}
+.dark-color{
+    color: @dark_color;
+}
+
+.light-gray{
+    color: @dark_color;
+    opacity: 0.5;
+}
+
 .input-style{
     .font_Sitka;
     label{
@@ -124,12 +136,13 @@ textarea {
     color: @dark_color;
     padding: 5px 10px !important;
     font-size: calc(0.4vw + 10px);
+    width: 100%;
     .font_Sitka;
 }
 
 label {
     .font_Sitka;
-    font-size: calc(0.3vw + 12px);
+    font-size: calc(0.3vw + 10px);
     margin: 0 5px;
 }
 
@@ -390,14 +403,14 @@ label {
     .dropbtn {
         background-color: @light_color;
         border: 1px solid @main_color;
+        color: @dark_color;
     }
 }
 
 .currency-dropdown {
     display: inline-flex;
     .dropbtn {
-        width: calc(3vw + 30px);
-        padding: 2px 5px;
+        width: calc(3vw + 50px);
         color: @dark_color;
     }
 }
@@ -1218,7 +1231,6 @@ label {
                             color: @main_color;
                             width: 80px;
                             .font_Sitka;
-                            font-size: 14px;
                         }
                     }
                 }
@@ -1529,15 +1541,20 @@ label {
 
 .sub-title{
     .font_Sitka;
+    font-size: calc(0.4vw + 12px);
+    padding: 5px 0;
+}
+
+.delet-account{
+    p{
+        font-size: calc(0.3vw + 10px);
+    }
 }
 
 .form-style{
     .add-btn{
         position: relative;
         width: 100%;
-        input{
-            width: 100%;
-        }
         .add-categoria{
             position: absolute;
             right: 5px;
@@ -1545,6 +1562,7 @@ label {
             padding: 6px 20px;
             background-color: @dark_color;
             color: @light_color;
+            font-size: calc(0.3vw + 11px);
             cursor: pointer;
         }
         .my-categoria{
@@ -1552,11 +1570,11 @@ label {
             flex-wrap: wrap;
             div{
                 border: 1px solid @main_color;
-                padding: 5px 20px;
+                padding: calc(0.2vw + 2px) calc(0.4vw + 15px);
                 color: @dark_color;
                 margin:5px 5px 0 0; 
                 .font_Sitka;
-                font-size: 15px;
+                font-size: calc(0.3vw + 10px);
                 display: inline;
                 border-radius: 3px;
                 position: relative;
@@ -1564,7 +1582,7 @@ label {
                     position: absolute;
                     top: 5px;
                     right: 5px;
-                    font-size: 12px;
+                    font-size: calc(0.3vw + 8px);
                 }
             }
             span{
@@ -1596,26 +1614,27 @@ label {
                 }
             }
         }
-        .inline-buttons{
-            margin-top: 20px;
-            button{
-                margin-right: 15px;
-                background-color: transparent;
-                border: 1px solid @main_color;
-                transition: 0.3s;
-                width: 100%;
-                &:hover{
-                    background-color: @dark_color;
-                    color: @light_color;
-                    border: none;
-                }
-                span{
-                    margin-left: 10px;
-                }
+    }
+    .inline-buttons{
+        margin-top: 20px;
+        button{
+            margin-right: 15px;
+            background-color: transparent;
+            border: 1px solid @main_color;
+            transition: 0.3s;
+            width: 100%;
+            &:hover{
+                background-color: @dark_color;
+                color: @light_color;
+                border: none;
+            }
+            span{
+                margin-left: 10px;
             }
         }
     }
 }
+
 
 .stars{
     font-size: calc(0.2vw + 11px);
@@ -1709,6 +1728,77 @@ label {
                 }
                 .fa-check-circle{
                     color: @green_color;
+                }
+            }
+        }
+    }
+}
+
+.small-btn-group{
+    button{
+        padding: 3px 20px;
+        font-size: calc(0.2vw + 10px);
+    }
+}
+
+.my-progress-bar{
+    position: relative;
+    display: flex;
+    span{
+        flex: 1;
+        flex-wrap: nowrap;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid @dark_color;
+        border-radius: 50%;
+        &::before{
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: @main_color;
+            position: absolute;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+.card-container{
+    .card-wrapper{
+        border: 1px solid @main_color;
+        .card-header{
+            padding: 5px 20px;
+            .font_Sitka;
+            align-items: center;
+            display: flex;
+            font-size: calc(0.3vw + 16px);
+            background-color: @dark_color;
+            color: @light_color;
+        }
+        .card-body{
+            padding: 20px;
+            li{
+                list-style: none;
+                .font_Sitka;
+                &:last-child{
+                    margin-bottom: 10px;
+                }
+                span{
+                    .font_Segoe;
+                }
+            }
+            input[type="checkbox"]{
+                color: @dark_color;
+            }
+            .flex{
+                ul{
+                    margin-left: 10px;
+                    li{
+                        .font_Segoe;
+                    }
                 }
             }
         }
