@@ -54,6 +54,7 @@ textarea:focus {
 }
 .input-style label {
   font-weight: 100 !important;
+  text-transform: capitalize;
 }
 .input-style input {
   width: 100%;
@@ -210,8 +211,40 @@ label {
 .item-stars i {
   color: #F5CD79;
 }
+.sub-text {
+  opacity: 0.5;
+  font-size: calc(0.3vw + 11px);
+}
 .right {
   text-align: right;
+}
+.paymant-info {
+  display: flex;
+  align-items: baseline;
+}
+.paymant-info p {
+  margin-left: 15px;
+}
+.payment-method-header {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.payment-method-header h4 {
+  display: inline;
+  margin-left: 10px;
+  width: 100%;
+}
+.payment-method-header input {
+  color: #F5CD79;
+}
+.payment-method-header .payment-method-icon {
+  width: 100%;
+  text-align: right;
+}
+.payment-method-header .payment-method-icon img {
+  width: calc(0.3vw + 20px);
+  margin-right: 5px;
 }
 .item-wrapper {
   max-width: 320px;
@@ -271,6 +304,7 @@ label {
 .item-wrapper .item-info p .old-price {
   color: #2DB53F;
   margin-left: 15px;
+  font-size: calc(0.3vw + 10px);
   text-decoration: line-through;
 }
 .item-wrapper .item-info p span:first-child {
@@ -345,7 +379,7 @@ label {
   background-color: #393939;
 }
 .light-dropdown .dropbtn {
-  background-color: #F9F9F9;
+  background-color: #ffffff;
   border: 1px solid #F5CD79;
   color: #393939;
 }
@@ -703,6 +737,7 @@ label {
 .header .iner_header .logo {
   display: inline-flex;
   align-items: center;
+  width: 100%;
 }
 .header .iner_header .logo img {
   width: calc(1vw + 23px);
@@ -1562,27 +1597,72 @@ label {
 }
 .my-progress-bar {
   position: relative;
+  text-align: center;
+}
+.my-progress-bar ul {
+  position: relative;
   display: flex;
 }
-.my-progress-bar span {
+.my-progress-bar ul li {
   flex: 1;
-  flex-wrap: nowrap;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #393939;
-  border-radius: 50%;
+  list-style: none;
+  position: relative;
+  font-size: calc(0.3vw + 11px);
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
 }
-.my-progress-bar span::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: #F5CD79;
+.my-progress-bar ul li i {
+  color: #393939;
   position: absolute;
-  border-radius: 50%;
+  font-size: 22px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-color: #F9F9F9;
+}
+.my-progress-bar ul li i i {
+  color: #F5CD79;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+.my-progress-bar ul li:first-child {
+  margin-left: 0;
+}
+.my-progress-bar ul li:last-child {
+  margin-right: 0;
+}
+.my-progress-bar ul li:first-child::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #F5CD79;
+  right: 0;
+  top: -12px;
+}
+.my-progress-bar ul li:last-child::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #F5CD79;
+  left: 0;
+  top: -12px;
+}
+.my-progress-bar ul li:not(:first-child):not(:last-child)::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #F5CD79;
+  left: 0;
+  top: -12px;
+}
+.my-progress-bar ul li .current-prog {
+  color: #F5CD79;
 }
 .card-container .card-wrapper {
   border: 1px solid #F5CD79;
@@ -1882,6 +1962,9 @@ label {
   }
 }
 @media (max-width: 991.98px) {
+  .right {
+    margin-bottom: 15px;
+  }
   .notification-container {
     position: initial;
   }

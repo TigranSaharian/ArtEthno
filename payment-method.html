@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -12,6 +13,7 @@
     <!-- custome styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div id="alert"></div>
 
@@ -32,61 +34,84 @@
                 <div class="col-12">
                     <div class="my-progress-bar">
                         <ul>
-                            <li><i class="far current-prog fa-circle"></i>Billing Address</li>
-                            <li><i class="far fa-circle"></i>Paymant Method</li>
+                            <li><i class="far fa-circle"><i class="fas fa-circle"></i></i>Billing Address</li>
+                            <li><i class="far current-prog fa-circle"></i>Paymant Method</li>
                             <li><i class="far fa-circle"></i>Review</li>
                         </ul>
                     </div>
-                    <hr/>
+                    <hr />
                 </div>
                 <div class="col-12">
-                    <h4 class="title">Billing Address</h4>
+                    <h4 class="title">Payment method </h4>
+                    <span class="sub-text">You will not be charged until you review this order on the next page.</span>
                 </div>
                 <div class="col-lg-5 col-md-6 col-12">
+                    <div class="payment-method-header">
+                        <input type="radio" checked name="creadit-card" />
+                        <h4>Creadit Card</h4>
+                        <div class="payment-method-icon">
+                            <img src="./assets/icons/png/american-express.png" alt="">
+                            <img src="./assets/icons/png/visa.png" alt="">
+                            <img src="./assets/icons/png/mastercard.png" alt="">
+                            <img src="./assets/icons/png/maestro.png" alt="">
+                        </div>
+                    </div>
                     <form action="" class="login-form">
-                        <div class="light-dropdown dropdown input-style mt-0 mb-3">
-                            <label>Country*</label>
-                            <button type="button" class="dropbtn"><span>Country</span><i class="fa fa-angle-down"
-                                    aria-hidden="true"></i></button>
-                            <div class="dropdown-content scroll">
-                                <span>Armenia</span>
-                                <span>Georgia</span>
-                                <span>Japan</span>
-                            </div>
-                        </div>
-                        <div class="light-dropdown dropdown input-style mt-0 mb-3">
-                            <label>Province*</label>
-                            <button type="button" class="dropbtn"><span>Province</span><i class="fa fa-angle-down"
-                                    aria-hidden="true"></i></button>
-                            <div class="dropdown-content scroll">
-                                <span>Yerevan</span>
-                                <span>Gyumri</span>
-                                <span>Vanadzor</span>
-                            </div>
-                        </div>
-                        <div class="light-dropdown dropdown input-style mt-0 mb-3">
-                            <label>City*</label>
-                            <button type="button" class="dropbtn"><span>City</span><i class="fa fa-angle-down"
-                                    aria-hidden="true"></i></button>
-                            <div class="dropdown-content scroll">
-                                <span>Yerevan</span>
-                                <span>Gyumri</span>
-                                <span>Vanadzor</span>
-                            </div>
+                        <div class="input-style">
+                            <label>Card name*</label>
+                            <input type="text" name="street-address" />
                         </div>
                         <div class="input-style">
-                            <label>Street Address*</label>
-                            <input type="text" name="password" />
-                        </div>
-                        <div class="input-style">
-                            <label>Postal Code*</label>
+                            <label>card number*</label>
                             <input type="number" name="password" />
                         </div>
                         <div class="input-style">
-                            <label>Full name*</label>
-                            <input type="text" name="password" />
+                            <div class="row">
+                                <div class="col-lg-8 col-12">
+                                    <label>Expiration date*</label>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="light-dropdown dropdown input-style mt-0 mb-3">
+                                                <button type="button" class="dropbtn"><span>Month</span><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                                <div class="dropdown-content scroll">
+                                                    <span>Yerevan</span>
+                                                    <span>Gyumri</span>
+                                                    <span>Vanadzor</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="light-dropdown dropdown input-style mt-0 mb-3">
+                                                <button type="button" class="dropbtn"><span>Year</span><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                                <div class="dropdown-content scroll">
+                                                    <span>Yerevan</span>
+                                                    <span>Gyumri</span>
+                                                    <span>Vanadzor</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="input-style">
+                                        <label>CCV*</label>
+                                        <input type="number" max="3" min="2" name="password" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="./payment-method.html"><input type="button" id="bill-address-cont" value="Continue" /></a>
+                        <div class="paymant-info">
+                            <input type="checkbox">
+                            <p>My billing address is the same as my shipping address: <br>
+                                <span class="sub-text"> Full name, Street, Postal code, Province, City, Country</span></p>
+                        </div>
+                        <div class="paymant-info mb-3">
+                            <input type="checkbox">
+                            <p><span class="sub-text"> Set as default</span></p>
+                        </div>
+                        <a href="./creadit-card-preview.html"><input type="button" id="bill-address-cont" value="Continue" /></a>
                     </form>
                 </div>
             </div>
@@ -157,4 +182,5 @@
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a92fd1a4bd.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

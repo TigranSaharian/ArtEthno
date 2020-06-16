@@ -50,7 +50,7 @@ $(".dropbtn").click(function () {
         arrow.css('transform', 'rotate(0deg)');
         dropdown.text($(this).text());
         dropdown_content.slideUp(200);
-    })
+    });
 });
 
 // click sign-in

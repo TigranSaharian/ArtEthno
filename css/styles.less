@@ -69,6 +69,7 @@ textarea:focus {
     .font_Sitka;
     label{
         font-weight: 100 !important;
+        text-transform: capitalize;
     }
     input{
         width: 100%;
@@ -247,8 +248,43 @@ label {
     }
 }
 
+.sub-text{
+    opacity: 0.5;
+    font-size: calc(0.3vw + 11px);
+}
+
 .right{
     text-align: right;
+}
+
+.paymant-info{
+    display: flex;
+    align-items: baseline;
+    p{
+        margin-left: 15px;
+    }
+}
+
+.payment-method-header{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    h4{
+        display: inline;
+        margin-left: 10px;
+        width: 100%;
+    }
+    input{
+        color: @main_color;
+    }
+    .payment-method-icon{
+        width: 100%;
+        text-align: right;
+        img{
+            width: calc(0.3vw + 20px);
+            margin-right: 5px;
+        }
+    }
 }
 
 .item-wrapper {
@@ -313,6 +349,7 @@ label {
             .old-price {
                 color: @green_color;
                 margin-left: 15px;
+                font-size: calc(0.3vw + 10px);
                 text-decoration: line-through;
             }
 
@@ -401,7 +438,7 @@ label {
 
 .light-dropdown {
     .dropbtn {
-        background-color: @light_color;
+        background-color: @white_color;
         border: 1px solid @main_color;
         color: @dark_color;
     }
@@ -796,6 +833,7 @@ label {
         .logo {
             display: inline-flex;
             align-items: center;
+            width: 100%;
 
             img {
                 width: calc(1vw + 23px);
@@ -1743,25 +1781,75 @@ label {
 
 .my-progress-bar{
     position: relative;
-    display: flex;
-    span{
-        flex: 1;
-        flex-wrap: nowrap;
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border: 2px solid @dark_color;
-        border-radius: 50%;
-        &::before{
-            content: '';
-            width: 10px;
-            height: 10px;
-            background-color: @main_color;
-            position: absolute;
-            border-radius: 50%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
+    text-align: center;
+    ul{
+        position: relative;
+        display: flex;
+        li{
+            flex: 1;
+            list-style: none;
+            position: relative;
+            font-size: calc(0.3vw + 11px);
+            .font_Sitka;
+            i{
+                color: @dark_color;
+                position: absolute;
+                font-size: 22px;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -100%);
+                background-color: @light_color;
+                i{
+                    color: @main_color;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 12px;
+                }
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            &:first-child{
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 50%;
+                    height: 2px;
+                    background-color: @main_color;
+                    right: 0;
+                    top: -12px;
+                }
+            }
+            &:last-child{
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 50%;
+                    height: 2px;
+                    background-color: @main_color;
+                    left: 0;
+                    top: -12px;
+                }
+            }
+            &:not(:first-child):not(:last-child){
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: @main_color;
+                    left: 0;
+                    top: -12px;
+                }
+            }
+            .current-prog{
+                color: @main_color;
+            }
         }
     }
 }
@@ -2138,6 +2226,9 @@ label {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 991.98px ) {
+    .right{
+        margin-bottom: 15px;
+    }
     .notification-container{
         position: initial;
         .notification-wrapper{
