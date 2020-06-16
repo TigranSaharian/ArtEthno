@@ -945,6 +945,15 @@ label {
 .menu-active {
   left: 0 !important;
 }
+.active-button {
+  background-color: #393939 !important;
+  color: #F9F9F9 !important;
+  border-color: #393939 !important;
+}
+.active-sub-button {
+  background-color: #F5CD79 !important;
+  color: #393939 !important;
+}
 .burger-menu-wrapper .mobile-drop-menu-contaner {
   background-color: #393939;
   position: fixed;
@@ -1234,6 +1243,7 @@ label {
   border-bottom: 1px solid #F5CD79;
   margin-left: 10px;
   font-size: calc(0.3vw + 9px);
+  width: auto;
 }
 .section .update-profile-image .image-upload p {
   font-size: calc(0.3vw + 6px);
@@ -1493,10 +1503,19 @@ label {
 .user-profile .inline-buttons button:hover {
   background-color: #393939;
   color: #F9F9F9;
-  border: none;
+  border-color: #393939;
 }
 .user-profile .inline-buttons button span {
   margin-left: 10px;
+}
+.user-profile .sub-btn-group button {
+  color: #F9F9F9;
+  background-color: #393939;
+  border: none;
+}
+.user-profile .sub-btn-group button:hover {
+  background-color: #F5CD79;
+  color: #393939;
 }
 .stars {
   font-size: calc(0.2vw + 11px);
