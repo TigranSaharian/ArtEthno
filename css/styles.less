@@ -82,6 +82,7 @@ textarea:focus {
     position: relative;
     h4{
         font-size: calc(0.4vw + 15px);
+        text-transform: capitalize;
     }
     &::after{
         content: '';
@@ -449,6 +450,17 @@ label {
     .dropbtn {
         width: calc(3vw + 50px);
         color: @dark_color;
+    }
+}
+
+.sort-dropdown{
+    position: relative;
+    .dropdown{
+        width: calc(10vw + 100px);
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        transform: translate(0%, -110%);
     }
 }
 
@@ -984,13 +996,13 @@ label {
                         }
                     }
                 }
-    
-                .drop-menu-search-brn {
-                    margin-top: 15px;
-    
-                    input {
-                        width: 100%;
-                    }
+            }
+            .drop-menu-search-brn {
+                margin-top: 15px;
+
+                input {
+                    width: 100%;
+                    text-align: center !important;
                 }
             }
         }
@@ -2141,6 +2153,7 @@ label {
             input {
                 width: calc(20vw + 100px);
                 background-color: @light_color;
+                font-size: calc(0.3vw + 10px);
             }
 
             button {

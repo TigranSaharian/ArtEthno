@@ -16,59 +16,6 @@
 
 <body>
     <div id="alert"></div>
-    <div class="sign-in-wrapper" rel="sign-in-popup">
-        <div class="popup-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p>Sign in</p>
-                    </div>
-                    <form action="" class="login-form">
-                        <div class="input-style">
-                            <label>Email address</label>
-                            <input type="email" name="email" />
-                        </div>
-                        <div class="input-style">
-                            <label>Password</label>
-                            <input type="password" name="password" />
-                        </div>
-                        <div class="remember-me">
-                            <input type="checkbox" name="rememberMe" id="remeberMe" />
-                            <label for="rememberMe">Remember Me</label>
-                            <a href="#">Forgot Password</a>
-                        </div>
-                        <input class="signIn-btn" type="button" value="Sign in" />
-                        <input class="internal-signIn-btn" type="button" value="Continue with facebook" />
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sign-up-wrapper" rel="sign-up-popup">
-        <div class="popup-container">
-            <div class="container">
-                <div class="col-12">
-                    <p>Create an account</p>
-                </div>
-                <form action="" class="login-form">
-                    <div class="input-style">
-                        <label>Email address</label>
-                        <input type="email" name="email" />
-                    </div>
-                    <div class="input-style">
-                        <label>First name</label>
-                        <input type="email" name="email" />
-                    </div>
-                    <div class="input-style">
-                        <label>Password</label>
-                        <input type="password" name="password" />
-                    </div>
-                    <input class="signIn-btn" type="button" value="Create an account" />
-                    <input class="internal-signIn-btn" type="button" value="Continue with facebook" />
-                </form>
-            </div>
-        </div>
-    </div>
     <div id="burger-menu" class="burger-menu-wrapper">
         <div class="mobile-drop-menu-contaner">
             <div>
@@ -370,9 +317,9 @@
                             <div class="col-lg-9">
                                 <div class="row">
                                     <section class="col-lg-4">
-                                        <div class="drop-menu-search-brn"><a href="./category.html"><input type="button" name="navbar_search"
-                                            value="View All (256) "></a></div>
                                         <div class="drop-menu-second-filter">
+                                            <div class="drop-menu-search-brn"><a href="./category.html"><input type="button" name="navbar_search"
+                                                value="View All (256) "></a></div>
                                             <div class="dark-dropdown dropdown">
                                                 <label>Shipping location</label>
                                                 <button class="dropbtn"><span>Shipping location</span><i
@@ -552,724 +499,681 @@
             </div>
         </div>
     </header>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200861.66934672862!2d44.414246897393184!3d40.161933035852925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406aa2dab8fc8b5b%3A0x3d1479ae87da526a!2sYerevan%2C%20Armenia!5e0!3m2!1sen!2s!4v1591681249503!5m2!1sen!2s" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="map-button">
-                        <button type="button" id="map-button" name="open-map">Search in map</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <section class="section">
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-3">
                     <div class="title">
-                        <h4>Most searched items</h4>
+                        <h4>Categoria name</h4>
                     </div>
+                    <div class="sort-dropdown">
+                        <div class="light-dropdown dropdown">
+                            <button class="dropbtn"><span>Sorting by</span><i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></button>
+                            <div class="dropdown-content scroll">
+                                <span href="#">High Price</span>
+                                <span href="#">Low Price</span>
+                                <span href="#">Date</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="item-wrapper shadow">
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <img src="./assets/Images/item1.png">
-                                <div class="image-items">
-                                    <span>Free shipping</span>
-                                    <span><i class="far fa-heart"></i></span>
-                                    <span>-10%</span>
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <h5>Item name</h5>
-                                <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                <h6>Shop name</h6>
-                                <div class="item-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(<span>132</span>)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2 col-md-4 col-12 align-self-start">
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="item-wrapper shadow">
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <img src="./assets/Images/item2.png">
-                                <div class="image-items">
-                                    <span>Free shipping</span>
-                                    <span><i class="far fa-heart"></i></span>
-                                    <span>-10%</span>
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <h5>Item name</h5>
-                                <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                <h6>Shop name</h6>
-                                <div class="item-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(<span>132</span>)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="item-wrapper shadow">
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <img src="./assets/Images/item3.png">
-                                <div class="image-items">
-                                    <span>Free shipping</span>
-                                    <span><i class="far fa-heart"></i></span>
-                                    <span>-10%</span>
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <h5>Item name</h5>
-                                <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                <h6>Shop name</h6>
-                                <div class="item-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(<span>132</span>)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="item-wrapper shadow">
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <img src="./assets/Images/item4.png">
-                                <div class="image-items">
-                                    <span>Free shipping</span>
-                                    <span><i class="far fa-heart"></i></span>
-                                    <span>-10%</span>
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <h5>Item name</h5>
-                                <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                <h6>Shop name</h6>
-                                <div class="item-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(<span>132</span>)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="item-wrapper shadow">
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <img src="./assets/Images/item5.png">
-                                <div class="image-items">
-                                    <span>Free shipping</span>
-                                    <span><i class="far fa-heart"></i></span>
-                                    <span>-10%</span>
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <h5>Item name</h5>
-                                <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                <h6>Shop name</h6>
-                                <div class="item-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(<span>132</span>)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="item-wrapper shadow">
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <img src="./assets/Images/item6.png">
-                                <div class="image-items">
-                                    <span>Free shipping</span>
-                                    <span><i class="far fa-heart"></i></span>
-                                    <span>-10%</span>
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <h5>Item name</h5>
-                                <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                <h6>Shop name</h6>
-                                <div class="item-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(<span>132</span>)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="center-btn">
-                        <button>More Results</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section gray-background">
-        <div class="section-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 section-title">
-                        <h1>top sellers</h1>
-                    </div>
-                </div>
-                <div class="row section-content mt-5">
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <div class="shop-wrapper shadow">
-                            <div class="shop-cover-img">
-                                <img src="./assets/Images/shops/2.png">
-                            </div>
-                            <div class="shop-info-body">
-                                <div class="shop-avatar-wrapper">
-                                    <div class="shop-avatar-img"></div>
-                                </div>
-                                <div class="shop-info">
-                                    <h1>Shop name</h1>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                <div class="col-lg-10 col-md-8 col-12 align-self-end">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item1.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                    <span class="like"><i class="far fa-heart"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <div class="shop-wrapper shadow">
-                            <div class="shop-cover-img">
-                                <img src="./assets/Images/shops/3.png">
-                            </div>
-                            <div class="shop-info-body">
-                                <div class="shop-avatar-wrapper">
-                                    <div class="shop-avatar-img"></div>
-                                </div>
-                                <div class="shop-info">
-                                    <h1>Shop name</h1>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                    <span class="like"><i class="far fa-heart"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <div class="shop-wrapper shadow">
-                            <div class="shop-cover-img">
-                                <img src="./assets/Images/shops/4.png">
-                            </div>
-                            <div class="shop-info-body">
-                                <div class="shop-avatar-wrapper">
-                                    <div class="shop-avatar-img"></div>
-                                </div>
-                                <div class="shop-info">
-                                    <h1>Shop name</h1>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                    <span class="like"><i class="far fa-heart"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <div class="shop-wrapper shadow">
-                            <div class="shop-cover-img">
-                                <img src="./assets/Images/shops/5.png">
-                            </div>
-                            <div class="shop-info-body">
-                                <div class="shop-avatar-wrapper">
-                                    <div class="shop-avatar-img"></div>
-                                </div>
-                                <div class="shop-info">
-                                    <h1>Shop name</h1>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                    <span class="like"><i class="far fa-heart"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <div class="shop-wrapper shadow">
-                            <div class="shop-cover-img">
-                                <img src="./assets/Images/shops/6.png">
-                            </div>
-                            <div class="shop-info-body">
-                                <div class="shop-avatar-wrapper">
-                                    <div class="shop-avatar-img"></div>
-                                </div>
-                                <div class="shop-info">
-                                    <h1>Shop name</h1>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                    <span class="like"><i class="far fa-heart"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <div class="shop-wrapper shadow">
-                            <div class="shop-cover-img">
-                                <img src="./assets/Images/shops/1.png">
-                            </div>
-                            <div class="shop-info-body">
-                                <div class="shop-avatar-wrapper">
-                                    <div class="shop-avatar-img"></div>
-                                </div>
-                                <div class="shop-info">
-                                    <h1>Shop name</h1>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                    <span class="like"><i class="far fa-heart"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="center-btn">
-                            <button>Discover more</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="section-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 section-title">
-                        <h1>popular products</h1>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item1.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item2.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item2.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item3.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item4.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item3.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item5.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item6.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item4.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item3.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item5.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item5.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item6.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item1.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item6.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item2.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <div class="item-wrapper shadow">
-                            <div class="image-wrapper">
-                                <div class="image">
-                                    <img src="./assets/Images/item4.png">
-                                    <div class="image-items">
-                                        <span>Free shipping</span>
-                                        <span><i class="far fa-heart"></i></span>
-                                        <span>-10%</span>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item1.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <h5>Item name</h5>
-                                    <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
-                                    <h6>Shop name</h6>
-                                    <div class="item-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <span>(<span>132</span>)</span>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="center-btn">
-                            <button>More Results</button>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item2.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section gray-background">
-        <div class="section-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 section-title">
-                        <h1>about us</h1>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-lg-5 col-md-12 col-sm-12 col-12 video-wrapper">
-                        <video src="https://youtu.be/-Io0wJ2dbOU" poster="./assets/Images/video_poster.png"></video>
-                    </div>
-                    <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-                        <div class="about-us-wrapper">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum in ducimus molestiae
-                                quam, sit quia quas omnis veritatis delectus debitis explicabo dolorum totam eum,
-                                dignissimos eius assumenda tenetur possimus aspernatur. Lorem ipsum dolor sit, amet
-                                consectetur adipisicing elit. Ipsum, perferendis excepturi quisquam quis vero officia
-                                dolores inventore eum rem beatae mollitia quasi exercitationem minus atque quas sequi!
-                                Ea, magni tempora?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore porro
-                                ratione perspiciatis amet aperiam exercitationem. Placeat iusto repellat, dolorum
-                                consequatur expedita quidem debitis. Dolore totam fugiat ad, repellendus hic veniam!</p>
-                            <div class="btn-right">
-                                <button type="button">Discover More</button>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item3.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item4.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item5.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item6.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item1.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item2.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item3.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item4.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item5.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item6.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item1.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item2.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item3.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item4.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item5.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="item-wrapper shadow">
+                                <div class="image-wrapper">
+                                    <div class="image">
+                                        <img src="./assets/Images/item6.png">
+                                        <div class="image-items">
+                                            <span>Free shipping</span>
+                                            <span><i class="far fa-heart"></i></span>
+                                            <span>-10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <h5>Item name</h5>
+                                        <p><span>USD</span>810<span class="old-price"><span>USD</span>900</span></p>
+                                        <h6>Shop name</h6>
+                                        <div class="item-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(<span>132</span>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="center-btn">
+                                <button>More Results</button>
                             </div>
                         </div>
                     </div>

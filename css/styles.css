@@ -66,6 +66,7 @@ textarea:focus {
 }
 .title h4 {
   font-size: calc(0.4vw + 15px);
+  text-transform: capitalize;
 }
 .title::after {
   content: '';
@@ -389,6 +390,16 @@ label {
 .currency-dropdown .dropbtn {
   width: calc(3vw + 50px);
   color: #393939;
+}
+.sort-dropdown {
+  position: relative;
+}
+.sort-dropdown .dropdown {
+  width: calc(10vw + 100px);
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transform: translate(0%, -110%);
 }
 .search-input {
   border-radius: 50px;
@@ -871,11 +882,12 @@ label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
-.header .drop-menu-contaner .main-menu section .drop-menu-item-filter .drop-menu-search-brn {
+.header .drop-menu-contaner .main-menu section .drop-menu-search-brn {
   margin-top: 15px;
 }
-.header .drop-menu-contaner .main-menu section .drop-menu-item-filter .drop-menu-search-brn input {
+.header .drop-menu-contaner .main-menu section .drop-menu-search-brn input {
   width: 100%;
+  text-align: center !important;
 }
 .header .drop-menu-contaner .main-menu ul {
   margin-bottom: 10px;
@@ -1900,6 +1912,7 @@ label {
   .search-box .search input {
     width: calc(20vw + 100px);
     background-color: #F9F9F9;
+    font-size: calc(0.3vw + 10px);
   }
   .search-box .search button {
     background-color: transparent;
