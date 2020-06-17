@@ -449,7 +449,7 @@ label {
   margin: 0;
 }
 .popup-background {
-  opacity: 1 !important;
+  display: block !important;
 }
 .popup-background::after {
   content: '';
@@ -1418,8 +1418,8 @@ label {
   color: #393939;
   opacity: 0.8;
 }
-.opacity {
-  opacity: 0;
+.none {
+  display: none;
 }
 .popup-container p {
   font-family: 'Sitka Banner', sans-serif;
@@ -1991,8 +1991,17 @@ label {
 .item-container .item-feedback-wrapper .feedback .image-wrapper p {
   font-size: calc(0.3vw + 11px);
 }
+.item-container .item-feedback-wrapper .feedback .feedback-item-image {
+  display: flex;
+}
 .item-container .item-feedback-wrapper .feedback .feedback-item-image img {
   width: calc(3vw + 50px);
+}
+.item-container .item-feedback-wrapper .feedback .feedback-item-image span {
+  font-size: calc(0.3vw + 12px);
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  margin-left: 15px;
 }
 .item-container .item-image-wrapper {
   padding: 0 10px;
@@ -2081,6 +2090,48 @@ label {
   height: calc(2vw + 30px);
   width: auto;
   transform: translate(-50%, -50%);
+}
+.item-container .pagination ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: flex-end;
+}
+.item-container .pagination ul li {
+  margin: 0 5px;
+  font-size: calc(0.3vw + 10px);
+}
+.item-container .pagination ul li i {
+  background-color: #F5CD79;
+  padding: 5px;
+}
+.item-shop-wrapper .shop-profile-image {
+  display: flex;
+}
+.item-shop-wrapper .shop-profile-image .shop-profile-image-wrapper {
+  width: calc(6vw + 100px);
+  height: calc(3vw + 50px);
+  overflow: hidden;
+  position: relative;
+  margin-right: 25px;
+}
+.item-shop-wrapper .shop-profile-image .shop-profile-image-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: calc(3vw + 50px);
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+.item-shop-wrapper .shop-profile-image .image-wrapper h4 {
+  font-size: calc(0.4vw + 15px);
+}
+.item-shop-wrapper .shop-profile-image .image-wrapper a {
+  text-decoration: none;
+  font-size: calc(0.3vw + 11px);
+}
+.item-shop-wrapper .shop-profile-image .image-wrapper p {
+  font-size: calc(0.3vw + 11px);
 }
 .filter-wrapper {
   padding: 0 10px;
@@ -2431,18 +2482,18 @@ label {
   }
 }
 @media (min-width: 768px) {
-  .mobile-feedback {
+  .mobile-display {
     display: none;
   }
-  .large-screen-feedback {
+  .large-screen-display {
     display: block;
   }
 }
 @media (max-width: 767.98px) {
-  .mobile-feedback {
+  .mobile-display {
     display: block;
   }
-  .large-screen-feedback {
+  .large-screen-display {
     display: none;
   }
   .margin-top {

@@ -112,30 +112,20 @@ $("#map-button").click(function(){
     map.toggleClass('active-map');
 });
 
-$('.opacity').click(function(e){
-    e.preventDefault();
-    if ($(e.target).attr('rel') === 'message-popup') {
-        $('.opacity').removeClass('popup-background');
-    }
-});
-
 $('.inbox-message').click(function(){
     window.location.replace("./message-pm.html");
 });
 
 $('#new-message').click(function(){
-    $('.opacity').addClass('popup-background');
+    $('.none').addClass('popup-background');
 });
 
 $('#add-new-address').click(function(){
-    $('.opacity').addClass('popup-background');
+    $('.none').addClass('popup-background');
 });
 
-$('.opacity').click(function(e){
-    e.preventDefault();
-    if ($(e.target).attr('rel') === 'new-address-popup') {
-        $('.opacity').removeClass('popup-background');
-    }
+$('.none').click(function(e){
+    RemovePopup(e, 'new-address-popup');
 });
 
 $('.new-message-input .fa-paper-plane').click(function(){
@@ -194,18 +184,15 @@ $('.image').click(function(){
 $('#more-info').click(function(){
     var gradient = $(this).closest('.item-description-wrapper').find('span');
     var desc = $(this).closest('.item-description-wrapper').find('p');
-    MoewInfo(gradient, desc);
+    MoreInfo(gradient, desc);
 });
 
 $('#buy-now').click(function(){
     $('.pamyant-method-popup').addClass('popup-background');
 });
 
-$('.opacity').click(function(e){
-    e.preventDefault();
-    if ($(e.target).attr('rel') === 'pamyant-method-popup') {
-        $('.opacity').removeClass('popup-background');
-    }
+$('.none').click(function(e){
+    RemovePopup(e, 'pamyant-method-popup');
 });
 
 $(function(){
@@ -280,7 +267,7 @@ $(function(){
     });
 });
 
-function MoewInfo(gradient, dascription){
+function MoreInfo(gradient, dascription){
     dascription.toggleClass('more-info');
     gradient.toggleClass('text-gradient');
 }
@@ -288,6 +275,13 @@ function MoewInfo(gradient, dascription){
 function SetPageIndex() {
     for (let index = 0; index < section.length; index++) {
         $(section).eq(index).attr('rel', (index + 1))
+    }
+}
+
+function RemovePopup(event, popup_name){
+    event.preventDefault();
+    if ($(event.target).attr('rel') === popup_name) {
+        $('.none').removeClass('popup-background');
     }
 }
 
