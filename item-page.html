@@ -17,6 +17,53 @@
 
 <body>
     <div id="alert"></div>
+    <div class="pamyant-method-popup opacity" rel="pamyant-method-popup">
+        <div class="popup-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Choose you payment method</p>
+                    </div>
+                    <form action="" class="login-form">
+                        <div class="flex-center left p-1">
+                            <input type="radio" name="payment-method">
+                            <div class="payment-method-icon left ml-3">
+                                <img src="./assets/icons/png/american-express.png" alt="" title="American Express">
+                                <img src="./assets/icons/png/visa.png" alt="" title="Visa Card">
+                                <img src="./assets/icons/png/mastercard.png" alt="" title="Master Card">
+                                <img src="./assets/icons/png/maestro.png" alt="" title="Maestro Card">
+                            </div>
+                        </div>
+                        <div class="flex-center left p-1">
+                            <input type="radio" name="payment-method">
+                            <div class="payment-method-icon left ml-3">
+                                <img src="./assets/icons/png/paypal.png" alt="" title="PayPal">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="order-summary">
+                            <h4 class="title">Order Summary</h4>
+                            <ul>
+                                <li>
+                                    <span>Item(s) total</span>
+                                    <span>USD<span>24.60</span></span>
+                                </li>
+                                <li>
+                                    <span>Shipping<span>To Armenia</span></span>
+                                    <span>USD <span>14.99</span></span>
+                                </li>
+                                <li>
+                                    <span>Total</span>
+                                    <span>USD <span>39.59</span></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <input class="signIn-btn" type="button" value="Process to checkout" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="burger-menu" class="burger-menu-wrapper">
         <div class="mobile-drop-menu-contaner">
             <div>
@@ -503,7 +550,7 @@
     <section class="section">
         <div class="container item-container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="item-image-wrapper">
                         <div class="item-image">
                             <div class="slide-controls">
@@ -535,7 +582,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="item-feedback-wrapper">
+                    <div class="item-feedback-wrapper large-screen-feedback">
                         <div class="feedback-title">
                             <h5>Feedbacks for this product</h5>
                             <div class="item-stars">
@@ -655,7 +702,7 @@
                         </div>
                         <p class="shipping-status">Status of shop</p>
                         <div class="item-button-wrapper">
-                            <button type="button">BUY NOW</button>
+                            <button type="button" id="buy-now">BUY NOW</button>
                             <button type="button">ADD TO CARD</button>
                         </div>
                         <hr>
@@ -729,6 +776,95 @@
                                 <textarea rows="4"></textarea>
                                 <div class="right mt-2">
                                     <button type="button">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-feedback-wrapper mobile-feedback">
+                        <hr>
+                        <div class="feedback-title">
+                            <h5>Feedbacks for this product</h5>
+                            <div class="item-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(<span>132</span>)</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="feedback">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
+                                </div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith <span> <span>| </span> 12 May 2020</span></h4>
+                                    <div class="item-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(<span>132</span>)</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus. Debitis numquam aliquam sequi modi?
+                                            Incidunt in veniam autem sunt veritatis ipsa nostrum, ullam deserunt, officia animi esse doloremque eos.
+                                    </p>
+                                    <div class="feedback-item-image mt-3">
+                                        <img src="./assets/Images/item5.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="feedback">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
+                                </div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith <span> <span>| </span> 12 May 2020</span></h4>
+                                    <div class="item-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(<span>132</span>)</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus. Debitis numquam aliquam sequi modi?
+                                            Incidunt in veniam autem sunt veritatis ipsa nostrum, ullam deserunt, officia animi esse doloremque eos.
+                                    </p>
+                                    <div class="feedback-item-image mt-3">
+                                        <img src="./assets/Images/item5.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="feedback">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
+                                </div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith <span> <span>| </span> 12 May 2020</span></h4>
+                                    <div class="item-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(<span>132</span>)</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus. Debitis numquam aliquam sequi modi?
+                                            Incidunt in veniam autem sunt veritatis ipsa nostrum, ullam deserunt, officia animi esse doloremque eos.
+                                    </p>
+                                    <div class="feedback-item-image mt-3">
+                                        <img src="./assets/Images/item5.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>

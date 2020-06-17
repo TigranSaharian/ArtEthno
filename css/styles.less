@@ -225,6 +225,11 @@ label {
     display: flex;
 }
 
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+
 .block{
     display: block !important;
 }
@@ -276,6 +281,10 @@ label {
     text-align: right;
 }
 
+.left{
+    text-align: left !important;
+}
+
 .paymant-info{
     display: flex;
     align-items: baseline;
@@ -296,13 +305,14 @@ label {
     input{
         color: @main_color;
     }
-    .payment-method-icon{
-        width: 100%;
-        text-align: right;
-        img{
-            width: calc(0.3vw + 20px);
-            margin-right: 5px;
-        }
+}
+
+.payment-method-icon{
+    width: 100%;
+    text-align: right;
+    img{
+        width: calc(0.3vw + 20px);
+        margin-right: 5px;
     }
 }
 
@@ -627,6 +637,29 @@ label {
             &:hover{
                 background-color: @dark_color;
                 color: @main_color;
+            }
+        }
+    }
+}
+
+.pamyant-method-popup{
+    .order-summary{
+        h5{
+            font-size: calc(0.4vw + 12px);
+            .font_Sitka;
+        }
+        padding: 0 10px 20px 10px;
+        ul{
+            li{
+                position: relative;
+                list-style: none;
+                font-size: calc(0.3vw + 10px);
+                span{
+                    &:nth-child(2){
+                        position: absolute;
+                        right: 0;
+                    }
+                }
             }
         }
     }
@@ -2018,7 +2051,7 @@ label {
 
 .item-container{
     .item-info-wrapper{
-        padding: 0 15px;
+        padding: 0 10px;
         .price-wrapper{
             p {
                 .font_Sitka;
@@ -2205,6 +2238,7 @@ label {
         }
     }
     .item-image-wrapper{
+        padding: 0 10px;
         .slide-controls{
             opacity: 0.8;
             i{
@@ -2294,7 +2328,6 @@ label {
         }
     }
 }
-
 
 .filter-wrapper{
     padding: 0 10px;
@@ -2586,13 +2619,6 @@ label {
         display: none;
     }
 }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {}
-
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 991.98px ) {
     .right{
@@ -2646,8 +2672,7 @@ label {
     }
 
     .bottom-menu-active{
-        background-color: @dark_color;
-        opacity: 0.8;
+        background-color: #4e4e4e;
     }
 
     .top-content {
@@ -2722,8 +2747,22 @@ label {
     }
 }
 
+@media (min-width: 768px){
+    .mobile-feedback{
+        display: none;
+    }
+    .large-screen-feedback{
+        display: block;
+    }
+}
 // Medium devices (tablets, less than 992px)
 @media (max-width: 767.98px) {
+    .mobile-feedback{
+        display: block;
+    }
+    .large-screen-feedback{
+        display: none;
+    }
     .margin-top{
         margin: 5px 0;
     }
@@ -2745,6 +2784,3 @@ label {
         width: 85%;
     }
 }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {}

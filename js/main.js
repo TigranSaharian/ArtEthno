@@ -197,6 +197,17 @@ $('#more-info').click(function(){
     MoewInfo(gradient, desc);
 });
 
+$('#buy-now').click(function(){
+    $('.pamyant-method-popup').addClass('popup-background');
+});
+
+$('.opacity').click(function(e){
+    e.preventDefault();
+    if ($(e.target).attr('rel') === 'pamyant-method-popup') {
+        $('.opacity').removeClass('popup-background');
+    }
+});
+
 $(function(){
     $('#feedback-btn').click(function(){
         $('#feedback-window').addClass('popup-background');

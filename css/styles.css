@@ -193,6 +193,10 @@ label {
 .flex {
   display: flex;
 }
+.flex-center {
+  display: flex;
+  align-items: center;
+}
 .block {
   display: block !important;
 }
@@ -234,6 +238,9 @@ label {
 .right {
   text-align: right;
 }
+.left {
+  text-align: left !important;
+}
 .paymant-info {
   display: flex;
   align-items: baseline;
@@ -254,11 +261,11 @@ label {
 .payment-method-header input {
   color: #F5CD79;
 }
-.payment-method-header .payment-method-icon {
+.payment-method-icon {
   width: 100%;
   text-align: right;
 }
-.payment-method-header .payment-method-icon img {
+.payment-method-icon img {
   width: calc(0.3vw + 20px);
   margin-right: 5px;
 }
@@ -558,6 +565,23 @@ label {
 .popup-container .login-form .internal-signIn-btn:hover {
   background-color: #393939;
   color: #F5CD79;
+}
+.pamyant-method-popup .order-summary {
+  padding: 0 10px 20px 10px;
+}
+.pamyant-method-popup .order-summary h5 {
+  font-size: calc(0.4vw + 12px);
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.pamyant-method-popup .order-summary ul li {
+  position: relative;
+  list-style: none;
+  font-size: calc(0.3vw + 10px);
+}
+.pamyant-method-popup .order-summary ul li span:nth-child(2) {
+  position: absolute;
+  right: 0;
 }
 .notification-container {
   position: relative;
@@ -1806,7 +1830,7 @@ label {
   max-height: 100% !important;
 }
 .item-container .item-info-wrapper {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .item-container .item-info-wrapper .price-wrapper p {
   font-family: 'Sitka Banner', sans-serif;
@@ -1969,6 +1993,9 @@ label {
 }
 .item-container .item-feedback-wrapper .feedback .feedback-item-image img {
   width: calc(3vw + 50px);
+}
+.item-container .item-image-wrapper {
+  padding: 0 10px;
 }
 .item-container .item-image-wrapper .slide-controls {
   opacity: 0.8;
@@ -2337,8 +2364,7 @@ label {
     right: 0;
   }
   .bottom-menu-active {
-    background-color: #393939;
-    opacity: 0.8;
+    background-color: #4e4e4e;
   }
   .top-content {
     position: fixed;
@@ -2404,7 +2430,21 @@ label {
     display: none;
   }
 }
+@media (min-width: 768px) {
+  .mobile-feedback {
+    display: none;
+  }
+  .large-screen-feedback {
+    display: block;
+  }
+}
 @media (max-width: 767.98px) {
+  .mobile-feedback {
+    display: block;
+  }
+  .large-screen-feedback {
+    display: none;
+  }
   .margin-top {
     margin: 5px 0;
   }
