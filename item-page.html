@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -11,7 +12,9 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <!-- custome styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/cutome-grid.css">
 </head>
+
 <body>
     <div id="alert"></div>
     <div id="burger-menu" class="burger-menu-wrapper">
@@ -43,7 +46,7 @@
                 </section>
                 <section class="burger-search-2">
                     <div class="drop-menu-second-filter">
-                        <div class="dark-dropdown dropdown">
+                        <div class="light-dropdown dropdown">
                             <label>Shipping location</label>
                             <button class="dropbtn"><span>Shipping location</span><i class="fa fa-angle-down"
                                     aria-hidden="true"></i></button>
@@ -53,7 +56,7 @@
                                 <span href="#">Burgundian Islands</span>
                             </div>
                         </div>
-                        <div class="dark-dropdown dropdown">
+                        <div class="light-dropdown dropdown">
                             <label>Item's ethic location</label>
                             <button class="dropbtn"><span>Country</span><i class="fa fa-angle-down"
                                     aria-hidden="true"></i></button>
@@ -63,7 +66,7 @@
                                 <span href="#">Burgundian Islands</span>
                             </div>
                         </div>
-                        <div class="dark-dropdown dropdown">
+                        <div class="light-dropdown dropdown">
                             <label>Delivery type</label>
                             <button class="dropbtn"><span>Delivery type</span><i class="fa fa-angle-down"
                                     aria-hidden="true"></i></button>
@@ -178,7 +181,7 @@
                             </div>
                             <hr />
                             <div class="user-popup-setting">
-                                <a href="./message-box.html"><i class="fas fa-envelope"></i> Message</a>
+                                <a href="/message-box.html"><i class="fas fa-envelope"></i> Message</a>
                                 <a href="#"><i class="fas fa-cog"></i> Account Settings</a>
                             </div>
                         </div>
@@ -227,7 +230,7 @@
                             </div>
                             <hr />
                             <div class="user-popup-setting">
-                                <a href="#"><i class="fas fa-envelope"></i> Message</a>
+                                <a href="./message-box.html"><i class="fas fa-envelope"></i> Message</a>
                                 <a href="#"><i class="fas fa-cog"></i> Account Settings</a>
                             </div>
                         </div>
@@ -316,6 +319,8 @@
                                 <div class="row">
                                     <section class="col-lg-4">
                                         <div class="drop-menu-second-filter">
+                                            <div class="drop-menu-search-brn"><a href="./category.html"><input type="button" name="navbar_search"
+                                                value="View All (256) "></a></div>
                                             <div class="dark-dropdown dropdown">
                                                 <label>Shipping location</label>
                                                 <button class="dropbtn"><span>Shipping location</span><i
@@ -479,7 +484,7 @@
                                                     <div class="dropdown-content scroll">
                                                         <span href="#">AMD</span>
                                                         <span href="#">RUB</span>
-                                                        <span href="#">EUR</span>
+                                                         <span href="#">EUR</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -496,85 +501,238 @@
         </div>
     </header>
     <section class="section">
-        <div class="container user-profile">
-            <div class="user-profile-container">
-                <div class="inline-buttons">
-                    <div class="row">
-                        <div class="col-lg-8 col-12">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12 mb-2">
-                                    <a href="./profile.html"><button class="active-button" disabled type="button">Profile</button></a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-12 mb-2">
-                                    <a href="./account.html"><button type="button">Settings</button></a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-12 mb-2">
-                                    <a href="./my-purcheses.html"><button type="button">Purchases</button></a>
-                                </div>
+        <div class="container item-container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-4">
+                    <div class="item-image-wrapper">
+                        <div class="item-image">
+                            <div class="slide-controls">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <img src="./assets/Images/item3.png">
+                            <div class="slide-controls">
+                                <i class="fas fa-chevron-right"></i>
                             </div>
                         </div>
-                    </div>
-                    <hr/>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12 mb-3 right">
-                    <a href="./favorite-item.html"><button type="button">View Profile</button></a>
-                </div>
-                <div class="col-12">
-                    <h6 class="sub-title">Profile Picture</h6>
-                    <div class="user-profile update-profile-image">
-                        <div class="user-profile-image-wrapper">
-                            <img id="avatar-image" src="./assets/Images/item1.png">
+                        <div class="item-sub-image">
+                            <div class="slide-controls">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="sub-image">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                                <img src="./assets/Images/item3.png">
+                            </div>
+                            <div class="slide-controls">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
-                        <div class="image-wrapper">
-                            <button id="upload-btn" type="button">Choose file</button>
-                            <input id="upload-txt" type="text" disabled value="file name">
-                            <input id="hidden-upload" type="file" hidden name="profile-img">
-                            <p>Must be a .jpg, .gif or .png file smaller than 10MB and at least 400px by 400px</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <input type="button" value="Save Image">
                     </div>
                     <hr>
-                    <form action="" class="form-style">
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Name</h6>
-                            <input class="col-lg-4" type="text" name="name">
+                    <div class="item-feedback-wrapper">
+                        <div class="feedback-title">
+                            <h5>Feedbacks for this product</h5>
+                            <div class="item-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(<span>132</span>)</span>
+                            </div>
                         </div>
                         <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Gender</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Birthday</h6>
-                            <input class="col-lg-4" type="text" name="name">
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">About</h6>
-                            <textarea class="col-lg-4" rows="4"></textarea>
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <h6 class="col-lg-3 sub-title">Favorite Categories</h6>
-                            <div class="col-lg-4 add-btn">
-                                <div>
-                                    <input id="categoria-name" type="text" name="name">
-                                    <span class="add-categoria">Add</span>
+                        <div class="feedback">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
                                 </div>
-                                <div class="my-categoria">
-                                    <div>Categoria sample<i class="fas fa-times"></i></div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith <span> <span>| </span> 12 May 2020</span></h4>
+                                    <div class="item-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(<span>132</span>)</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus. Debitis numquam aliquam sequi modi?
+                                            Incidunt in veniam autem sunt veritatis ipsa nostrum, ullam deserunt, officia animi esse doloremque eos.
+                                    </p>
+                                    <div class="feedback-item-image mt-3">
+                                        <img src="./assets/Images/item5.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="right">
-                            <input type="button" value="Save changes">
+                        <hr>
+                        <div class="feedback">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
+                                </div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith <span> <span>| </span> 12 May 2020</span></h4>
+                                    <div class="item-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(<span>132</span>)</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus. Debitis numquam aliquam sequi modi?
+                                            Incidunt in veniam autem sunt veritatis ipsa nostrum, ullam deserunt, officia animi esse doloremque eos.
+                                    </p>
+                                    <div class="feedback-item-image mt-3">
+                                        <img src="./assets/Images/item5.png">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                        <hr>
+                        <div class="feedback">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
+                                </div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith <span> <span>| </span> 12 May 2020</span></h4>
+                                    <div class="item-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(<span>132</span>)</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus. Debitis numquam aliquam sequi modi?
+                                            Incidunt in veniam autem sunt veritatis ipsa nostrum, ullam deserunt, officia animi esse doloremque eos.
+                                    </p>
+                                    <div class="feedback-item-image mt-3">
+                                        <img src="./assets/Images/item5.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="item-info-wrapper">
+                        <h4>Name of item</h4>
+                        <hr class="m-0">
+                        <div class="price-wrapper">
+                            <p><span>USD</span><span>810</span>
+                                <span class="old-price">
+                                    <span>USD</span>
+                                    <span>900</span>
+                                    <span class="old-price-description">
+                                        <span>Save</span> 
+                                        <span>USD</span>
+                                        <span>90</span>
+                                        <span>(10%)</span>
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="item-shop-info">
+                            <h6>Name of Shop</h6>
+                            <div class="item-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(<span>132</span>)</span>
+                            </div>
+                        </div>
+                        <p class="shipping-status">Status of shop</p>
+                        <div class="item-button-wrapper">
+                            <button type="button">BUY NOW</button>
+                            <button type="button">ADD TO CARD</button>
+                        </div>
+                        <hr>
+                        <div class="item-quantity">
+                            <span class="quantity">Quantity</span>
+                            <div class="light-dropdown dropdown m-0 quantity-dropdown">
+                                <button class="dropbtn"><span>1</span><i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                <div class="dropdown-content scroll">
+                                    <span href="#">2</span>
+                                    <span href="#">3</span>
+                                    <span href="#">4</span>
+                                    <span href="#">5</span>
+                                    <span href="#">6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="item-description">
+                            <h6 class="item-info-title">ITEM DESCRIPTION</h6>
+                            <p class="handmade mt-3"><i class="fas fa-hand-paper"></i><span>Handmade</span></p>
+                            <div class="item-description-wrapper">
+                                <div class="item-description-text">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, provident amet! Quia expedita sit velit
+                                        corporis iusto molestiae magnam explicabo veniam quod. Consequatur aspernatur quasi quas nesciunt esse
+                                        excepturi illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel minima quisquam eaque
+                                        voluptas soluta, est id eius officia. Soluta, repudiandae.
+                                        Nihil praesentium voluptatem nam, quia minima ipsam corporis modi?
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, provident amet! Quia expedita sit velit
+                                        corporis iusto molestiae magnam explicabo veniam quod. Consequatur aspernatur quasi quas nesciunt esse
+                                        excepturi illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel minima quisquam eaque
+                                        voluptas soluta, est id eius officia. Soluta, repudiandae.
+                                        Nihil praesentium voluptatem nam, quia minima ipsam corporis modi?
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, provident amet! Quia expedita sit velit
+                                        corporis iusto molestiae magnam explicabo veniam quod. Consequatur aspernatur quasi quas nesciunt esse
+                                        excepturi illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel minima quisquam eaque
+                                        voluptas soluta, est id eius officia. Soluta, repudiandae.
+                                        Nihil praesentium voluptatem nam, quia minima ipsam corporis modi?
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, provident amet! Quia expedita sit velit
+                                        corporis iusto molestiae magnam explicabo veniam quod. Consequatur aspernatur quasi quas nesciunt esse
+                                        excepturi illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel minima quisquam eaque
+                                        voluptas soluta, est id eius officia. Soluta, repudiandae.
+                                        Nihil praesentium voluptatem nam, quia minima ipsam corporis modi?
+                                        <span class="text-gradient"></span>
+                                    </p>
+                                </div>
+                                <button type="button" id="more-info">More Information</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="shipping-terms">
+                            <h6 class="item-info-title">Shipping terms</h6>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, provident amet! Quia expedita sit velit
+                                corporis iusto molestiae magnam explicabo veniam quod. Consequatur aspernatur quasi quas nesciunt esse
+                                excepturi illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel minima quisquam eaque
+                                voluptas soluta, est id eius officia. Soluta, repudiandae.
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="shop-owner-wrapper">
+                            <div class="user-profile-image">
+                                <div class="user-profile-image-wrapper">
+                                    <img id="avatar-image" src="./assets/Images/item1.png">
+                                </div>
+                                <div class="image-wrapper">
+                                    <h4>Jhone Smith</h4>
+                                    <span>Armenia, <span>Yerevan</span></span>
+                                </div>
+                            </div>
+                            <div class="send-message mt-3">
+                                <textarea rows="4"></textarea>
+                                <div class="right mt-2">
+                                    <button type="button">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -644,4 +802,5 @@
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a92fd1a4bd.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

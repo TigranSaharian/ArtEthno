@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <!-- custome styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/cutome-grid.css">
 </head>
 
 <body>
@@ -506,7 +507,7 @@
                     <div class="title">
                         <h4>Categoria name</h4>
                     </div>
-                    <div class="sort-dropdown">
+                    <div class="sorting-dropdown">
                         <div class="light-dropdown dropdown">
                             <button class="dropbtn"><span>Sorting by</span><i class="fa fa-angle-down"
                                     aria-hidden="true"></i></button>
@@ -520,10 +521,81 @@
                     <hr>
                 </div>
                 <div class="col-lg-2 col-md-4 col-12 align-self-start">
+                    <div class="light-dropdown dropdown m-0">
+                        <button class="dropbtn"><span>All Categories</span><i
+                                class="fa fa-angle-down" aria-hidden="true"></i></button>
+                        <div class="dropdown-content scroll">
+                            <span href="#">Jewelry & Accessories</span>
+                            <span href="#">Cloting & Shoes</span>
+                            <span href="#">Home & Living</span>
+                            <span href="#">Wedding & party</span>
+                            <span href="#">Art & Collectibles</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter-wrapper">
+                        <h6>Special offers</h6>
+                        <div class="filter">
+                            <div class="filter-item">
+                                <input type="checkbox" name="make-default">
+                                <label for="make-default">FREE shipping</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" name="make-default">
+                                <label for="make-default">On sale</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter-wrapper">
+                        <h6>Ready to ship in</h6>
+                        <div class="filter">
+                            <div class="filter-item">
+                                <input type="checkbox" name="make-default">
+                                <label for="make-default">1 business day</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" name="make-default">
+                                <label for="make-default">1 – 3 business days</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter-wrapper">
+                        <h6>Price</h6>
+                        <div class="filter">
+                            <div class="filter-item">
+                                <input type="radio" name="price">
+                                <label for="make-default"><span>USD</span><span>5</span> - <span>USD</span><span>15</span></label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="radio" name="price">
+                                <label for="make-default"><span>USD</span><span>15</span> - <span>USD</span><span>35</span></label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="radio" name="price">
+                                <label for="make-default"><span>USD</span><span>35</span> - <span>USD</span><span>55</span></label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="radio" name="price">
+                                <label for="make-default"><span>USD</span><span>55</span> - <span>USD</span><span>95</span></label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="radio" name="price">
+                                <label for="make-default"><span>Over USD 100</span></label>
+                            </div>
+                            <div class="filter-item ">
+                                <input type="text" name="price" placeholder="Low">
+                                <span class="m-0">-</span>
+                                <input type="text" name="price" placeholder="High">
+                                <button type="button"></button><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-10 col-md-8 col-12 align-self-end">
                     <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -550,7 +622,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -577,7 +649,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -604,7 +676,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -631,7 +703,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -658,7 +730,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -685,7 +757,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -712,7 +784,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -739,7 +811,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -766,7 +838,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -793,7 +865,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -820,7 +892,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -847,7 +919,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -874,7 +946,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -901,7 +973,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -928,7 +1000,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -955,7 +1027,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -982,7 +1054,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -1009,7 +1081,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -1036,7 +1108,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -1063,7 +1135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -1090,7 +1162,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -1117,7 +1189,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">
@@ -1144,7 +1216,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                        <div class="col-lg-2dot4 col-md-4 col-sm-6 col-6">
                             <div class="item-wrapper shadow">
                                 <div class="image-wrapper">
                                     <div class="image">

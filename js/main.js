@@ -187,6 +187,16 @@ $('.add-categoria').click(function(){
     }
 });
 
+$('.image').click(function(){
+    window.location.replace("./item-page.html");
+});
+
+$('#more-info').click(function(){
+    var gradient = $(this).closest('.item-description-wrapper').find('span');
+    var desc = $(this).closest('.item-description-wrapper').find('p');
+    MoewInfo(gradient, desc);
+});
+
 $(function(){
     $('#feedback-btn').click(function(){
         $('#feedback-window').addClass('popup-background');
@@ -258,6 +268,11 @@ $(function(){
         current_page_title.text(' | Item options');
     });
 });
+
+function MoewInfo(gradient, dascription){
+    dascription.toggleClass('more-info');
+    gradient.toggleClass('text-gradient');
+}
 
 function SetPageIndex() {
     for (let index = 0; index < section.length; index++) {
