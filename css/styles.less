@@ -8,8 +8,8 @@
 @green_color: #2DB53F;
 @red_color: red;
 
-@size_small: calc(0.3vw + 6px);
-@size_standard: calc(0.3vw + 11px);
+@size_small: calc(0.3vw + 7px);
+@size_standard: calc(0.3vw + 10px);
 @size_larg: calc(0.5vw + 15px);
 @size_extralarg: calc(1vw + 15px);
 
@@ -40,6 +40,11 @@ ul,
 li {
     margin: 0;
     padding: 0;
+}
+
+h5{
+    .font_Sitka;
+    font-size: @size_h5;
 }
 
 h4 {
@@ -315,7 +320,6 @@ label {
 .item-stars {
     padding: 5px 0 10px 0;
     font-size: @size_small;
-
     i {
         color: @main_color;
     }
@@ -334,13 +338,7 @@ label {
 
 .sub-text{
     opacity: 0.5;
-    font-size: @size_standard;
-}
-
-.sub-title{
-    .font_Sitka;
-    font-size: calc(0.4vw + 12px);
-    padding: 5px 0;
+    font-size: @size_small;
 }
 
 .right{
@@ -439,9 +437,7 @@ label {
         position: relative;
 
         h5 {
-            .font_Sitka;
             padding-top: 10px;
-            font-size: @size_h5;
             cursor: pointer;
             width: fit-content;
         }
@@ -713,10 +709,6 @@ label {
 }
 
 .order-summary{
-    h5{
-        font-size: calc(0.4vw + 12px);
-        .font_Sitka;
-    }
     padding: 0 10px 20px 10px;
     ul{
         li{
@@ -788,9 +780,9 @@ label {
                 a{
                     width: 100%;
                     margin: 0 auto;
-                    color: @main_color;
+                    color: @dark_color;
                     text-align: left;
-                    font-size: calc(0.4vw + 10px);
+                    font-size: @size_small;
                     .font_Sitka            
                 }
             }
@@ -802,7 +794,7 @@ label {
                 margin: 0;
                 padding: 5px 0 !important;
                 .font_Sitka;
-                font-size: calc(0.4vw + 10px);
+                font-size: @size_standard;
                 display: flex;
                 align-items: center;
                 text-align: left;
@@ -825,18 +817,13 @@ label {
     background-color: @dark_color;
     display: flex;
     align-items: center;
-    #user{
-        position: relative;
-    }
     .container {
         display: flex;
 
         a {
             color: @white_color;
-            .font_Segoe;
-            cursor: pointer;
             text-decoration: none;
-
+            .font_Segoe;
             &:hover {
                 color: @white_color;
             }
@@ -861,34 +848,26 @@ label {
             }
 
             .icon-count {
-                position: relative;
-
-                span {
-                    &:first-child {
-                        width: calc(0.3vw + 13px);
-                        height: calc(0.3vw + 13px);
-                        top: -5px;
-                        left: 50%;
-                        position: absolute;
-                        display: flex;
-                        text-align: center;
-                        font-size: calc(0.2vw + 8px);
-                        border-radius: 50%;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: #F5CD79;
-                        color: #393939;
-                        font-weight: 900 !important;
-                        .font_Segoe;
+                i{
+                    position: relative;
+                    span {
+                        &:first-child {
+                            top: -5px;
+                            left: 50%;
+                            position: absolute;
+                            display: flex;
+                            text-align: center;
+                            font-size: @size_small;
+                            border-radius: 10px;
+                            padding: 2px 5px;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #F5CD79;
+                            color: #393939;
+                            font-weight: 900 !important;
+                            .font_Segoe;
+                        }
                     }
-                }
-            }
-        }
-
-        .unauthorized {
-            span {
-                &:first-child {
-                    margin: 0 10px !important;
                 }
             }
         }
@@ -1019,7 +998,7 @@ label {
                     cursor: pointer;
                     padding-right: calc(0.8vw + 9px);
                     a{
-                        font-size: calc(0.4vw + 7px);
+                        font-size: @size_small;
                         color: @dark_color;
                     }
                 }
@@ -1228,7 +1207,7 @@ label {
             background-color: @light_color;
             padding: 10px 15px;
             .font_Sitka;
-            font-size: calc(0.3vw + 9px);
+            font-size: @size_small;
             letter-spacing: 2px;
             text-transform: uppercase;
             .back{
@@ -1262,7 +1241,7 @@ label {
                 text-align: left;
                 color:@main_color;
                 .font_Sitka;
-                font-size: calc(0.5vw + 14px);
+                font-size: @size_larg;
                 padding: 10px 0;
             }
             ul{
@@ -1274,7 +1253,7 @@ label {
                         text-decoration: none;
                         color: @light_color;
                         .font_Sitka;
-                        font-size:  calc(0.5vw + 13px);
+                        font-size:  @size_larg;
                         text-transform: uppercase;
                         letter-spacing: 2px;
                     }
@@ -1473,13 +1452,7 @@ label {
         }
 
         .btn-right {
-            bottom: 10px;
-            right: 10px;
             margin-top: 30px;
-
-            button {
-                padding: 5px 80px;
-            }
         }
     }
     .update-profile-image{
@@ -1497,7 +1470,7 @@ label {
                 border: none;
                 border-bottom: 1px solid @main_color;
                 margin-left: 10px;
-                font-size: calc(0.3vw + 9px);
+                font-size: @size_small;
                 width:auto;
             }
             p{
@@ -1529,7 +1502,7 @@ label {
                 padding: 5px 0;
                 .font_Sitka;
                 display: block;
-                font-size: calc(0.4vw + 10px);
+                font-size: @size_standard;
                 color: @dark_color;
                 text-decoration: none;
             }
@@ -1566,7 +1539,7 @@ label {
                 background-color: @white_color;
             }
             input{
-                font-size: calc(0.3vw + 8px);
+                font-size: @size_small;
                 width: 100%;
                 background-color: @white_color;
             }
@@ -1629,7 +1602,7 @@ label {
 }
 
 .date{
-    font-size: calc(0.3vw + 7px);
+    font-size: @size_small;
     color: @dark_color;
     opacity: 0.8;
 }
@@ -1966,7 +1939,7 @@ label {
             .font_Sitka;
             align-items: center;
             display: flex;
-            font-size: calc(0.3vw + 16px);
+            font-size: @size_larg;
             background-color: @dark_color;
             color: @light_color;
         }
@@ -2011,7 +1984,7 @@ label {
     }
 
     .shop-info-body {
-        padding: 15px;
+        padding: @size_standard;
         display: flex;
         align-items: center;
         position: relative;
@@ -2019,8 +1992,8 @@ label {
         .shop-avatar-wrapper {
             border-radius: 50%;
             overflow: hidden;
-            width: 50px;
-            height: 50px;
+            width: calc(2vw + 20px);
+            height: calc(2vw + 20px);
             border: 1px solid @main_color;
             cursor: pointer;
 
@@ -2029,25 +2002,17 @@ label {
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                width: 50px;
-                height: 50px;
+                width: calc(2vw + 20px);
+                height: calc(2vw + 20px);
             }
         }
 
         .shop-info {
             margin-left: 20px;
-
-            h1 {
-                cursor: pointer;
-                font-weight: 100;
-                .font_Sitka;
-                display: inline;
-                font-size: calc(0.4vw + 16px);
-            }
             .item-stars{
                 padding: 0;
                 span{
-                    font-size: @size_standard;
+                    font-size: @size_small;
                 }
             }
             .like {
@@ -2058,7 +2023,7 @@ label {
                 transform: translateY(-50%);
 
                 i {
-                    font-size: 25px;
+                    font-size: @size_larg;
                     color: @main_color;
                 }
             }
@@ -2091,7 +2056,7 @@ label {
                     display: block;
                     color: @green_color;
                     margin-left: 35px;
-                    font-size: calc(0.4vw + 14px);
+                    font-size: @size_standard;
                     text-decoration: line-through;
                     position: relative;
                     .old-price-description{
@@ -2119,9 +2084,6 @@ label {
             display: flex;
             .item-stars {
                 padding: 0 15px;
-            }
-            h6{
-                font-size: calc(0.4vw + 12px);
             }
         }
     
@@ -2156,7 +2118,7 @@ label {
     
         .item-description{
             .handmade{
-                font-size: calc(0.3vw + 13px);
+                font-size:  @size_standard;
                 span{
                     margin-left: 15px;
                     .font_Sitka;
@@ -2228,10 +2190,6 @@ label {
             .item-stars{
                 padding: 0 20px;
             }
-            h5{
-                .font_Sitka;
-                font-size: calc(0.4vw + 12px);
-            }
         }
         .feedback{
             .item-stars{
@@ -2239,10 +2197,9 @@ label {
             }
             .image-wrapper{
                 width: calc(100% - 100px);
-                h5{
-                    font-size: calc(0.4vw + 15px);
+                h4{
                     span{
-                        font-size: @size_standard !important;
+                        font-size: @size_small !important;
                     }
                 }
                 p{
@@ -2255,7 +2212,7 @@ label {
                     width: calc(3vw + 50px)
                 }
                 span{
-                    font-size: calc(0.3vw + 12px);
+                    font-size: @size_standard;
                     .font_Sitka;
                     margin-left: 15px;
                 }
@@ -2542,6 +2499,90 @@ label {
     }
 }
 
+.check-shop-name{
+    position: relative;
+    span{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        padding: 6px 20px;
+        transform: translateY(-50%);
+        font-size: @size_standard;
+        background-color: @main_color;
+        color: @dark_color;
+        .font_Sitka;
+    }
+}
+
+.liting-item{
+    min-height: 200px;
+    background-color: @dark_color;
+    .listing-wrapper {
+        img{
+            width: 100%;
+        }
+        .fa-trash-alt{
+            position: absolute;
+            top: 5px;
+            font-size: @size_small;
+            right: 10px;
+            color: @dark_color;
+            padding: 5px;
+            background-color: @light_color;
+        }
+    }
+}
+
+.liting-item-empty{
+    min-height: 200px;
+    background-color: @dark_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .empty-wrapper{
+        text-align: center;
+        .fa-plus{
+            font-size: calc(2vw + 25px);
+            color: @main_color;
+        }
+        p{
+            padding: 10px 0;
+            color: @main_color;
+            font-size: @size_standard;
+            .font_Sitka;
+        }
+    }
+}
+
+.billing-type-wrapper{
+    padding: 15px;
+    border: 1px solid @main_color;
+    position: relative;
+    h5{
+        margin-bottom: 5px;
+        font-size: @size_h5;
+    }
+    input[type="radio"]{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .billing-type-content{
+        p{
+            &:first-child{
+                font-size: calc(2.5vw + 15px);
+                .font_Sitka;
+                line-height: 1;
+            }
+            &:last-child{
+                margin-left: 15px;
+                font-size: @size_standard;
+            }
+        }
+    }
+}
+
 .footer {
 
     .footer-top-wrapper {
@@ -2633,21 +2674,14 @@ label {
 
         .fotter-bottom-body {
             display: flex;
-            font-size: calc(0.4vw + 10px);
-
-            div {
-                &:first-child {
-                    .font_Sitka;
-                }
-            }
+            font-size: @size_standard;
+            .font_Sitka;
 
             div {
                 position: relative;
-
                 &:last-child {
                     position: absolute;
                     right: 0;
-                    .font_Sitka
                 }
             }
         }
@@ -2835,9 +2869,6 @@ label {
         z-index: 100;
         height: 55px;
         .icon-wrapper{
-            .icon-count span:first-child{
-                top: 7px !important;
-            }
             .icon {
                 justify-content: center;
                 width: 100%;
