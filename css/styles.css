@@ -2225,8 +2225,10 @@ label {
   font-weight: 700;
 }
 .liting-item {
-  min-height: 200px;
+  width: 100%;
+  overflow: hidden;
   background-color: #393939;
+  height: calc(3vw + 120px);
 }
 .liting-item .listing-wrapper img {
   width: 100%;
@@ -2241,7 +2243,7 @@ label {
   background-color: #F9F9F9;
 }
 .liting-item-empty {
-  min-height: 200px;
+  height: calc(3vw + 120px);
   background-color: #393939;
   display: flex;
   justify-content: center;

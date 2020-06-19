@@ -182,6 +182,10 @@ $('.image').click(function(){
     window.location.replace("./item-page.html");
 });
 
+$('.liting-item-empty').click(function(){
+    window.location.replace('./add-new-listing.html');
+});
+
 $('#more-info').click(function(){
     var gradient = $(this).closest('.item-description-wrapper').find('span');
     var desc = $(this).closest('.item-description-wrapper').find('p');
