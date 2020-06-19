@@ -8,6 +8,16 @@
 @green_color: #2DB53F;
 @red_color: red;
 
+@size_small: calc(0.3vw + 6px);
+@size_standard: calc(0.3vw + 11px);
+@size_larg: calc(0.5vw + 15px);
+@size_extralarg: calc(1vw + 15px);
+
+@size_h1: calc(0.4vw + 20px);
+@size_h3: calc(0.4vw + 15px);
+@size_h4: calc(0.4vw + 12px);
+@size_h5: calc(0.4vw + 10px);
+
 .font_Segoe {
     font-family: 'Segoe UI';
     font-weight: 200;
@@ -34,6 +44,19 @@ li {
 
 h4 {
     .font_Sitka;
+    font-size: @size_h4;
+    padding: 5px 0;
+}
+
+h3{
+    .font_Sitka;
+    font-size: @size_h3;
+    padding: 5px 0;
+}
+
+h1{
+    .font_Sitka;
+    font-size: @size_h1;
     padding: 5px 0;
 }
 
@@ -70,6 +93,52 @@ textarea:focus {
     background-color: @light_color;
 }
 
+.dark-background{
+    background-color: @dark_color;
+}
+
+.light-title{
+    h1 {
+        color: @light_color;
+        &::after {
+            background-color: @main_color
+        }
+    }
+}
+
+.dark-title{
+    h1{
+        color: @dark_color;
+        &::after {
+            background-color: @main_color;
+        }
+    }
+}
+
+.section-title{
+    h1 {
+       .font_Sitka;
+       text-transform: uppercase;
+       letter-spacing: calc(0.8vw + 0.5px);
+       font-weight: 100;
+       font-size: @size_h1;
+       position: relative;
+       z-index: 1;
+       padding-left: 25px;
+
+       &::after {
+           content: '';
+           position: absolute;
+           bottom: -10px;
+           left: 0;
+           opacity: 0.6;
+           width: 90px;
+           height: 30px;
+           z-index: -1;
+       }
+   }
+}
+
 .green{
     color: @green_color;
 }
@@ -89,10 +158,7 @@ textarea:focus {
 .title {
     margin: 5px 0;
     position: relative;
-    h4{
-        font-size: calc(0.4vw + 15px);
-        text-transform: capitalize;
-    }
+    text-transform: capitalize;
     &::after{
         content: '';
         position: absolute;
@@ -110,7 +176,7 @@ textarea:focus {
         background-color: @main_color;
         padding: 5px 20px;
         border: none;
-        font-size: calc(0.3vw + 11px);
+        font-size: @size_standard;
         transition: 0.3s;
         cursor: pointer;
         text-transform: capitalize;
@@ -126,7 +192,7 @@ input[type="button"] {
     background-color: @main_color;
     padding: 5px 20px;
     border: none;
-    font-size: calc(0.3vw + 11px);
+    font-size: @size_standard;
     transition: 0.3s;
     cursor: pointer;
     text-transform: capitalize;
@@ -146,14 +212,14 @@ textarea {
     text-align: left;
     color: @dark_color;
     padding: 5px 15px !important;
-    font-size: calc(0.4vw + 10px);
+    font-size: @size_standard;
     width: 100%;
     .font_Sitka;
 }
 
 label {
     .font_Sitka;
-    font-size: calc(0.3vw + 10px);
+    font-size: @size_standard;
     margin: 0 5px;
 }
 
@@ -248,7 +314,7 @@ label {
 
 .item-stars {
     padding: 5px 0 10px 0;
-    font-size: calc(0.3vw + 7px);
+    font-size: @size_small;
 
     i {
         color: @main_color;
@@ -268,7 +334,7 @@ label {
 
 .sub-text{
     opacity: 0.5;
-    font-size: calc(0.3vw + 11px);
+    font-size: @size_standard;
 }
 
 .sub-title{
@@ -281,8 +347,17 @@ label {
     text-align: right;
 }
 
+.center{
+    text-align: center;
+}
+
 .left{
     text-align: left !important;
+}
+
+.position-right{
+    position: absolute;
+    right: 0;
 }
 
 .paymant-info{
@@ -366,7 +441,7 @@ label {
         h5 {
             .font_Sitka;
             padding-top: 10px;
-            font-size: calc(0.4vw + 10px);
+            font-size: @size_h5;
             cursor: pointer;
             width: fit-content;
         }
@@ -374,12 +449,12 @@ label {
         p {
             .font_Sitka;
             margin: 0;
-            font-size: calc(0.4vw + 11px);
+            font-size: @size_h4;
 
             .old-price {
                 color: @green_color;
                 margin-left: 15px;
-                font-size: calc(0.3vw + 10px);
+                font-size: @size_standard;
                 text-decoration: line-through;
             }
 
@@ -390,7 +465,7 @@ label {
 
         h6 {
             .font_Segoe;
-            font-size: calc(0.3vw + 9px);
+            font-size: @size_standard;
             cursor: pointer;
             width: fit-content;
         }
@@ -414,7 +489,7 @@ label {
 
 .dropdown{
     margin-top: 10px;
-    font-size: calc(0.3vw + 11px);
+    font-size: @size_standard;
     .dropbtn {
         border: none;
         width: 100%;
@@ -506,15 +581,15 @@ label {
     padding: 5px 15px;
     border: none !important;
     padding: 5px 15px !important;
-    font-size: calc(0.3vw + 10px);
+    font-size: @size_standard;
 }
 
 .sign-in-wrapper{
-    opacity: 0;
+    display: none;
 }
 
 .sign-up-wrapper{
-    opacity: 0;
+    display: none;
 }
 
 .margin-top{
@@ -522,7 +597,6 @@ label {
 }
 
 .popup-background{
-    // opacity: 1 !important;
     display: block !important;
     &::after{
         content: '';
@@ -562,7 +636,7 @@ label {
             .font_Sitka;
             padding: 5px 20px;
             border: none;
-            font-size: calc(0.3vw + 11px);
+            font-size: @size_standard;
             transition: 0.3s;
             cursor: pointer;
             text-transform: capitalize;
@@ -587,11 +661,6 @@ label {
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    p{
-        .font_Sitka;
-        font-size: calc(0.6vw + 20px);
-        padding: 10px 0;
-    }
     .login-form{
         width: 100%;
         .remember-me{
@@ -623,7 +692,7 @@ label {
             color: @light_color;
             text-transform: uppercase;
             transition: 0.3s;
-            font-size: calc(0.3vw + 12px);
+            font-size: @size_standard;
             &:hover{
                 background-color: @main_color;
                 color: @dark_color;
@@ -634,7 +703,7 @@ label {
             border: 1px solid @main_color;
             background-color: @light_color;
             transition: 0.3s;
-            font-size: calc(0.3vw + 12px);
+            font-size: @size_standard;
             &:hover{
                 background-color: @dark_color;
                 color: @main_color;
@@ -643,23 +712,21 @@ label {
     }
 }
 
-.pamyant-method-popup{
-    .order-summary{
-        h5{
-            font-size: calc(0.4vw + 12px);
-            .font_Sitka;
-        }
-        padding: 0 10px 20px 10px;
-        ul{
-            li{
-                position: relative;
-                list-style: none;
-                font-size: calc(0.3vw + 10px);
-                span{
-                    &:nth-child(2){
-                        position: absolute;
-                        right: 0;
-                    }
+.order-summary{
+    h5{
+        font-size: calc(0.4vw + 12px);
+        .font_Sitka;
+    }
+    padding: 0 10px 20px 10px;
+    ul{
+        li{
+            position: relative;
+            list-style: none;
+            font-size: @size_standard;
+            span{
+                &:nth-child(2){
+                    position: absolute;
+                    right: 0;
                 }
             }
         }
@@ -677,7 +744,7 @@ label {
         p{
             border-bottom: 1px solid @dark_color;
             padding: 5px 0;
-            font-size: calc(0.3vw + 10px);
+            font-size: @size_standard;
             color: @dark_color;
             text-align: left;
         }
@@ -715,7 +782,6 @@ label {
             }
             .user-popup-info{
                 h4{
-                    font-size: calc(0.4vw + 13px);
                     color: @dark_color;
                     padding: 0;
                 }
@@ -875,7 +941,7 @@ label {
             .font_Segoe;
             padding: 5px 15px;
             width: calc(100% - 75px);
-            font-size: calc(0.3vw + 10px);
+            font-size: @size_standard;
             transition: 0.3s;
             margin-left: 35px;
         }
@@ -916,7 +982,7 @@ label {
                 font-weight: 700;
                 letter-spacing: calc(0.5vw + 2px);
                 text-transform: uppercase;
-                font-size: calc(0.5vw + 17px);
+                font-size: @size_larg;
                 line-height: 0;
                 margin-top: 3px;
 
@@ -1133,7 +1199,7 @@ label {
             background-color: @main_color;
             padding: 5px 20px;
             border: none;
-            font-size: calc(0.3vw + 11px);
+            font-size: @size_standard;
             transition: 0.3s;
     
             &:hover {
@@ -1395,30 +1461,6 @@ label {
     padding: calc(1vw + 25px) 0;
 
     .section-wrapper {
-        .section-title{
-            h1 {
-               .font_Sitka;
-               text-transform: uppercase;
-               letter-spacing: calc(0.8vw + 0.5px);
-               font-weight: 100;
-               font-size: 30px;
-               position: relative;
-               z-index: 1;
-               padding-left: 25px;
-   
-               &::after {
-                   content: '';
-                   position: absolute;
-                   bottom: -10px;
-                   left: 0;
-                   background-color: @main_color;
-                   opacity: 0.6;
-                   width: 90px;
-                   height: 30px;
-                   z-index: -1;
-               }
-           }
-        }
 
         .video-wrapper video {
             width: inherit;
@@ -1459,7 +1501,7 @@ label {
                 width:auto;
             }
             p{
-                font-size: calc(0.3vw + 6px);
+                font-size: @size_small;
                 padding: 5px 0;
             }
         }
@@ -1554,11 +1596,11 @@ label {
                     width: 100%;
                     h6{
                         .font_Sitka;
-                        font-size: calc(0.3vw + 11px);
+                        font-size: @size_standard;
                         line-height: 0.5;
                     }
                     p{
-                        font-size: calc(0.3vw + 8px);
+                        font-size: @size_small;
                     }
                 }
             }
@@ -1571,7 +1613,7 @@ label {
             }
         }
         .message-reciver{
-            font-size: calc(0.3vw + 11px);
+            font-size: @size_standard;
             display: flex;
             width: 100%;
             border: 1px solid @main_color;
@@ -1599,7 +1641,7 @@ label {
 .popup-container{
     p{
         .font_Sitka;
-        font-size: calc(0.3vw + 14px);
+        font-size: @size_larg;
         padding: 10px 0;
     }
     .message-form{
@@ -1651,7 +1693,7 @@ label {
 
 .delet-account{
     p{
-        font-size: calc(0.3vw + 10px);
+        font-size: @size_standard;
     }
 }
 
@@ -1666,7 +1708,7 @@ label {
             padding: 6px 20px;
             background-color: @dark_color;
             color: @light_color;
-            font-size: calc(0.3vw + 11px);
+            font-size: @size_standard;
             cursor: pointer;
         }
         .my-categoria{
@@ -1678,7 +1720,7 @@ label {
                 color: @dark_color;
                 margin:5px 5px 0 0; 
                 .font_Sitka;
-                font-size: calc(0.3vw + 10px);
+                font-size: @size_standard;
                 display: inline;
                 border-radius: 3px;
                 position: relative;
@@ -1686,12 +1728,12 @@ label {
                     position: absolute;
                     top: 5px;
                     right: 5px;
-                    font-size: calc(0.3vw + 8px);
+                    font-size: @size_small;
                 }
             }
             span{
                 .font_Sitka;
-                font-size: calc(0.3vw + 12px);
+                font-size: @size_standard;
             }
         }
     }
@@ -1703,7 +1745,6 @@ label {
             text-align: left;
 
             h4{
-                font-size: calc(0.4vw + 12px);
                 color: @dark_color;
                 padding: 0;
                 text-transform: uppercase;
@@ -1713,7 +1754,7 @@ label {
                 margin: 5px 0;
                 a{
                     color: @dark_color;
-                    font-size: calc(0.3vw + 10px);
+                    font-size: @size_standard;
                     text-decoration: none;
                 }
             }
@@ -1777,23 +1818,10 @@ label {
                 .purches-message{
                     cursor: pointer;
                     .font_Sitka;
-                    font-size: calc(0.3vw + 10px);
+                    font-size: @size_standard;
                     i{
                         color: @dark_color;
                         margin-right: 5px;
-                    }
-                }
-                h1{
-                    .font_Sitka;
-                    width: 100%;
-                    align-items: baseline;
-                    font-size: calc(0.5vw + 13px);
-                    .purches-message{
-                        .font_Sitka;
-                        font-size: calc(0.3vw + 12px);
-                        i{
-                            margin-right: 10px;
-                        }
                     }
                 }
             }
@@ -1804,10 +1832,10 @@ label {
                 p{
                     .font_Sitka;
                     &:first-child{
-                        font-size: calc(0.5vw + 15px);
+                        font-size: @size_larg;
                     }
                     &:last-child{
-                        font-size: calc(0.3vw + 10px);
+                        font-size: @size_standard;
                         text-decoration: line-through;
                         color: @green_color;
                     }
@@ -1815,11 +1843,11 @@ label {
             }
         }
         p{
-            font-size: calc(0.4vw + 11px);
+            font-size: @size_standard;
         }
         .purches-item-info{
             span{
-                font-size: calc(0.3vw + 9px);
+                font-size: @size_small;
                 .font_Sitka;
                 color: @dark_color;
                 opacity: 0.8;
@@ -1833,7 +1861,7 @@ label {
             justify-content: flex-end;
             margin-top: 10px;
             span{
-                font-size: calc(0.4vw + 10px); 
+                font-size: @size_standard; 
                 margin-right: 10px;   
                 .font_Sitka;
                 i{
@@ -1865,7 +1893,7 @@ label {
             flex: 1;
             list-style: none;
             position: relative;
-            font-size: calc(0.3vw + 11px);
+            font-size: @size_standard;
             .font_Sitka;
             i{
                 color: @dark_color;
@@ -2019,7 +2047,7 @@ label {
             .item-stars{
                 padding: 0;
                 span{
-                    font-size: calc(0.3vw + 10px);
+                    font-size: @size_standard;
                 }
             }
             .like {
@@ -2067,7 +2095,7 @@ label {
                     text-decoration: line-through;
                     position: relative;
                     .old-price-description{
-                        font-size: calc(0.3vw + 10px);
+                        font-size: @size_standard;
                         text-decoration: solid;
                         display: flex;
                         margin-top: -5px;
@@ -2102,7 +2130,7 @@ label {
             background-color: black;
             width: fit-content;
             color: white;
-            font-size: calc(0.3vw + 10px);
+            font-size: @size_standard;
             margin-top: 10px;
         }
     
@@ -2120,17 +2148,7 @@ label {
                 }
             }
         }
-    
-        .item-quantity{
-            display: flex;
-            align-items: center;
-            .quantity{
-                .font_Sitka;
-                margin-right: 15px;
-                font-size: calc(0.3vw + 12px);
-            }
-        }
-    
+   
         .item-info-title{
             letter-spacing: calc(0.2vw + 2px);
             text-transform: uppercase;
@@ -2162,7 +2180,7 @@ label {
                         overflow: hidden;
                         max-height: 150px;
                         &:last-child{
-                            font-size: calc(0.3vw + 10px);
+                            font-size: @size_standard;
                         }
                     }
                 }
@@ -2182,7 +2200,7 @@ label {
         .shipping-terms{
             p{
                 margin-top: 10px;
-                font-size: calc(0.3vw + 10px);
+                font-size: @size_standard;
             }
         }
     
@@ -2192,13 +2210,13 @@ label {
                     max-height: 250px;
                 }
             }
-            .image-wrapper{
+            .shop-info-wrapper{
                 h4{
-                    font-size: calc(0.4vw + 15px);
+                    font-size: @size_h4;
                     padding: 0;
                 }
                 span{
-                    font-size: calc(0.3vw + 10px);
+                    font-size: @size_standard;
                 }
             }
         }
@@ -2221,14 +2239,14 @@ label {
             }
             .image-wrapper{
                 width: calc(100% - 100px);
-                h4{
+                h5{
                     font-size: calc(0.4vw + 15px);
                     span{
-                        font-size: calc(0.3vw + 10px) !important;
+                        font-size: @size_standard !important;
                     }
                 }
                 p{
-                    font-size: calc(0.3vw + 11px);
+                    font-size: @size_standard;
                 }
             }
             .feedback-item-image{
@@ -2342,7 +2360,7 @@ label {
             justify-content: flex-end;
             li{
                 margin: 0 5px;
-                font-size: calc(0.3vw + 10px);
+                font-size: @size_standard;
                 i{
                     background-color: @main_color;
                     padding: 5px;
@@ -2371,26 +2389,123 @@ label {
             }
         }
         .image-wrapper{
-            h4{
-                font-size: calc(0.4vw + 15px);
-            }
             a{
                 text-decoration: none;
-                font-size: calc(0.3vw + 11px);
+                font-size: @size_standard;
             }
             p{
-                font-size: calc(0.3vw + 11px);
+                font-size: @size_standard;
             }
+        }
+    }
+}
+
+.cart-item-wrapper{
+    .position-right{
+        right: 5px;
+    }
+    .shop-profile-image{
+        .shop-profile-image-wrapper{
+            width: calc(2vw + 40px);
+            height: calc(1vw + 20px);
+            margin-right: 10px;
+            img{
+                height: calc(1vw + 20px);
+            }
+        }
+    }
+    .purches-model-container{
+        img{
+            width: 100%;
+        }
+    }
+    .cart-item-shipping{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .purches-price-wrapper{
+            line-height: 1;
+            p{
+                font-size: @size_standard;
+                .font_Segoe;
+            }
+            .ready-to-shop{
+                font-size: @size_small;
+            }
+        }
+    }
+    .cart-payment-method{
+        width: 100%;
+        li{
+            list-style: none;
+        }
+    }
+    .purches-shipping-wrapper{
+        p{
+            span{
+                font-weight: 900;   
+                font-size: @size_standard;                     
+            }
+        }
+        span{
+            font-size: @size_small;
+        }
+    }
+}
+
+.create-shop-info{
+    width: 100%;
+    h4{
+        margin-bottom: 20px;
+    }
+    .listing-fee{
+        margin: 0 auto;
+        border: 1px solid @main_color;
+        padding: @size_standard calc(5vw + 35px);
+        p{
+            &:first-child{
+                font-size: @size_extralarg;
+            }
+            &:last-child{
+                font-size: @size_standard;
+            }
+        }
+    }
+    .billing-type{
+        border: 1px solid @main_color;
+        padding: calc(0.5vw + 10px) calc(2vw + 55px);
+        p{
+            &:first-child{
+                font-size: @size_extralarg;
+            }
+            &:last-child{
+                .font_Sitka;
+                font-size: @size_standard;
+            }
+        }
+    }
+    .or{
+        font-size: @size_extralarg;
+        margin: 0 10px;
+        .font_Sitka;
+    }
+}
+
+.faq{
+    .faq-containet{
+        .faq-title{
+            color: @main_color;
+        }
+        p{
+            font-size: @size_standard;
+            color: @light_color;
         }
     }
 }
 
 .filter-wrapper{
     padding: 0 10px;
-    h6{
-        .font_Sitka;
-        font-size: calc(0.4vw + 12px)
-    }
     .filter{
         margin-top: 10px;
         .filter-item{
@@ -2409,7 +2524,7 @@ label {
         }
         i{
             padding: 10px 20px;
-            font-size: calc(0.3vw + 11px);
+            font-size: @size_standard;
             border: 1px solid @main_color;
             transition: 0.3s;
             &:hover{
@@ -2428,37 +2543,13 @@ label {
 }
 
 .footer {
-    .footer-title h1 {
-        .font_Sitka;
-        text-transform: uppercase;
-        letter-spacing: calc(0.8vw + 0.5px);
-        font-weight: 100;
-        font-size: 30px;
-        position: relative;
-        z-index: 1;
-        padding-left: 25px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            background-color: @main_color;
-            opacity: 0.6;
-            width: 90px;
-            height: 30px;
-            z-index: -1;
-        }
-    }
 
     .footer-top-wrapper {
         background-color: @dark_color;
         padding: 40px 0;
         color: @white_color;
 
-        p {
-            .font_Sitka;
-            font-size: 22px;
+        h3 {
             text-transform: capitalize;
             margin-bottom: 10px;
             color: @main_color;
@@ -2482,7 +2573,7 @@ label {
                         background-color: @white_color;
                         border-radius: 50%;
                         color: @dark_color;
-                        font-size: calc(0.3vw + 12px);
+                        font-size: @size_standard;
                         transition: 0.3s;
                     }
 
@@ -2509,7 +2600,7 @@ label {
                 list-style: none;
                 .font_Segoe;
                 padding: 5px 0;
-                font-size: calc(0.4vw + 12px);
+                font-size: @size_standard;
                 cursor: pointer;
                 transition: 0.3s;
                 width: max-content;
@@ -2573,7 +2664,7 @@ label {
             input {
                 width: calc(20vw + 100px);
                 background-color: @light_color;
-                font-size: calc(0.3vw + 10px);
+                font-size: @size_standard;
             }
 
             button {
@@ -2639,6 +2730,12 @@ label {
     }
     .burger{
         display: none;
+    }
+    .listing-fee{
+        max-width: 450px;
+    }
+    .billing-type{
+        max-width: 350px;
     }
 }
 
@@ -2813,6 +2910,15 @@ label {
 }
 // Medium devices (tablets, less than 992px)
 @media (max-width: 767.98px) {
+    .listing-fee{
+        width: 100%;
+    }
+    .billing-type{
+        max-width: 100%;
+    }
+    .block-center{
+        display: block;
+    }
     .mobile-display{
         display: block;
     }

@@ -55,6 +55,7 @@ $(".dropbtn").click(function () {
 
 // click sign-in
 $('.sign-in').click(function(){
+    console.log(33);
     $('.sign-in-wrapper').addClass('popup-background');
 });
 

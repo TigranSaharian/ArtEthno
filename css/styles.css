@@ -24,6 +24,19 @@ li {
 h4 {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
+  font-size: calc(0.4vw + 12px);
+  padding: 5px 0;
+}
+h3 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.4vw + 15px);
+  padding: 5px 0;
+}
+h1 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  font-size: calc(0.4vw + 20px);
   padding: 5px 0;
 }
 i {
@@ -51,6 +64,42 @@ textarea:focus {
 .gray-background {
   background-color: #F9F9F9;
 }
+.dark-background {
+  background-color: #393939;
+}
+.light-title h1 {
+  color: #F9F9F9;
+}
+.light-title h1::after {
+  background-color: #F5CD79;
+}
+.dark-title h1 {
+  color: #393939;
+}
+.dark-title h1::after {
+  background-color: #F5CD79;
+}
+.section-title h1 {
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: calc(0.8vw + 0.5px);
+  font-weight: 100;
+  font-size: calc(0.4vw + 20px);
+  position: relative;
+  z-index: 1;
+  padding-left: 25px;
+}
+.section-title h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  opacity: 0.6;
+  width: 90px;
+  height: 30px;
+  z-index: -1;
+}
 .green {
   color: #2DB53F;
 }
@@ -69,9 +118,6 @@ textarea:focus {
 .title {
   margin: 5px 0;
   position: relative;
-}
-.title h4 {
-  font-size: calc(0.4vw + 15px);
   text-transform: capitalize;
 }
 .title::after {
@@ -123,7 +169,7 @@ textarea {
   text-align: left;
   color: #393939;
   padding: 5px 15px !important;
-  font-size: calc(0.4vw + 10px);
+  font-size: calc(0.3vw + 11px);
   width: 100%;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
@@ -131,7 +177,7 @@ textarea {
 label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   margin: 0 5px;
 }
 .scroll::-webkit-scrollbar-track {
@@ -211,7 +257,7 @@ label {
 }
 .item-stars {
   padding: 5px 0 10px 0;
-  font-size: calc(0.3vw + 7px);
+  font-size: calc(0.3vw + 6px);
 }
 .item-stars i {
   color: #F5CD79;
@@ -238,8 +284,15 @@ label {
 .right {
   text-align: right;
 }
+.center {
+  text-align: center;
+}
 .left {
   text-align: left !important;
+}
+.position-right {
+  position: absolute;
+  right: 0;
 }
 .paymant-info {
   display: flex;
@@ -323,12 +376,12 @@ label {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   margin: 0;
-  font-size: calc(0.4vw + 11px);
+  font-size: calc(0.4vw + 12px);
 }
 .item-wrapper .item-info p .old-price {
   color: #2DB53F;
   margin-left: 15px;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   text-decoration: line-through;
 }
 .item-wrapper .item-info p span:first-child {
@@ -337,7 +390,7 @@ label {
 .item-wrapper .item-info h6 {
   font-family: 'Segoe UI';
   font-weight: 200;
-  font-size: calc(0.3vw + 9px);
+  font-size: calc(0.3vw + 11px);
   cursor: pointer;
   width: fit-content;
 }
@@ -437,13 +490,13 @@ label {
   padding: 5px 15px;
   border: none !important;
   padding: 5px 15px !important;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .sign-in-wrapper {
-  opacity: 0;
+  display: none;
 }
 .sign-up-wrapper {
-  opacity: 0;
+  display: none;
 }
 .margin-top {
   margin: 0;
@@ -511,12 +564,6 @@ label {
   left: 50%;
   transform: translateX(-50%);
 }
-.popup-container p {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  font-size: calc(0.6vw + 20px);
-  padding: 10px 0;
-}
 .popup-container .login-form {
   width: 100%;
 }
@@ -549,7 +596,7 @@ label {
   color: #F9F9F9;
   text-transform: uppercase;
   transition: 0.3s;
-  font-size: calc(0.3vw + 12px);
+  font-size: calc(0.3vw + 11px);
 }
 .popup-container .login-form .signIn-btn:hover {
   background-color: #F5CD79;
@@ -560,26 +607,26 @@ label {
   border: 1px solid #F5CD79;
   background-color: #F9F9F9;
   transition: 0.3s;
-  font-size: calc(0.3vw + 12px);
+  font-size: calc(0.3vw + 11px);
 }
 .popup-container .login-form .internal-signIn-btn:hover {
   background-color: #393939;
   color: #F5CD79;
 }
-.pamyant-method-popup .order-summary {
+.order-summary {
   padding: 0 10px 20px 10px;
 }
-.pamyant-method-popup .order-summary h5 {
+.order-summary h5 {
   font-size: calc(0.4vw + 12px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
-.pamyant-method-popup .order-summary ul li {
+.order-summary ul li {
   position: relative;
   list-style: none;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
-.pamyant-method-popup .order-summary ul li span:nth-child(2) {
+.order-summary ul li span:nth-child(2) {
   position: absolute;
   right: 0;
 }
@@ -596,7 +643,7 @@ label {
 .notification-container .notification-wrapper p {
   border-bottom: 1px solid #393939;
   padding: 5px 0;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   color: #393939;
   text-align: left;
 }
@@ -633,7 +680,6 @@ label {
   transform: translate(-50%, -50%);
 }
 .user-popup-window .user-popup-container .user-popup .user-popup-info h4 {
-  font-size: calc(0.4vw + 13px);
   color: #393939;
   padding: 0;
 }
@@ -769,7 +815,7 @@ label {
   font-weight: 200;
   padding: 5px 15px;
   width: calc(100% - 75px);
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   transition: 0.3s;
   margin-left: 35px;
 }
@@ -804,7 +850,7 @@ label {
   font-weight: 700;
   letter-spacing: calc(0.5vw + 2px);
   text-transform: uppercase;
-  font-size: calc(0.5vw + 17px);
+  font-size: calc(0.5vw + 15px);
   line-height: 0;
   margin-top: 3px;
 }
@@ -1237,28 +1283,6 @@ label {
 .section {
   padding: calc(1vw + 25px) 0;
 }
-.section .section-wrapper .section-title h1 {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: calc(0.8vw + 0.5px);
-  font-weight: 100;
-  font-size: 30px;
-  position: relative;
-  z-index: 1;
-  padding-left: 25px;
-}
-.section .section-wrapper .section-title h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  background-color: #F5CD79;
-  opacity: 0.6;
-  width: 90px;
-  height: 30px;
-  z-index: -1;
-}
 .section .section-wrapper .video-wrapper video {
   width: inherit;
 }
@@ -1391,7 +1415,7 @@ label {
   line-height: 0.5;
 }
 .message-box .message-content .inbox-wrapper .inbox-message .message-wrapper p {
-  font-size: calc(0.3vw + 8px);
+  font-size: calc(0.3vw + 6px);
 }
 .message-box .message-content .inbox-wrapper .sender {
   text-align: right;
@@ -1424,7 +1448,7 @@ label {
 .popup-container p {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 14px);
+  font-size: calc(0.5vw + 15px);
   padding: 10px 0;
 }
 .popup-container .message-form {
@@ -1471,7 +1495,7 @@ label {
   transform: translate(-50%, -50%);
 }
 .delet-account p {
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .form-style .add-btn {
   position: relative;
@@ -1498,7 +1522,7 @@ label {
   margin: 5px 5px 0 0;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   display: inline;
   border-radius: 3px;
   position: relative;
@@ -1507,18 +1531,17 @@ label {
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: calc(0.3vw + 8px);
+  font-size: calc(0.3vw + 6px);
 }
 .form-style .add-btn .my-categoria span {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 12px);
+  font-size: calc(0.3vw + 11px);
 }
 .user-profile .user-profile-container .profile-info {
   text-align: left;
 }
 .user-profile .user-profile-container .profile-info h4 {
-  font-size: calc(0.4vw + 12px);
   color: #393939;
   padding: 0;
   text-transform: uppercase;
@@ -1529,7 +1552,7 @@ label {
 }
 .user-profile .user-profile-container .profile-info .profile-follower a {
   color: #393939;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   text-decoration: none;
 }
 .user-profile .inline-buttons {
@@ -1586,26 +1609,11 @@ label {
   cursor: pointer;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .purches-model-container .purches-info-wrapper .purches-wrapper-top-content div .purches-message i {
   color: #393939;
   margin-right: 5px;
-}
-.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div h1 {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  width: 100%;
-  align-items: baseline;
-  font-size: calc(0.5vw + 13px);
-}
-.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div h1 .purches-message {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  font-size: calc(0.3vw + 12px);
-}
-.purches-model-container .purches-info-wrapper .purches-wrapper-top-content div h1 .purches-message i {
-  margin-right: 10px;
 }
 .purches-model-container .purches-info-wrapper .purches-wrapper-top-content .purches-price-wrapper {
   text-align: right;
@@ -1619,15 +1627,15 @@ label {
   font-size: calc(0.5vw + 15px);
 }
 .purches-model-container .purches-info-wrapper .purches-wrapper-top-content .purches-price-wrapper p:last-child {
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   text-decoration: line-through;
   color: #2DB53F;
 }
 .purches-model-container .purches-info-wrapper p {
-  font-size: calc(0.4vw + 11px);
+  font-size: calc(0.3vw + 11px);
 }
 .purches-model-container .purches-info-wrapper .purches-item-info span {
-  font-size: calc(0.3vw + 9px);
+  font-size: calc(0.3vw + 6px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   color: #393939;
@@ -1640,7 +1648,7 @@ label {
   margin-top: 10px;
 }
 .purches-model-container .purches-status-wrapper div span {
-  font-size: calc(0.4vw + 10px);
+  font-size: calc(0.3vw + 11px);
   margin-right: 10px;
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
@@ -1810,7 +1818,7 @@ label {
   padding: 0;
 }
 .shop-wrapper .shop-info-body .shop-info .item-stars span {
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .shop-wrapper .shop-info-body .shop-info .like {
   position: absolute;
@@ -1848,7 +1856,7 @@ label {
   position: relative;
 }
 .item-container .item-info-wrapper .price-wrapper p .old-price .old-price-description {
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   text-decoration: solid;
   display: flex;
   margin-top: -5px;
@@ -1878,7 +1886,7 @@ label {
   background-color: black;
   width: fit-content;
   color: white;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
   margin-top: 10px;
 }
 .item-container .item-info-wrapper .item-button-wrapper button[type="button"] {
@@ -1892,16 +1900,6 @@ label {
 .item-container .item-info-wrapper .item-button-wrapper button[type="button"]:first-child:hover {
   background-color: #393939;
   color: #F9F9F9;
-}
-.item-container .item-info-wrapper .item-quantity {
-  display: flex;
-  align-items: center;
-}
-.item-container .item-info-wrapper .item-quantity .quantity {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  margin-right: 15px;
-  font-size: calc(0.3vw + 12px);
 }
 .item-container .item-info-wrapper .item-info-title {
   letter-spacing: calc(0.2vw + 2px);
@@ -1938,7 +1936,7 @@ label {
   max-height: 150px;
 }
 .item-container .item-info-wrapper .item-description .item-description-wrapper .item-description-text p:last-child {
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .item-container .item-info-wrapper .item-description .item-description-wrapper button {
   width: 100%;
@@ -1952,17 +1950,17 @@ label {
 }
 .item-container .item-info-wrapper .shipping-terms p {
   margin-top: 10px;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .item-container .item-info-wrapper .shop-owner-wrapper .send-message textarea {
   max-height: 250px;
 }
-.item-container .item-info-wrapper .shop-owner-wrapper .image-wrapper h4 {
-  font-size: calc(0.4vw + 15px);
+.item-container .item-info-wrapper .shop-owner-wrapper .shop-info-wrapper h4 {
+  font-size: calc(0.4vw + 12px);
   padding: 0;
 }
-.item-container .item-info-wrapper .shop-owner-wrapper .image-wrapper span {
-  font-size: calc(0.3vw + 10px);
+.item-container .item-info-wrapper .shop-owner-wrapper .shop-info-wrapper span {
+  font-size: calc(0.3vw + 11px);
 }
 .item-container .item-feedback-wrapper .feedback-title {
   display: flex;
@@ -1982,11 +1980,11 @@ label {
 .item-container .item-feedback-wrapper .feedback .image-wrapper {
   width: calc(100% - 100px);
 }
-.item-container .item-feedback-wrapper .feedback .image-wrapper h4 {
+.item-container .item-feedback-wrapper .feedback .image-wrapper h5 {
   font-size: calc(0.4vw + 15px);
 }
-.item-container .item-feedback-wrapper .feedback .image-wrapper h4 span {
-  font-size: calc(0.3vw + 10px) !important;
+.item-container .item-feedback-wrapper .feedback .image-wrapper h5 span {
+  font-size: calc(0.3vw + 11px) !important;
 }
 .item-container .item-feedback-wrapper .feedback .image-wrapper p {
   font-size: calc(0.3vw + 11px);
@@ -2099,7 +2097,7 @@ label {
 }
 .item-container .pagination ul li {
   margin: 0 5px;
-  font-size: calc(0.3vw + 10px);
+  font-size: calc(0.3vw + 11px);
 }
 .item-container .pagination ul li i {
   background-color: #F5CD79;
@@ -2123,9 +2121,6 @@ label {
   width: auto;
   transform: translate(-50%, -50%);
 }
-.item-shop-wrapper .shop-profile-image .image-wrapper h4 {
-  font-size: calc(0.4vw + 15px);
-}
 .item-shop-wrapper .shop-profile-image .image-wrapper a {
   text-decoration: none;
   font-size: calc(0.3vw + 11px);
@@ -2133,13 +2128,94 @@ label {
 .item-shop-wrapper .shop-profile-image .image-wrapper p {
   font-size: calc(0.3vw + 11px);
 }
-.filter-wrapper {
-  padding: 0 10px;
+.cart-item-wrapper .position-right {
+  right: 5px;
 }
-.filter-wrapper h6 {
+.cart-item-wrapper .shop-profile-image .shop-profile-image-wrapper {
+  width: calc(2vw + 40px);
+  height: calc(1vw + 20px);
+  margin-right: 10px;
+}
+.cart-item-wrapper .shop-profile-image .shop-profile-image-wrapper img {
+  height: calc(1vw + 20px);
+}
+.cart-item-wrapper .purches-model-container img {
+  width: 100%;
+}
+.cart-item-wrapper .cart-item-shipping {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cart-item-wrapper .cart-item-shipping .purches-price-wrapper {
+  line-height: 1;
+}
+.cart-item-wrapper .cart-item-shipping .purches-price-wrapper p {
+  font-size: calc(0.3vw + 11px);
+  font-family: 'Segoe UI';
+  font-weight: 200;
+}
+.cart-item-wrapper .cart-item-shipping .purches-price-wrapper .ready-to-shop {
+  font-size: calc(0.3vw + 6px);
+}
+.cart-item-wrapper .cart-payment-method {
+  width: 100%;
+}
+.cart-item-wrapper .cart-payment-method li {
+  list-style: none;
+}
+.cart-item-wrapper .purches-shipping-wrapper p span {
+  font-weight: 900;
+  font-size: calc(0.3vw + 11px);
+}
+.cart-item-wrapper .purches-shipping-wrapper span {
+  font-size: calc(0.3vw + 6px);
+}
+.create-shop-info {
+  width: 100%;
+}
+.create-shop-info h4 {
+  margin-bottom: 20px;
+}
+.create-shop-info .listing-fee {
+  margin: 0 auto;
+  border: 1px solid #F5CD79;
+  padding: calc(0.3vw + 11px) calc(5vw + 35px);
+}
+.create-shop-info .listing-fee p:first-child {
+  font-size: calc(1vw + 15px);
+}
+.create-shop-info .listing-fee p:last-child {
+  font-size: calc(0.3vw + 11px);
+}
+.create-shop-info .billing-type {
+  border: 1px solid #F5CD79;
+  padding: calc(0.5vw + 10px) calc(2vw + 55px);
+}
+.create-shop-info .billing-type p:first-child {
+  font-size: calc(1vw + 15px);
+}
+.create-shop-info .billing-type p:last-child {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.4vw + 12px);
+  font-size: calc(0.3vw + 11px);
+}
+.create-shop-info .or {
+  font-size: calc(1vw + 15px);
+  margin: 0 10px;
+  font-family: 'Sitka Banner', sans-serif;
+  font-weight: 700;
+}
+.faq .faq-containet .faq-title {
+  color: #F5CD79;
+}
+.faq .faq-containet p {
+  font-size: calc(0.3vw + 11px);
+  color: #F9F9F9;
+}
+.filter-wrapper {
+  padding: 0 10px;
 }
 .filter-wrapper .filter {
   margin-top: 10px;
@@ -2174,37 +2250,12 @@ label {
   margin-left: 5px;
   font-weight: 700;
 }
-.footer .footer-title h1 {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: calc(0.8vw + 0.5px);
-  font-weight: 100;
-  font-size: 30px;
-  position: relative;
-  z-index: 1;
-  padding-left: 25px;
-}
-.footer .footer-title h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  background-color: #F5CD79;
-  opacity: 0.6;
-  width: 90px;
-  height: 30px;
-  z-index: -1;
-}
 .footer .footer-top-wrapper {
   background-color: #393939;
   padding: 40px 0;
   color: #ffffff;
 }
-.footer .footer-top-wrapper p {
-  font-family: 'Sitka Banner', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
+.footer .footer-top-wrapper h3 {
   text-transform: capitalize;
   margin-bottom: 10px;
   color: #F5CD79;
@@ -2226,7 +2277,7 @@ label {
   background-color: #ffffff;
   border-radius: 50%;
   color: #393939;
-  font-size: calc(0.3vw + 12px);
+  font-size: calc(0.3vw + 11px);
   transition: 0.3s;
 }
 .footer .footer-top-wrapper .social-media-wrapper .social-media-icons a:first-child i {
@@ -2244,7 +2295,7 @@ label {
   font-family: 'Segoe UI';
   font-weight: 200;
   padding: 5px 0;
-  font-size: calc(0.4vw + 12px);
+  font-size: calc(0.3vw + 11px);
   cursor: pointer;
   transition: 0.3s;
   width: max-content;
@@ -2290,7 +2341,7 @@ label {
   .search-box .search input {
     width: calc(20vw + 100px);
     background-color: #F9F9F9;
-    font-size: calc(0.3vw + 10px);
+    font-size: calc(0.3vw + 11px);
   }
   .search-box .search button {
     background-color: transparent;
@@ -2337,6 +2388,12 @@ label {
   }
   .burger {
     display: none;
+  }
+  .listing-fee {
+    max-width: 450px;
+  }
+  .billing-type {
+    max-width: 350px;
   }
 }
 @media (min-width: 992px) {
@@ -2490,6 +2547,15 @@ label {
   }
 }
 @media (max-width: 767.98px) {
+  .listing-fee {
+    width: 100%;
+  }
+  .billing-type {
+    max-width: 100%;
+  }
+  .block-center {
+    display: block;
+  }
   .mobile-display {
     display: block;
   }
