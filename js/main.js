@@ -163,15 +163,15 @@ $('#upload-btn').click(function () {
     UploadFile($('#upload-btn'), null);
 })
 
-$('.add-categoria').click(function(){
-    let categoria_name = $('#categoria-name').val();
+$('.add-item').click(function(){
+    let categoria_name = $(this).closest('.add-btn').find('.item-name').val();
     if(categoria_name.length > 0){
         console.log(categoria_name);
         let close = '<i class="fas fa-times"></i>';
         let new_blok = $('<div></div>').append(categoria_name);
         new_blok.append(close);
-        $('.my-categoria').append(new_blok);
-        $('#categoria-name').val('');
+        $('.added-item').append(new_blok);
+        $('.item-name').val('');
         Alert('The categoria added', success);
     }else{
         Alert('Please type any categoria', error);
@@ -180,6 +180,10 @@ $('.add-categoria').click(function(){
 
 $('.image').click(function(){
     window.location.replace("./item-page.html");
+});
+
+$('.add-paypal').click(function(){
+    $('.paypal-popup').addClass('popup-background');
 });
 
 $('.liting-item-empty').click(function(){
@@ -198,6 +202,10 @@ $('#buy-now').click(function(){
 
 $('.none').click(function(e){
     RemovePopup(e, 'pamyant-method-popup');
+});
+
+$('.none').click(function(e){
+    RemovePopup(e, 'paypal');
 });
 
 $(function(){
