@@ -160,8 +160,12 @@ $(document).keypress(function(event){
 });
 
 $('#upload-btn').click(function () {
-    UploadFile($('#upload-btn'), null);
+    UploadFile(this);
 })
+
+$('.edit-cover').click(function(){
+    ChangeCover(this);
+});
 
 $('.add-item').click(function(){
     let categoria_name = $(this).closest('.add-btn').find('.item-name').val();
@@ -321,19 +325,39 @@ function GetPrivusePage(page_index){
     }
 }
 
-function UploadFile(value, button) {
+function UploadFile(value) {
     var item = $(value).closest("div").find("input[type='file']");
     item.click();
-    $('#hidden-upload').change(function (e) {
+    $('.hidden-upload').change(function (e) {
         ReadURL(this);
         var fileName = e.target.files[0].name;
         $('#upload-txt').val(fileName);
     }); 
 }
 
+function ChangeCover(value) {
+    var item = $(value).closest("div").find("input[type='file']");
+    item.click();
+    let cover_wrapper = $(value).closest('.shop-cover');
+    console.log(cover_wrapper);
+    $('.hidden-upload').change(function (e) {
+        Change(this, cover_wrapper);
+    }); 
+}
+
+function Change(input, wrapper) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('.shop-cover').css('background-image', 'url(' + e.target.result + ')');
+            wrapper.append('<button class="edit-cover ml-1">Save</button>')
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
 function ReadURL(input) {
     if (input.files && input.files[0]) {
-        console.log(input);
         var reader = new FileReader();
         reader.onload = function (e) {
             $('#avatar-image').attr('src', e.target.result);

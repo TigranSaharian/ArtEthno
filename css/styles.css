@@ -188,6 +188,9 @@ label {
 .short-input {
   width: 80px !important;
 }
+p {
+  font-size: calc(0.3vw + 10px);
+}
 .scroll::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px #F5CD79;
   border-radius: 7px;
@@ -661,7 +664,6 @@ label {
 .notification-container .notification-wrapper p {
   border-bottom: 1px solid #393939;
   padding: 5px 0;
-  font-size: calc(0.3vw + 10px);
   color: #393939;
   text-align: left;
 }
@@ -1469,6 +1471,7 @@ label {
 .search {
   position: relative;
   line-height: 0;
+  height: 100%;
 }
 .search .search-input {
   background-color: #F9F9F9;
@@ -1476,9 +1479,9 @@ label {
 }
 .search button {
   position: absolute;
-  right: 5px;
+  right: 0;
   border-radius: 30px;
-  padding: 10px 15px;
+  height: inherit;
 }
 .search button i {
   font-size: 10px;
@@ -1498,9 +1501,6 @@ label {
   height: calc(3vw + 30px);
   width: auto;
   transform: translate(-50%, -50%);
-}
-.delet-account p {
-  font-size: calc(0.3vw + 10px);
 }
 .form-style .add-btn {
   position: relative;
@@ -1636,9 +1636,6 @@ label {
   text-decoration: line-through;
   color: #2DB53F;
 }
-.purches-model-container .purches-info-wrapper p {
-  font-size: calc(0.3vw + 10px);
-}
 .purches-model-container .purches-info-wrapper .purches-item-info span {
   font-size: calc(0.3vw + 7px);
   font-family: 'Sitka Banner', sans-serif;
@@ -1667,7 +1664,7 @@ label {
 }
 .small-btn-group button {
   padding: 3px 20px;
-  font-size: calc(0.2vw + 10px);
+  font-size: calc(0.3vw + 7px);
 }
 .my-progress-bar {
   position: relative;
@@ -1775,6 +1772,9 @@ label {
 .card-container .card-wrapper .card-body .flex ul li {
   font-family: 'Segoe UI';
   font-weight: 200;
+}
+.shop-wrapper {
+  position: relative;
 }
 .shop-wrapper .shop-cover-img {
   overflow: hidden;
@@ -1944,7 +1944,6 @@ label {
 }
 .item-container .item-info-wrapper .shipping-terms p {
   margin-top: 10px;
-  font-size: calc(0.3vw + 10px);
 }
 .item-container .item-info-wrapper .shop-owner-wrapper .send-message textarea {
   max-height: 250px;
@@ -1971,9 +1970,6 @@ label {
 }
 .item-container .item-feedback-wrapper .feedback .image-wrapper h4 span {
   font-size: calc(0.3vw + 7px) !important;
-}
-.item-container .item-feedback-wrapper .feedback .image-wrapper p {
-  font-size: calc(0.3vw + 10px);
 }
 .item-container .item-feedback-wrapper .feedback .feedback-item-image {
   display: flex;
@@ -2111,9 +2107,6 @@ label {
   text-decoration: none;
   font-size: calc(0.3vw + 10px);
 }
-.item-shop-wrapper .shop-profile-image .image-wrapper p {
-  font-size: calc(0.3vw + 10px);
-}
 .cart-item-wrapper .position-right {
   right: 5px;
 }
@@ -2197,7 +2190,6 @@ label {
   color: #F5CD79;
 }
 .faq .faq-containet p {
-  font-size: calc(0.3vw + 10px);
   color: #F9F9F9;
 }
 .filter-wrapper {
@@ -2286,7 +2278,6 @@ label {
 .liting-item-empty .empty-wrapper p {
   padding: 10px 0;
   color: #F5CD79;
-  font-size: calc(0.3vw + 10px);
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
 }
@@ -2318,7 +2309,6 @@ label {
 .new-listing .listing-figure-wrapper p {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
-  font-size: calc(0.3vw + 10px);
   color: #F5CD79;
   margin-top: 10px;
 }
@@ -2361,15 +2351,23 @@ label {
 .type .flex .listing-details-type label {
   width: 100%;
 }
-.cover {
+.shop-page {
+  padding-top: 0;
+}
+.shop-page .shop-cover {
   background-image: url(../assets/Images/cover/cover.jpg);
   width: 100%;
   height: 350px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
-.shop-category li {
+.shop-page .shop-cover .edit-cover {
+  margin: 10px 10px;
+  opacity: 0.8;
+}
+.shop-page .shop-category li {
   font-family: 'Sitka Banner', sans-serif;
   font-weight: 700;
   list-style: none;
@@ -2379,23 +2377,29 @@ label {
   margin: 5px;
   position: relative;
 }
-.shop-category li span {
+.shop-page .shop-category li span {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
-.cover-slide {
+.shop-page .cover-slide {
   max-height: 350px;
   overflow: hidden;
 }
-.cover-slide .cover-image {
+.shop-page .cover-slide .cover-image {
   background-image: url(../assets/Images/cover/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: 350px;
+}
+.shop-page .liting-item-empty {
+  height: calc(100% - 15px);
+}
+.shop-page .motto {
+  font-size: calc(1vw + 15px);
 }
 .footer .footer-top-wrapper {
   background-color: #393939;

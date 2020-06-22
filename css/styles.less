@@ -232,6 +232,10 @@ label {
     width: 80px !important;
 }
 
+p{
+    font-size: @size_standard;
+}
+
 .scroll::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px @main_color;
     border-radius: 7px;
@@ -769,7 +773,6 @@ label {
         p{
             border-bottom: 1px solid @dark_color;
             padding: 5px 0;
-            font-size: @size_standard;
             color: @dark_color;
             text-align: left;
         }
@@ -1665,15 +1668,17 @@ label {
 .search{
     position: relative;
     line-height: 0;
+    height: 100%;
     .search-input{
         background-color: @light_color;
         width: 100%;
     }
     button{
         position: absolute;
-        right: 5px;
+        right: 0;
         border-radius: 30px;
-        padding: 10px 15px;
+        // padding: 10px 15px;
+        height: inherit;
         i{
             font-size: 10px;
         }
@@ -1694,12 +1699,6 @@ label {
         height: calc(3vw + 30px);
         width: auto;
         transform: translate(-50%,-50%);
-    }
-}
-
-.delet-account{
-    p{
-        font-size: @size_standard;
     }
 }
 
@@ -1848,9 +1847,6 @@ label {
                 }
             }
         }
-        p{
-            font-size: @size_standard;
-        }
         .purches-item-info{
             span{
                 font-size: @size_small;
@@ -1885,7 +1881,7 @@ label {
 .small-btn-group{
     button{
         padding: 3px 20px;
-        font-size: calc(0.2vw + 10px);
+        font-size: @size_small;
     }
 }
 
@@ -2004,6 +2000,7 @@ label {
 }
 
 .shop-wrapper {
+    position: relative;
     .shop-cover-img {
         overflow: hidden;
 
@@ -2195,7 +2192,6 @@ label {
         .shipping-terms{
             p{
                 margin-top: 10px;
-                font-size: @size_standard;
             }
         }
     
@@ -2234,9 +2230,6 @@ label {
                     span{
                         font-size: @size_small !important;
                     }
-                }
-                p{
-                    font-size: @size_standard;
                 }
             }
             .feedback-item-image{
@@ -2385,9 +2378,6 @@ label {
                 text-decoration: none;
                 font-size: @size_standard;
             }
-            p{
-                font-size: @size_standard;
-            }
         }
     }
 }
@@ -2490,7 +2480,6 @@ label {
             color: @main_color;
         }
         p{
-            font-size: @size_standard;
             color: @light_color;
         }
     }
@@ -2586,7 +2575,6 @@ label {
         p{
             padding: 10px 0;
             color: @main_color;
-            font-size: @size_standard;
             .font_Sitka;
         }
     }
@@ -2629,7 +2617,6 @@ label {
         }
         p{
             .font_Sitka;
-            font-size: @size_standard;
             color: @main_color;
             margin-top: 10px;
         }
@@ -2686,45 +2673,60 @@ label {
     }
 }
 
-.cover{
-    background-image: url(../assets/Images/cover/cover.jpg);
-    width: 100%;
-    height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.shop-category{
-    li{
-        .font_Sitka;
-        list-style: none;
-        padding: 5px 20px;
-        color: @dark_color;
-        background-color: @main_color;
-        margin: 5px;
-        position: relative;
-        span{
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-}
 
-.cover-slide{
-    max-height: 350px;
-    overflow: hidden;
-    .cover-image{
+.shop-page{
+    padding-top: 0;
+    .shop-cover{
         background-image: url(../assets/Images/cover/cover.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
         width: 100%;
         height: 350px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .edit-cover{
+            margin: 10px 10px;
+            opacity: 0.8;
+        }
+    }
+    .shop-category{
+        li{
+            .font_Sitka;
+            list-style: none;
+            padding: 5px 20px;
+            color: @dark_color;
+            background-color: @main_color;
+            margin: 5px;
+            position: relative;
+            span{
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .cover-slide{
+        max-height: 350px;
+        overflow: hidden;
+        .cover-image{
+            background-image: url(../assets/Images/cover/cover.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 350px;
+        }
+    }
+    .liting-item-empty{
+        height: calc(100% - 15px);
+    }
+    .motto{
+        font-size: @size_extralarg;
     }
 }
+
 
 .footer {
 
