@@ -159,11 +159,11 @@ $(document).keypress(function(event){
     }
 });
 
-$('#upload-btn').click(function () {
+$('.upload-btn').click(function () {
     UploadFile(this);
 })
 
-$('.edit-cover').click(function(){
+$('.edit-image').click(function(){
     ChangeCover(this);
 });
 
@@ -328,18 +328,18 @@ function GetPrivusePage(page_index){
 function UploadFile(value) {
     var item = $(value).closest("div").find("input[type='file']");
     item.click();
+    let image = $(value).closest('.update-profile-image').find('.avatar-image');
     $('.hidden-upload').change(function (e) {
-        ReadURL(this);
+        ReadURL(this, image);
         var fileName = e.target.files[0].name;
-        $('#upload-txt').val(fileName);
+        $(value).closest('.image-wrapper').find('.upload-txt').val(fileName);
     }); 
 }
 
 function ChangeCover(value) {
     var item = $(value).closest("div").find("input[type='file']");
     item.click();
-    let cover_wrapper = $(value).closest('.shop-cover');
-    console.log(cover_wrapper);
+    let cover_wrapper = $(value).closest('div');
     $('.hidden-upload').change(function (e) {
         Change(this, cover_wrapper);
     }); 
@@ -349,18 +349,22 @@ function Change(input, wrapper) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
-            $('.shop-cover').css('background-image', 'url(' + e.target.result + ')');
-            wrapper.append('<button class="edit-cover ml-1">Save</button>')
+            if(wrapper.hasClass('shop-cover')){
+                $('.shop-cover').css('background-image', 'url(' + e.target.result + ')');
+                wrapper.append('<button class="edit-image ml-1">Save</button>')
+            }else{
+                wrapper.find('img').attr('src', e.target.result);
+            }
         }
         reader.readAsDataURL(input.files[0]);
     }
 }
 
-function ReadURL(input) {
+function ReadURL(input, image) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
-            $('#avatar-image').attr('src', e.target.result);
+            image.attr('src', e.target.result);
         }
         reader.readAsDataURL(input.files[0]);
     }
