@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#393939">
+    <link rel="icon" href="./assets/logo/logo.ico" type="image/ico" sizes="16x16">
+    <title>Art Ethno</title>
+    <!-- external libraries -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- custome styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="alert"></div>
+    <section class="section pt-0">
+        <div class="shop-menu">
+            <ul>
+                <li>
+                    <div class="flex-center">
+                        <h4>Shop Manager</h4>
+                        <div class="position-right menu-close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="./admin-listing.html"><img src="./assets/icons/dashboard.png" alt=""><span>Dashboard</span></a> </li>
+                <li><a href="./admin-listing.html"><i class="fas fa-pen-square"></i><span>Profile</span></a></li>
+                <li><a href="./admin-listing.html"><i class="fas fa-list-ul"></i><span>Listing</span></a></li>
+                <li class="main-background"><a href="./message-box.html"><i class="fas fa-envelope"></i><span>Messages</span></a></li>
+                <li><a href=""><i class="fas fa-landmark"></i><span>Finances</span></a></li>
+                <li><a href=""><i class="fas fa-cog"></i><span>Settings</span></a></li>
+                <li>
+                    <div class="flex">
+                        <a href="./shop-page.html">
+                            <i class="fas fa-store"></i>
+                            <span>Your Shop name</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="container-fluid message-box">
+                <div class="row">
+                    <div class="col-lg-10 col-12 offset-lg-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row message-top-content">
+                                    <div class="col-lg-2 col-md-3 col-12">
+                                        <h4 class="title">Messages</h4>
+                                    </div>
+                                    <div class="col-lg-8 col-md-9 col-12 search margin-top">
+                                        <input class="search-input" placeholder="Search message" type="text" placeholder="Search">
+                                        <button class="search-item" id="search-item" type="button"><i class="fas fa-search"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                    <!-- <div class="col-lg-2 col-md-3 col-12 margin-top">
+                                        <button type="button" id="new-message" class="full-size">New Message</button>
+                                    </div> -->
+                                    <div class="col-lg-10 col-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12">
+                                <div class="message-menu">
+                                    <ul>
+                                        <li><a href="./shop-message.html">Inbox</a></li>
+                                        <li><a href="">Sent</a></li>
+                                        <li><a href="">All</a></li>
+                                        <li><a href="">Trush</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <div class="message-content">
+                                    <div class="message-reciver">
+                                        <h6>Jony Brjony</h6>
+                                    </div>
+                                    <div class="inbox-wrapper scroll">
+                                        <div class="inbox-message recived">
+                                            <div class="message-wrapper">
+                                                <h6>name of recived user</h6>
+                                                <span class="date">12 may 2020</span>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis iusto
+                                                    praesentium tenetur ipsam. Nihil, dicta error minima quaerat doloremque quia
+                                                    unde,
+                                                    eligendi laboriosam, quas quis perferendis eveniet? Facilis soluta temporibus,
+                                                    vel doloribus, repudiandae doloremque unde qui velit,
+                                                    eos eius alias. Vitae dolor error suscipit temporibus?</p>
+                                            </div>
+                                        </div>
+                                        <div class="inbox-message sender">
+                                            <div class="message-wrapper">
+                                                <h6>name of sender user</h6>
+                                                <span class="date">12 may 2020</span>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis iusto
+                                                    praesentium tenetur ipsam. Nihil, dicta error minima quaerat doloremque quia
+                                                    unde,
+                                                    eligendi laboriosam, quas quis perferendis eveniet? Facilis soluta temporibus,
+                                                    vel doloribus, repudiandae doloremque unde qui velit,
+                                                    eos eius alias. Vitae dolor error suscipit temporibus?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-message-input">
+                                        <input class="new-message" type="text">
+                                        <img class="send" src="./assets/icons/send.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a92fd1a4bd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

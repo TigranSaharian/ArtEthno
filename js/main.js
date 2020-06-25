@@ -113,8 +113,12 @@ $("#map-button").click(function(){
     map.toggleClass('active-map');
 });
 
-$('.inbox-message').click(function(){
+$('.message-body').click(function(){
     window.location.replace("./message-pm.html");
+});
+
+$('.shop-message-body').click(function(){
+    window.location.replace("./shop-pm-message.html");
 });
 
 $('#new-message').click(function(){
@@ -129,7 +133,7 @@ $('.none').click(function(e){
     RemovePopup(e, 'new-address-popup');
 });
 
-$('.new-message-input .fa-paper-plane').click(function(){
+$('.new-message-input .send').click(function(){
     let new_message = $(this).closest('.new-message-input').find('.new-message'); 
     let message_container = $(this).closest('.message-content').find('.inbox-wrapper');
     let inbox_message = $('<div></div>').addClass('inbox-message');
@@ -155,7 +159,7 @@ $('.new-message-input .fa-paper-plane').click(function(){
 $(document).keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
-        $('.fa-paper-plane').click();    
+        $('.send').click();    
     }
 });
 
@@ -186,6 +190,14 @@ $('.image').click(function(){
     window.location.replace("./item-page.html");
 });
 
+$('.check-item').click(function(){
+    $('.admin-btn-group').toggleClass('block');
+});
+
+$('.stock-item').click(function(){
+    window.location.replace("./edit-item.html");
+});
+
 $('.add-paypal').click(function(){
     $('.paypal-popup').addClass('popup-background');
 });
@@ -210,6 +222,16 @@ $('.none').click(function(e){
 
 $('.none').click(function(e){
     RemovePopup(e, 'paypal');
+});
+
+$('.admin-burger').click(function(){
+    $('.shop-menu').addClass('admin-menu-active');
+    $('.main-content').addClass('blur');
+});
+
+$('.menu-close').click(function(){
+    $('.shop-menu').removeClass('admin-menu-active');
+    $('.main-content').removeClass('blur');
 });
 
 $(function(){
