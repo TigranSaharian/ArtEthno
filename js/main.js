@@ -55,7 +55,6 @@ $(".dropbtn").click(function () {
 
 // click sign-in
 $('.sign-in').click(function(){
-    console.log(33);
     $('.sign-in-wrapper').addClass('popup-background');
 });
 
@@ -132,6 +131,21 @@ $('#add-new-address').click(function(){
 $('.none').click(function(e){
     RemovePopup(e, 'new-address-popup');
 });
+
+$('.upgrade').click(function(){
+    $('.subscribe-modal').addClass('popup-background');
+});
+
+$(".subscribe-modal").click(function(e) {
+    e.preventDefault();
+    if ($(e.target).attr('rel') === 'subscribe-modal') {
+        $('.subscribe-modal').removeClass('popup-background');
+    }
+});
+
+$('.open-menu').click(function(){
+    $(this).children('ul').toggleClass('block');
+})
 
 $('.new-message-input .send').click(function(){
     let new_message = $(this).closest('.new-message-input').find('.new-message'); 

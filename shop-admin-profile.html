@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#393939">
+    <link rel="icon" href="./assets/logo/logo.ico" type="image/ico" sizes="16x16">
+    <title>Art Ethno</title>
+    <!-- external libraries -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- custome styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/cutome-grid.css">
+</head>
+
+<body>
+    <div id="alert"></div>
+    <header class="header">
+        <div class="container-fluid iner_header">
+            <div class="left admin-burger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo flex-end">
+                <h1><a href="./index.html">Art Ethno</a></h1>
+                <a href="./index.html" class="ml-2"><img src="./assets/logo/logo_yellow_green.png"></a>
+            </div>
+        </div>
+    </header>
+    <section class="section pt-2">
+        <div class="shop-menu">
+            <ul>
+                <li class="first-child">
+                    <div class="flex-center">
+                        <h4>Shop Manager</h4>
+                        <div class="position-right menu-close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="./dashboard.html"><img src="./assets/icons/dashboard.png" alt=""><span>Dashboard</span></a> </li>
+                <li><a href="./admin-listing.html"><i class="fas fa-list-ul"></i><span>Stock</span></a></li>
+                <li><a href="./shop-message.html"><i class="fas fa-envelope"></i><span>Messages</span></a></li>
+                <li><a href=""><i class="fas fa-landmark"></i><span>Finances</span></a></li>
+                <li><a href="./order-and-shipping.html"><i class="fas fa-clipboard-list"></i><span>Orders and shippings</span></a></li>
+                <li><a href="./index.html"><i class="fas fa-home"></i><span>Marketplace</span></a> </li>
+                <li class="admin-menu-profile open-menu main-background">
+                    <a><i class="fas fa-cog"></i><span>Settings</span></a>
+                    <ul class="block">
+                        <li><a href="./edit-shop.html"><i class="fas fa-store"></i><span>Info & Appearance</span></a></li>
+                        <li><a href="./subscription.html"><i class="fas fa-handshake"></i><span>Subscription</span></a></li>
+                        <li><a href="#"><i class="fas fa-cogs"></i><span>Shipping settings</span></a></li>
+                        <li class="active-sub-menu"><a href="./shop-admin-profile.html"><i class="fas fa-user"></i><span>My account</span></a></li>
+                    </ul>
+                </li>
+                <li class="last-child"><a href="./shop-page.html"> <i class="fas fa-store"></i> <span>Your shop name</span></a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-12 offset-lg-2">
+                        <div class="row">
+                            <div class="col-lg-10 col-12">
+                                <h4 class="">Profile Picture</h4>
+                                <div class="user-profile update-profile-image">
+                                    <div class="user-profile-image-wrapper">
+                                        <img id="avatar-image" src="./assets/Images/item1.png">
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <button class="upload-btn" type="button">Choose file</button>
+                                        <input class="upload-txt" type="text" disabled value="file name">
+                                        <input class="hidden-upload" type="file" hidden name="profile-img">
+                                        <p>Must be a .jpg, .gif or .png file smaller than 10MB and at least 400px by 400px</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <input type="button" value="Save Image">
+                                </div>
+                                <hr>
+                                <form action="" class="form-style">
+                                    <div class="row mb-4">
+                                        <h4 class="col-lg-3 ">Name</h4>
+                                        <input class="col-lg-4" type="text" name="name">
+                                    </div>
+                                    <hr>
+                                    <div class="row mb-4">
+                                        <h4 class="col-lg-3 ">Gender</h4>
+                                        <input class="col-lg-4" type="text" name="name">
+                                    </div>
+                                    <hr>
+                                    <div class="row mb-4">
+                                        <h4 class="col-lg-3 ">City</h4>
+                                        <div class="col-lg-4 add-btn">
+                                            <div>
+                                                <input class="item-name" type="text" name="name">
+                                                <span class="add-item">Add</span>
+                                            </div>
+                                            <div class="added-item">
+                                                <div>Yerevan, Armenia<i class="fas fa-times"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row mb-4">
+                                        <h4 class="col-lg-3">Birthday</h4>
+                                        <input class="col-lg-4" type="text" name="name">
+                                    </div>
+                                    <hr>
+                                    <div class="row mb-4">
+                                        <h4 class="col-lg-3 ">About</h4>
+                                        <textarea class="col-lg-4" rows="4"></textarea>
+                                    </div>
+                                    <hr>
+                                    <div class="row mb-4">
+                                        <h4 class="col-lg-3 ">Favorite Categories</h4>
+                                        <div class="col-lg-4 add-btn">
+                                            <div>
+                                                <input class="item-name" type="text" name="name">
+                                                <span class="add-item">Add</span>
+                                            </div>
+                                            <div class="added-item">
+                                                <div>Categoria sample<i class="fas fa-times"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <input type="button" value="Save changes">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a92fd1a4bd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
