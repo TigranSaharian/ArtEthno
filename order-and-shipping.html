@@ -17,28 +17,214 @@
 
 <body>
     <div id="alert"></div>
-    <!-- <div class="order-info-wrapper">
+    <div class="order-info-wrapper">
         <div class="container">
-            <div class="order-info-body right-order">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <h4>Order from <span>James Bond</span></h4>
-                                <p class="sub-text"><span>#25158632 (order number)</span> via Etsy <span>Shop name</span></p>
-                                <p class="sub-text"><span>2</span> items, <span>USD</span><span> 50</span></p>
+            <div class="order-info-body scroll right-order shadow">
+                <div class="close-order-window">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="order-window">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <h4>Order from <span>James Bond</span></h4>
+                                    <p class="sub-text"><span>#25158632 (order number)</span> via Etsy <span>Shop name</span></p>
+                                    <p class="sub-text"><span>2</span> items, <span>USD</span><span> 50</span></p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <p><strong>No tracking</strong></p>
+                                    <p class="sub-text">Ordered 12:59am, Tue, Feb 11, 2020</p>
+                                    <p class="sub-text">Ship to <span>Armenia, <span>Erevan</span></span></p>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <p class="sub-text"><strong>No tracking</strong></p>
-                                <p class="sub-text">Ordered 12:59am, Tue, Feb 11, 2020</p>
-                                <p class="sub-text">Ship to <span>Armenia, <span>Erevan</span></span></p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-12">
-                                <div>
-                                    <span><i class="mr-2 fas fa-check-circle"></i> Completed</span>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="order-option-btn-group flex-center">
+                                        <p><i class="fas fa-check-circle"></i> Completed</p>
+                                        <p><i class="fas fa-print"></i> Print</p>
+                                        <p><i class="fas fa-times-circle"></i> Cancel order</p>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="user-profile-image">
+                                        <div class="user-profile-image-wrapper">
+                                            <img src="./assets/Images/item3.png" alt="">
+                                        </div>
+                                        <div class="image-wrapper">
+                                            <a href="./favorite-shop.html" target="_blank"><h5 title="view profile">Jhone smith</h5></a>
+                                            <span><i class="fas fa-envelope"></i> <span class="sub-text">Message history</span></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="message-box">
+                                        <div class="message-content">
+                                            <div class="message-reciver">
+                                                <h6>Jhon Smith</h6>
+                                            </div>
+                                            <div class="inbox-wrapper scroll">
+                                                <div class="inbox-message recived">
+                                                    <div class="message-wrapper">
+                                                        <h6>name of recived user</h6>
+                                                        <span class="date">12 may 2020</span>
+                                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis iusto
+                                                            praesentium tenetur ipsam. Nihil, dicta error minima quaerat doloremque quia
+                                                            unde,
+                                                            eligendi laboriosam, quas quis perferendis eveniet? Facilis soluta temporibus,
+                                                            vel doloribus, repudiandae doloremque unde qui velit,
+                                                            eos eius alias. Vitae dolor error suscipit temporibus?</p>
+                                                    </div>
+                                                </div>
+                                                <div class="inbox-message sender">
+                                                    <div class="message-wrapper">
+                                                        <h6>name of sender user</h6>
+                                                        <span class="date">12 may 2020</span>
+                                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis iusto
+                                                            praesentium tenetur ipsam. Nihil, dicta error minima quaerat doloremque quia
+                                                            unde,
+                                                            eligendi laboriosam, quas quis perferendis eveniet? Facilis soluta temporibus,
+                                                            vel doloribus, repudiandae doloremque unde qui velit,
+                                                            eos eius alias. Vitae dolor error suscipit temporibus?</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="new-message-input">
+                                                <input class="new-message" type="text">
+                                                <img class="send" src="./assets/icons/send.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <p>Shipping with <span>Hay Post</span></p>
+                                    <p class="sub-text">Marked complete on<span> Fri, Feb 21, 2020</span></p>
+                                    <hr>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <h5>Receipt <span>#1584968471</span></h5>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-6 col-md-6 col-8">
+                                            <p><span>2</span>Item(s)</p>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-2">
+                                            <div class="right">
+                                                <p>Quantity</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-2">
+                                            <div class="right">
+                                                <p>Item price</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sold-item-wrapper mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-8">
+                                                <div class="sold-item flex-center">
+                                                    <img src="./assets/Images/item5.png" alt="">
+                                                    <p class="ml-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Natus ab quia commodi officia voluptatum quos!</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2">
+                                                <div class="right">
+                                                    <p class="mt-2">1</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2">
+                                                <div class="right">
+                                                    <p class="mt-2"><span>USD</span><span> 50</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sold-item-wrapper mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-8">
+                                                <div class="sold-item flex-center">
+                                                    <img src="./assets/Images/item1.png" alt="">
+                                                    <p class="ml-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Natus ab quia commodi officia voluptatum quos!</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2">
+                                                <div class="right">
+                                                    <p class="mt-2">1</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2">
+                                                <div class="right">
+                                                    <p class="mt-2"><span>USD</span><span> 50</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sold-item-wrapper mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-8">
+                                                <div class="sold-item flex-center">
+                                                    <img src="./assets/Images/item4.png" alt="">
+                                                    <p class="ml-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Natus ab quia commodi officia voluptatum quos!</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2">
+                                                <div class="right">
+                                                    <p class="mt-2">1</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2">
+                                                <div class="right">
+                                                    <p class="mt-2"><span>USD</span><span> 50</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="sold-item-total mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-9 col-10">
+                                                <p>Item total</p>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2 right">
+                                                <p><span>USD</span><span> 150</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="sold-item-total mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-9 col-10">
+                                                <p>Shipping price</p>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2 right">
+                                                <p><span>USD</span><span> 0</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="sold-item-total mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-9 col-10">
+                                                <p>Taxes</p>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2 right">
+                                                <p><span>USD</span><span> 6.45</span></p>
+                                            </div>
+                                            <hr class="col-12">
+                                            <div class="col-lg-9 col-md-9 col-10">
+                                                <p><strong>Order total</strong></p>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-2 right">
+                                                <p><strong><span>USD</span><span> 143.55</span></strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +232,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <header class="header">
         <div class="container-fluid iner_header">
             <div class="left admin-burger">
@@ -93,6 +279,16 @@
                     <div class="col-lg-10 col-12 offset-lg-2">
                         <div class="row">
                             <div class="col-lg-10 col-12">
+                                <div class="sorting-dropdown order-filter">
+                                    <div class="dark-dropdown dropdown">
+                                        <button class="dropbtn"><span>Orders</span><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                        <div class="dropdown-content scroll">
+                                            <span href="#">New</span>
+                                            <span href="#">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="cart-item-wrapper gray-background border-basic">
                                     <div class="row">
                                         <div class="col-lg-9 col-md-8 col-12 p-3">
@@ -116,7 +312,7 @@
                                                                     <div class="purches-wrapper-top-content flex">
                                                                         <div>
                                                                             <h3>Item name </h3>
-                                                                            <p>Quantity - <span><strong>1</strong></span></p>
+                                                                            <p class="small-text">Quantity - <span><strong>1</strong></span></p>
                                                                         </div>
                                                                         <div class="purches-price-wrapper">
                                                                             <p>USD <span>950</span></p>
@@ -124,7 +320,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <hr />
-                                                                    <p class="purches-description mb-2">Lorem ipsum, dolor sit amet consectetur
+                                                                    <p class="purches-description small-text mb-2">Lorem ipsum, dolor sit amet consectetur
                                                                         adipisicing elit. Aperiam sint quas aspernatur quis quo iste
                                                                         perferendis, assumenda nam facilis, voluptatum libero?
                                                                         Distinctio at excepturi voluptates assumenda odit inventore error
@@ -147,7 +343,7 @@
                                                                     <div class="purches-wrapper-top-content flex">
                                                                         <div>
                                                                             <h3>Item name </h3>
-                                                                            <p>Quantity - <span><strong>1</strong></span></p>
+                                                                            <p class="small-text">Quantity - <span><strong>1</strong></span></p>
                                                                         </div>
                                                                         <div class="purches-price-wrapper">
                                                                             <p>USD <span>950</span></p>
@@ -155,7 +351,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <hr />
-                                                                    <p class="purches-description mb-2">Lorem ipsum, dolor sit amet consectetur
+                                                                    <p class="purches-description small-text mb-2">Lorem ipsum, dolor sit amet consectetur
                                                                         adipisicing elit. Aperiam sint quas aspernatur quis quo iste
                                                                         perferendis, assumenda nam facilis, voluptatum libero?
                                                                         Distinctio at excepturi voluptates assumenda odit inventore error

@@ -248,6 +248,16 @@ $('.menu-close').click(function(){
     $('.main-content').removeClass('blur');
 });
 
+$('.close-order-window').click(function(){
+    $('.order-info-body').removeClass('order-window-open');
+    $('.main-content').removeClass('blur');
+});
+
+$('.cart-item-wrapper').click(function(){
+    $('.order-info-body').addClass('order-window-open');
+    $('.main-content').addClass('blur');
+});
+
 $(function(){
     $('#feedback-btn').click(function(){
         $('#feedback-window').addClass('popup-background');
