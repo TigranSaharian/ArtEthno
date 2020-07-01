@@ -3140,4 +3140,7 @@ p {
   .order-window-open {
     right: 0% !important;
   }
+  .option-last-child {
+    margin-bottom: 60px;
+  }
 }
