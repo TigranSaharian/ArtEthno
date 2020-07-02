@@ -2044,6 +2044,7 @@ p{
 .card-container{
     .card-wrapper{
         border: 1px solid @main_color;
+        padding: 0;
         .card-header{
             padding: 5px 20px;
             .font_Sitka;
@@ -2923,12 +2924,15 @@ p{
     }
 }
 
+.card-height{
+    min-height: 330px;
+}
+
 .card-wrapper{
     border: 1px solid @main_color;
     padding: 20px;
     position: relative;
     background-color: @white_color;
-    min-height: 330px;
     transition: 0.3s;
     &:hover{
         z-index: 1;

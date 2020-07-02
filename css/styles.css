@@ -1806,6 +1806,7 @@ p {
 }
 .card-container .card-wrapper {
   border: 1px solid #F5CD79;
+  padding: 0;
 }
 .card-container .card-wrapper .card-header {
   padding: 5px 20px;
@@ -2577,12 +2578,14 @@ p {
   letter-spacing: calc(0.1vw + 1px);
   color: #F5CD79;
 }
+.card-height {
+  min-height: 330px;
+}
 .card-wrapper {
   border: 1px solid #F5CD79;
   padding: 20px;
   position: relative;
   background-color: #ffffff;
-  min-height: 330px;
   transition: 0.3s;
 }
 .card-wrapper:hover {
